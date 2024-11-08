@@ -803,12 +803,17 @@ class AjaxController extends BaseController
         $chatId = inputPost('chat_id');
         $chat = $chatModel->getChat($chatId);
         if ($chat->sender_id == user()->id || $chat->receiver_id == user()->id) {
-            $chatModel->addMessage($chatId);
+            $chatModel->addMessage($chatId,[
+                'sender_id'    => user()->id,
+                'receiver_id'  => inputPost('receiver_id'),
+                'message'      => inputPost('message')
+            ]);
+
             $jsonData = [
                 'status' => 1,
                 'chatId' => $chat->id,
                 'arrayChats' => $chatModel->getChatsArray($chat->id),
-                'arrayMessages' => $chatModel->getMessagesArray($chatId)
+                'arrayMessages' => $chatModel->getMessagesArray($chatId),
             ];
         }
         echo json_encode($jsonData);

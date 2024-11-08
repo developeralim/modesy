@@ -2,7 +2,9 @@
 
 namespace App\Controllers;
 
+use App\Models\AuthModel;
 use App\Models\BiddingModel;
+use App\Models\ChatModel;
 use App\Models\EarningsModel;
 use App\Models\OrderAdminModel;
 use App\Models\OrderModel;
@@ -284,26 +286,39 @@ class OrderController extends BaseController
      */
     public function requestQuotePost()
     {
-        $productId = inputPost('product_id');
-        $product = $this->productModel->getActiveProduct($productId);
-        $pageLink = '&nbsp;<a href="' . generateUrl("quote_requests") . '" class="link-blue link-underlined">' . clrQuotes(trans("quote_requests")) . '</a>';
-        if (!empty($product)) {
+        $productId  = inputPost('product_id');
+        $product    = $this->productModel->getActiveProduct($productId);
+        $pageLink   = '&nbsp;<a href="' . generateUrl("quote_requests") . '" class="link-blue link-underlined">' . clrQuotes(trans("quote_requests")) . '</a>';
+        
+        if ( ! empty($product) ) {
             if ($product->user_id == user()->id) {
                 $this->session->setFlashdata('product_details_error', trans("msg_quote_request_error") . $pageLink);
                 return redirect()->back();
             }
             $biddingModel = new BiddingModel();
-            if (!$biddingModel->checkActiveQuoteRequest($product->id, user()->id)) {
-                $this->session->setFlashdata('product_details_error', trans("already_have_active_request") . $pageLink);
-                return redirect()->back();
+            $chatModel    = new ChatModel();
+            $seller       = (new AuthModel)->getUser($product->user_id);
+
+            if ( $existingBid = $biddingModel->checkActiveQuoteRequest($product->id, user()->id) ) {
+               $biddingModel->rejectQuote( $existingBid );
             }
-            $quoteId = $biddingModel->requestQuote($product);
+
+            $quoteId    = $biddingModel->requestQuote($product);
+            $chat       = $chatModel->initOrGetChat( $product );
+    
+            $chatModel->addMessage($chat['id'],[
+                'sender_id'    => $chat['sender_id'],
+                'receiver_id'  => $chat['receiver_id'],
+                'quote_id'     => $quoteId,
+                'message'      => ''
+            ]);
+
             if ($quoteId) {
                 //send email
                 $seller = getUser($product->user_id);
                 if (!empty($seller) && getEmailOptionStatus($this->generalSettings, 'bidding_system') == 1) {
                     $emailData = [
-                        'email_type' => 'quote',
+                        'email_type'    => 'quote',
                         'email_address' => $seller->email,
                         'email_subject' => trans("quote_request"),
                         'template_path' => 'email/main',
@@ -316,8 +331,10 @@ class OrderController extends BaseController
                     addToEmailQueue($emailData);
                 }
             }
-            $this->session->setFlashdata('product_details_success', trans("msg_quote_request_sent") . $pageLink);
+
+            return redirect()->to("messages/{$chat['uuid']}");
         }
+
         return redirect()->back();
     }
 

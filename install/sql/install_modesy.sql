@@ -1023,7 +1023,7 @@ INSERT INTO `language_translations` (`id`, `lang_id`, `label`, `translation`) VA
 (123, 1, 'app_name', 'Application Name'),
 (124, 1, 'app_secret', 'App Secret'),
 (125, 1, 'april', 'April'),
-(126, 1, 'ask_question', 'Ask Question'),
+(126, 1, 'ask_question', 'Message'),
 (127, 1, 'assign_membership_plan', 'Assign Membership Plan'),
 (128, 1, 'attachments', 'Attachments'),
 (129, 1, 'audio', 'Audio'),

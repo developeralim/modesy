@@ -1,10 +1,10 @@
 <?php if (!empty($chat)): ?>
     <div id="formChat">
-        <input type="hidden" id="inputChatId" name="chat_id" value="<?= $chat->id; ?>">
-        <?php if (user()->id == $chat->sender_id): ?>
-            <input type="hidden" name="receiver_id" id="inputChatReceiverId" value="<?= $chat->receiver_id; ?>">
+        <input type="hidden" id="inputChatId" name="chat_id" value="<?= $chat['id']; ?>">
+        <?php if (user()->id == $chat['sender_id']): ?>
+            <input type="hidden" name="receiver_id" id="inputChatReceiverId" value="<?= $chat['receiver_id']; ?>">
         <?php else: ?>
-            <input type="hidden" name="receiver_id" id="inputChatReceiverId" value="<?= $chat->sender_id; ?>">
+            <input type="hidden" name="receiver_id" id="inputChatReceiverId" value="<?= $chat['sender_id']; ?>">
         <?php endif; ?>
         <input type="text" name="message" id="inputChatMessage" class="form-control" placeholder="<?= trans('write_a_message'); ?>" autocomplete="off" onkeypress="if(event.keyCode === 13){sendChatMessage()};">
         <button type="button" id="btnChatSubmit" class="btn">

@@ -12,17 +12,67 @@ class ChatModel extends BaseModel
         $this->builderMessages = $this->db->table('chat_messages');
     }
 
-    //add chat
-    public function addChat()
+    public function initOrGetChat( $product )
     {
-        $data = [
-            'sender_id' => user()->id,
-            'receiver_id' => inputPost('receiver_id'),
-            'subject' => inputPost('subject'),
-            'product_id' => inputPost('product_id'),
-            'updated_at' => date("Y-m-d H:i:s"),
-            'created_at' => date("Y-m-d H:i:s")
-        ];
+        $seller    = (new AuthModel)->getUser($product->user_id);
+
+        if ( ! ( $chat = $this->builder->where('sender_id',user()->id)->where('receiver_id',$seller->id)->where('product_id',$product->id)->get()->getRow(type:'array') ) ) {
+
+            $id = $this->addChat([
+                'receiver_id'   => $seller->id,
+                'subject'       => 'Hello First Chat',
+                'product_id'    => $product->id,
+                'uuid'          => uniqid(more_entropy:true)
+            ]);
+            
+            $reviewsCount = (new CommonModel)->getReviewsCountByProductId( $product->id );
+            $country      = getCountry( $seller->country_id ?? 0 );
+            $city         = getCity( $seller->city_id ?? 0 );
+
+            $this->addMessage( $id,[
+                'sender_id'    => $seller->id,
+                'receiver_id'  => user()->id,
+                'message'      => sprintf('
+                    <strong>Hello, I am %1$s</strong> <br>
+                    <div class="product-details-review">
+                        %2$s
+                        <span class="review-text">%3$s &nbsp;(%4$d)</span>
+                    </div>
+                    <div class="location">
+                        <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+                            <path d="M8 0a6.5 6.5 0 0 0-6.5 6.5C1.5 12.99 8 16 8 16s6.5-3.01 6.5-9.5A6.5 6.5 0 0 0 8 0m0 1.5a5 5 0 0 1 5 5c0 4.38-3.52 6.92-5 7.8-1.46-.88-5-3.45-5-7.8a5 5 0 0 1 5-5m0 2.25a2.75 2.75 0 1 0 0 5.5 2.75 2.75 0 0 0 0-5.5m0 1.5a1.25 1.25 0 0 1 0 2.5 1.25 1.25 0 0 1 0-2.5"></path>
+                        </svg>
+                        <span>%5$s</span>,
+                        <span>%6$s</span>
+                    </div>',
+                    $seller->username,
+                    view('partials/_review_stars', ['rating' => $product->rating]),
+                    trans("reviews"),
+                    numberFormatShort($reviewsCount),
+                    $country->name ?? '',
+                    $city->name ?? ''
+                ),
+            ]);
+
+            $chat = $this->builder->where('id',$id)->get()->getRow(type:'array');
+        }
+
+        return $chat;
+    }
+
+    //add chat
+    public function addChat( $data = [
+        'receiver_id'   => 0,
+        'subject'       => '',
+        'product_id'    => 0
+    ])
+    {
+        $data = array_merge([
+            'sender_id'     => user()->id,
+            'updated_at'    => date("Y-m-d H:i:s"),
+            'created_at'    => date("Y-m-d H:i:s")
+        ],$data);
+
         if (empty($data['product_id'])) {
             $data['product_id'] = 0;
         }
@@ -33,28 +83,28 @@ class ChatModel extends BaseModel
     }
 
     //add message
-    public function addMessage($chatId)
+    public function addMessage($chatId,$data = [
+        'sender_id'    => 0,
+        'receiver_id'  => 0,
+    ])
     {
-        $data = [
-            'chat_id' => $chatId,
-            'sender_id' => user()->id,
-            'receiver_id' => inputPost('receiver_id'),
-            'message' => inputPost('message'),
-            'is_read' => 0,
-            'deleted_user_id' => 0,
-            'created_at' => date("Y-m-d H:i:s")
-        ];
-        if (!empty($data['message'])) {
-            if ($this->builderMessages->insert($data)) {
-                $messageId = $this->db->insertID();
-                $this->builder->where('id', clrNum($chatId))->update(['updated_at' => date("Y-m-d H:i:s")]);
-                //set cache
-                $this->setChatCache($data['receiver_id']);
-                //send email
-                $this->addMessageEmail($messageId);
-                return $messageId;
-            }
+        $data = array_merge([
+            'chat_id'           => $chatId,
+            'is_read'           => 0,
+            'deleted_user_id'   => 0,
+            'created_at'        => date("Y-m-d H:i:s")
+        ],$data);
+        
+        if ($this->builderMessages->insert($data)) {
+            $messageId = $this->db->insertID();
+            $this->builder->where('id', clrNum($chatId))->update(['updated_at' => date("Y-m-d H:i:s")]);
+            //set cache
+            $this->setChatCache($data['receiver_id']);
+            //send email
+            $this->addMessageEmail($messageId);
+            return $messageId;
         }
+
         return false;
     }
 
@@ -79,7 +129,7 @@ class ChatModel extends BaseModel
     }
 
     //get chats by user id
-    public function getChats($userId)
+    public function getChats($userId,$limit = null,$offset = 0)
     {
         return $this->builder->select('chat.*,
         user_receiver.username AS receiver_username, user_receiver.first_name AS receiver_first_name, user_receiver.last_name AS receiver_last_name, user_receiver.avatar AS receiver_avatar, user_receiver.role_id AS receiver_role_id,
@@ -88,7 +138,7 @@ class ChatModel extends BaseModel
             ->join('users AS user_receiver', 'chat.receiver_id = user_receiver.id')
             ->join('users AS user_sender', 'chat.sender_id = user_sender.id')
             ->where('chat.id IN (SELECT DISTINCT chat_messages.chat_id FROM chat_messages WHERE (chat_messages.receiver_id =  ' . clrNum($userId) . ' OR chat_messages.sender_id =  ' . clrNum($userId) . ') AND chat_messages.deleted_user_id !=  ' . clrNum($userId) . ')')
-            ->orderBy('num_unread_messages, chat.updated_at', 'DESC')->get()->getResult();
+            ->orderBy('num_unread_messages, chat.updated_at', 'DESC')->get($limit,$offset)->getResult();
     }
 
     //get user unread chats
@@ -110,10 +160,10 @@ class ChatModel extends BaseModel
     }
 
     //get messages
-    public function getMessages($chatId)
+    public function getMessages($chatId,$limit = null,$offset = 0)
     {
         return $this->builderMessages->select('chat_messages.*, (SELECT avatar FROM users WHERE chat_messages.sender_id = users.id LIMIT 1) AS user_avatar')
-            ->where('chat_messages.chat_id', clrNum($chatId))->get()->getResult();
+            ->where('chat_messages.chat_id', clrNum($chatId))->get($limit,$offset)->getResult();
     }
 
     //get latest messages

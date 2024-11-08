@@ -433,7 +433,12 @@ if (!function_exists('priceCurrencyFormat')) {
         return $price;
     }
 }
-
+if ( ! function_exists('getCurrencySymbol') ) {
+    function getCurrencySymbol($currency_code)
+    {
+        return Config\Globals::$currencies[$currency_code]->symbol;
+    }
+}
 //get price
 if (!function_exists('getPrice')) {
     function getPrice($price, $formatType)
@@ -1013,16 +1018,10 @@ if (!function_exists('getProductFormData')) {
             if (!checkProductStock($product)) {
                 $disabled = ' disabled';
             }
-            if ($product->listing_type == 'sell_on_site' || $product->listing_type == 'license_key') {
+            if ($product->listing_type == 'sell_on_site' || $product->listing_type == 'license_key' || $product->listing_type == 'bidding') {
                 if ($product->is_free_product != 1) {
                     $data->addToCartUrl = base_url('add-to-cart');
                     $data->button = '<button class="btn btn-md btn-custom btn-product-cart"' . $disabled . '><span class="btn-cart-icon"><i class="icon-cart-solid"></i></span>' . trans("add_to_cart") . '</button>';
-                }
-            } elseif ($product->listing_type == 'bidding') {
-                $data->addToCartUrl = base_url('request-quote-post');
-                $data->button = '<button class="btn btn-md btn-custom btn-product-cart"' . $disabled . '><span class="btn-cart-icon"><i class="icon-tag"></i></span>' . trans("request_a_quote") . '</button>';
-                if (!authCheck() && $product->listing_type == 'bidding') {
-                    $data->button = '<button type="button" data-toggle="modal" data-target="#loginModal" class="btn btn-md btn-custom btn-product-cart"' . $disabled . '><span class="btn-cart-icon"><i class="icon-tag"></i></span>' . trans("request_a_quote") . '</button>';
                 }
             } else {
                 if (authCheck()) {

@@ -22,17 +22,17 @@ class BiddingModel extends BaseModel
         $appendedVariations = $selectedVariations->str;
         $optionsArray = $selectedVariations->options_array;
         $data = [
-            'product_id' => $product->id,
-            'product_title' => getProductTitle($product, false) . ' ' . $appendedVariations,
-            'product_quantity' => $quantity,
-            'seller_id' => $product->user_id,
-            'buyer_id' => user()->id,
-            'status' => 'new_quote_request',
-            'price_offered' => 0,
-            'price_currency' => '',
-            'variation_option_ids' => !empty($optionsArray) ? serialize($optionsArray) : '',
-            'updated_at' => date('Y-m-d H:i:s'),
-            'created_at' => date('Y-m-d H:i:s')
+            'product_id'            => $product->id,
+            'product_title'         => getProductTitle($product, false) . ' ' . $appendedVariations,
+            'product_quantity'      => $quantity,
+            'seller_id'             => $product->user_id,
+            'buyer_id'              => user()->id,
+            'status'                => 'pending_quote',
+            'price_offered'         => inputPost('bid') == 'custom' ? inputPost('custom_price') : inputPost('bid'),
+            'price_currency'        => $product->currency,
+            'variation_option_ids'  => !empty($optionsArray) ? serialize($optionsArray) : '',
+            'updated_at'            => date('Y-m-d H:i:s'),
+            'created_at'            => date('Y-m-d H:i:s')
         ];
         if ($this->builder->insert($data)) {
             return $this->db->insertID();
@@ -62,7 +62,7 @@ class BiddingModel extends BaseModel
     //accept quote
     public function acceptQuote($quoteRequest)
     {
-        if (!empty($quoteRequest) && user()->id == $quoteRequest->buyer_id) {
+        if (!empty($quoteRequest) && user()->id == $quoteRequest->seller_id) {
             $data = [
                 'status' => 'pending_payment',
                 'updated_at' => date('Y-m-d H:i:s')
@@ -75,7 +75,7 @@ class BiddingModel extends BaseModel
     //reject quote
     public function rejectQuote($quoteRequest)
     {
-        if (!empty($quoteRequest) && user()->id == $quoteRequest->buyer_id) {
+        if (!empty($quoteRequest) && user()->id == $quoteRequest->seller_id) {
             $data = [
                 'status' => 'rejected_quote',
                 'updated_at' => date('Y-m-d H:i:s')
@@ -145,11 +145,7 @@ class BiddingModel extends BaseModel
     //check active quote request
     public function checkActiveQuoteRequest($productId, $buyerId)
     {
-        $row = $this->builder->where('product_id', clrNum($productId))->where('buyer_id', clrNum($buyerId))->where('status', 'new_quote_request')->get()->getRow();
-        if (!empty($row)) {
-            return false;
-        }
-        return true;
+        return $this->builder->where('product_id', clrNum($productId))->where('buyer_id', clrNum($buyerId))->where('status', 'pending_quote')->get()->getRow();
     }
 
     //delete quote request

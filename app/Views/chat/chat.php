@@ -54,9 +54,9 @@
                                             if (isVendorByRoleId($user->role_id)) {
                                                 $username = $user->username;
                                             }
-                                            if (!empty($user)):?>
-                                                <div class="item">
-                                                    <div class="chat-contact" data-chat-id="<?= $item->id; ?>">
+                                            if (!empty($user)): ?>
+                                                <a class="item" href="<?= base_url("messages/{$item->uuid}") ?>">
+                                                    <div class="chat-contact <?php if( ! empty($chat) && $chat['id'] == $item->id ) : print('active'); endif; ?>" data-chat-id="<?= $item->id; ?>">
                                                         <div class="flex-item">
                                                             <div class="item-img">
                                                                 <img src="<?= getUserAvatar($user); ?>" alt="<?= esc($username); ?>">
@@ -77,43 +77,74 @@
                                                             </div>
                                                         <?php endif; ?>
                                                     </div>
-                                                </div>
-                                            <?php endif;
+                                                </a>
+                                        <?php endif;
                                         endforeach; ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col chat-right">
-                            <div id="chatUserContainer" class="chat-header">
-                                <?php if (!empty($chat)):
-                                    view('chat/_chat_user', ['chat' => $chat]);
-                                endif; ?>
-                            </div>
-                            <div class="chat-content">
-                                <div id="chatMessagesContainer" class="messages">
-                                    <?php if (!empty($chat) && !empty($messages)):
-                                        echo view('chat/_messages', ['chat' => $chat, 'messages' => $messages]);
-                                    endif;
-                                    if (empty($chat)): ?>
-                                        <div class="select-chat-container">
-                                            <label class="badge"><?= trans("select_chat_start_messaging"); ?></label>
-                                        </div>
-                                    <?php endif; ?>
-                                </div>
-                                <div id="chatInputContainer" class="chat-input">
-                                    <?php if (!empty($chat)):
-                                        echo view('chat/_chat_form', ['chat' => $chat]);
-                                    else: ?>
-                                        <input type="text" name="message" class="form-control" placeholder="<?= trans('write_a_message'); ?>" autocomplete="off" disabled>
-                                        <button type="button" class="btn" disabled>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#273244" class="bi bi-send" viewBox="0 0 16 16">
-                                                <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                            <?php if ( ! empty( $chat ) ) : ?>
+                                <div id="chatUserContainer" class="chat-header">
+                                    <div class="text-center p-3">
+                                        <a  href="<?= base_url("profile/{$receiver->slug}"); ?>">
+                                            <?= esc(getUsername($receiver)); ?>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 16 16" version="1.1" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                                                <polyline points="8.25 2.75,2.75 2.75,2.75 13.25,13.25 13.25,13.25 7.75" />
+                                                <path d="m13.25 2.75-5.5 5.5m3-6.5h3.5v3.5" />
                                             </svg>
-                                        </button>
-                                    <?php endif; ?>
+                                        </a>
+                                    </div>
+                                    <hr>
+                                    <div class="product-info p-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-inline-block">
+                                            <img src="<?= getProductMainImage($product->id,'image_small'); ?>" class="img-thumbnail" style="width: 50px;">
+                                            <div class="float-right mx-2">
+                                                <a href="<?= generateProductUrl($product); ?>"><strong><?= getProductTitle($product); ?></strong></a>
+                                                <div class="item-meta">
+                                                    <?= view('product/_price_product_item', ['product' => $product]); ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php if( user()->id != $product->user_id ): ?>
+                                            <div class="action-btns d-flex justify-content-between align-items-center">
+                                                <button class="btn btn-outline-info" data-toggle="modal" data-target="<?= ! authCheck() ? '#loginModal' : '#priceOfferModal' ?>">Make an offer</button>
+                                                <form action="<?= getProductFormData($product)->addToCartUrl ?>" class="mx-2" method="post" id="form_add_cart">
+                                                    <?= csrf_field(); ?>
+                                                    <input type="hidden" name="product_quantity" value="1">
+                                                    <input type="hidden" name="product_id" value="<?= $product->id; ?>">
+                                                    <button class="btn btn-info" type="submit">Buy</button>
+                                                </form>
+                                                <?= view('product/details/_offer_send',['product' => getProduct($chat['product_id'])]); ?>
+                                            </div>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="chat-content">
+                                    <div id="chatMessagesContainer" class="messages">
+                                        <?= view('chat/_messages', ['chat' => $chat, 'messages' => $messages]); ?>
+                                    </div>
+                                    <div id="chatInputContainer" class="chat-input">
+                                        <?php if (!empty($chat)):
+                                            echo view('chat/_chat_form', ['chat' => $chat]);
+                                        else: ?>
+                                            <input type="text" name="message" class="form-control" placeholder="<?= trans('write_a_message'); ?>" autocomplete="off" disabled>
+                                            <button type="button" class="btn" disabled>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#273244" class="bi bi-send" viewBox="0 0 16 16">
+                                                    <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+                                                </svg>
+                                            </button>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            <?php else : ?>
+                                <div class="chat-content">
+                                    <div class="select-chat-container">
+                                        <label class="badge"><?= trans("select_chat_start_messaging"); ?></label>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 <?php else: ?>
@@ -128,6 +159,7 @@
         .chat-left .chat-contacts-container {
             height: 380px !important;
         }
+
         .chat .chat-content {
             height: 380px !important;
         }

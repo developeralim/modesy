@@ -224,7 +224,8 @@ if (!empty($languages)) {
         //contact
         $routes->get($key . $csrt->contact, 'HomeController::contact');
         //chat
-        $routes->get($key . $csrt->messages, 'HomeController::chat');
+        $routes->get($key . $csrt->messages . '/(:any)', 'ChatController::chat/$1');
+        $routes->get($key . $csrt->messages, 'ChatController::chats');
         //rss feeds
         $routes->get($key . $csrt->rss_feeds, 'RssController::rssFeeds');
         $routes->get($key . 'rss/' . $csrt->latest_products, 'RssController::latestProducts');

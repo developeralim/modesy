@@ -32,11 +32,13 @@ $routes->post('download-attachment-post', 'SupportController::downloadAttachment
 $routes->post('forgot-password-post', 'AuthController::forgotPasswordPost');
 $routes->post('reset-password-post', 'AuthController::resetPasswordPost');
 $routes->post('register-post', 'AuthController::registerPost');
+
 //bidding
 $routes->post('submit-quote-post', 'DashboardController::submitQuotePost');
 $routes->post('request-quote-post', 'OrderController::requestQuotePost');
 $routes->post('accept-quote-post', 'OrderController::acceptQuote');
 $routes->post('reject-quote-post', 'OrderController::rejectQuote');
+
 //cart
 $routes->post('cart/add-to-cart', 'CartController::addToCart');
 $routes->post('add-to-cart-quote', 'CartController::addToCartQuote');
@@ -61,8 +63,11 @@ $routes->post('add-refund-message', 'OrderController::addRefundMessage');
 //wallet
 $routes->post('wallet/new-payout-request-post', 'ProfileController::newPayoutRequestPost');
 $routes->post('wallet/set-payout-account-post', 'ProfileController::setPayoutAccountPost');
+
 //message
 $routes->post('send-message-post', 'HomeController::sendMessagePost');
+$routes->post('chat/init','ChatController::initChat');
+
 //file
 $routes->post('upload-audio-post', 'FileController::uploadAudio');
 $routes->post('load-audio-preview-post', 'FileController::loadAudioPreview');

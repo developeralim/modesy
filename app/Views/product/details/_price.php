@@ -27,7 +27,7 @@
                         <?= priceFormatted($price, $product->currency, true); ?>
                     </strong>
                 <?php endif;
-            elseif ($product->listing_type == 'ordinary_listing'):
+            elseif ($product->listing_type == 'ordinary_listing' || $product->listing_type == 'bidding' ):
                 if ($productSettings->classified_price == 1):?>
                     <strong class="lbl-price">
                         <?= priceFormatted($price, $product->currency); ?>

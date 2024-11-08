@@ -21,7 +21,7 @@ use App\Models\VariationModel;
 use Config\Globals;
 
 class HomeController extends BaseController
-{
+{ 
     protected $blogModel;
     protected $blogPerPage;
 
@@ -840,31 +840,6 @@ class HomeController extends BaseController
 
         echo view('partials/_header', $data);
         echo view('wishlist', $data);
-        echo view('partials/_footer');
-    }
-
-    /*
-     * --------------------------------------------------------------------
-     * Chat
-     * --------------------------------------------------------------------
-     */
-
-    /**
-     * Chat
-     */
-    public function chat()
-    {
-        if (!authCheck()) {
-            return redirect()->to(langBaseUrl());
-        }
-        $chatModel = new ChatModel();
-        $data['title'] = trans("messages");
-        $data['description'] = trans("messages") . ' - ' . $this->baseVars->appName;
-        $data['keywords'] = trans("messages") . ',' . $this->baseVars->appName;
-        $data['chats'] = $chatModel->getChats(user()->id);
-
-        echo view('partials/_header', $data);
-        echo view('chat/chat', $data);
         echo view('partials/_footer');
     }
 

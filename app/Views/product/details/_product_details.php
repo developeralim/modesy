@@ -3,8 +3,8 @@
         <?php if ($product->product_type == 'digital'): ?>
             <label class="badge badge-info-light badge-instant-download">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
                 </svg>&nbsp;&nbsp;<?= trans("instant_download"); ?>
             </label>
         <?php endif; ?>
@@ -47,13 +47,24 @@
             if ($product->listing_type == 'ordinary_listing' && empty($product->external_link)):
                 $showAsk = false;
             endif;
-            if ($showAsk == true):?>
+            if ($showAsk == true && $product->user_id !== user()?->id ): ?>
                 <?php if (authCheck() || (!authCheck() && $generalSettings->show_vendor_contact_information == 1)): ?>
-                    <button class="btn btn-contact-seller" data-toggle="modal" data-target="#messageModal"><i class="icon-envelope"></i> <?= trans("ask_question") ?></button>
+                    <form action="<?= base_url('chat/init'); ?>" novalidate method="post" enctype="multipart/form-data">
+                        <?= csrf_field(); ?>
+                        <input type="hidden" name="product" value="<?= $product->id; ?>">
+                        <button class="btn btn-contact-seller" type="submit"><i class="icon-envelope"></i> <?= trans("ask_question") ?></button>
+                    </form>
                 <?php else: ?>
                     <button class="btn btn-contact-seller" data-toggle="modal" data-target="#loginModal"><i class="icon-envelope"></i> <?= trans("ask_question") ?></button>
                 <?php endif;
             endif; ?>
+            <div class="col-12">
+                <?php if ( $product->product_type != 'bidding' && $product->user_id !== user()?->id ) : ?>
+                    <div class="button-container-bidding">
+                        <button type="button" data-toggle="modal" data-target="<?= ! authCheck() ? '#loginModal' : '#priceOfferModal' ?>" class="btn btn-contact-seller mx-2"><i class="icon-price-tag-o"></i> <?= trans("offer_a_price") ?></button>
+                    </div>
+                <?php endif; ?>
+            </div>
         </div>
         <div class="row-custom details">
             <?php if ($product->listing_type != 'ordinary_listing' && $product->product_type != 'digital'): ?>
@@ -99,9 +110,9 @@
                         <span><?= timeAgo($product->created_at); ?></span>
                     </div>
                 </div>
-            <?php endif;
+                <?php endif;
             if (!empty($productFilterValuesArray) && !empty($productFilterValuesArray['top']) && countItems($productFilterValuesArray['top']) > 0):
-                foreach ($productFilterValuesArray['top'] as $item):?>
+                foreach ($productFilterValuesArray['top'] as $item): ?>
                     <div class="item-details">
                         <div class="left">
                             <label><?= esc($item['name']); ?></label>
@@ -110,20 +121,18 @@
                             <span><?= esc($item['value']); ?></span>
                         </div>
                     </div>
-                <?php endforeach;
+            <?php endforeach;
             endif; ?>
         </div>
     </div>
 </div>
 
-<?php if ($product->listing_type == 'sell_on_site' || $product->listing_type == 'license_key') {
+<?php if ($product->listing_type == 'sell_on_site' || $product->listing_type == 'license_key' || $product->listing_type == 'bidding') {
     if ($product->product_type == 'digital' && $product->is_free_product == 1) {
         echo '<form action="' . base_url('download-free-digital-file-post') . '" method="post">';
     } else {
         echo '<form action="' . getProductFormData($product)->addToCartUrl . '" method="post" id="form_add_cart">';
     }
-} elseif ($product->listing_type == 'bidding') {
-    echo '<form action="' . getProductFormData($product)->addToCartUrl . '" method="post" id="form_request_quote">';
 } ?>
 <?= csrf_field(); ?>
 <input type="hidden" name="product_id" value="<?= $product->id; ?>">
@@ -153,31 +162,30 @@
         <?php if ($product->is_sold != 1 && $product->listing_type != 'ordinary_listing' && $product->product_type != 'digital'): ?>
             <div class="number-spinner">
                 <div class="input-group">
-                        <span class="input-group-btn">
-                            <button type="button" class="btn btn-default btn-spinner-minus" data-dir="dwn">-</button>
-                        </span>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default btn-spinner-minus" data-dir="dwn">-</button>
+                    </span>
                     <input type="text" id="input_product_quantity" class="form-control text-center" name="product_quantity" value="1" aria-label="Product quantity">
                     <span class="input-group-btn">
-                            <button type="button" class="btn btn-default btn-spinner-plus" data-dir="up">+</button>
-                        </span>
+                        <button type="button" class="btn btn-default btn-spinner-plus" data-dir="up">+</button>
+                    </span>
                 </div>
             </div>
         <?php endif;
         $buttton = getProductFormData($product)->button;
-        if ($product->is_sold != 1 && !empty($buttton)):?>
+        if ($product->is_sold != 1 && !empty($buttton)): ?>
             <div class="button-container">
                 <?= $buttton; ?>
             </div>
         <?php endif; ?>
-
         <?php if ($product->product_type == 'digital' && $product->is_free_product == 1):
             if (authCheck()):
                 if (!empty($product->digital_file_download_link)): ?>
                     <div class="button-container">
                         <a href="<?= esc($product->digital_file_download_link); ?>" class="btn btn-md btn-custom btn-product-cart" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-                                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
                             </svg>&nbsp;&nbsp;<?= trans("download") ?>
                         </a>
                     </div>
@@ -185,8 +193,8 @@
                     <div class="button-container">
                         <button class="btn btn-md btn-custom btn-product-cart">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-                                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
                             </svg>&nbsp;&nbsp;<?= trans("download") ?>
                         </button>
                     </div>
@@ -195,12 +203,12 @@
                 <div class="button-container">
                     <button class="btn btn-md btn-custom btn-product-cart" data-toggle="modal" data-target="#loginModal">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
                         </svg>&nbsp;&nbsp;<?= trans("download") ?>
                     </button>
                 </div>
-            <?php endif;
+        <?php endif;
         endif; ?>
 
         <div class="button-container button-container-wishlist">
@@ -224,7 +232,7 @@
     <div class="row">
         <div class="col-12 product-already-purchased text-success">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
             </svg>&nbsp;
             <?= trans("msg_product_already_purchased") ?>
             &nbsp;
@@ -261,7 +269,7 @@
             <div class="item">
                 <div class="title">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 32 32">
-                        <path fill="#7c818b" d="M0 6v2h19v15h-6.156c-.446-1.719-1.992-3-3.844-3s-3.398 1.281-3.844 3H4v-5H2v7h3.156c.446 1.719 1.992 3 3.844 3s3.398-1.281 3.844-3h8.312c.446 1.719 1.992 3 3.844 3s3.398-1.281 3.844-3H32v-8.156l-.063-.157l-2-6L29.72 10H21V6zm1 4v2h9v-2zm20 2h7.281L30 17.125V23h-1.156c-.446-1.719-1.992-3-3.844-3s-3.398 1.281-3.844 3H21zM2 14v2h6v-2zm7 8c1.117 0 2 .883 2 2s-.883 2-2 2s-2-.883-2-2s.883-2 2-2m16 0c1.117 0 2 .883 2 2s-.883 2-2 2s-2-.883-2-2s.883-2 2-2"/>
+                        <path fill="#7c818b" d="M0 6v2h19v15h-6.156c-.446-1.719-1.992-3-3.844-3s-3.398 1.281-3.844 3H4v-5H2v7h3.156c.446 1.719 1.992 3 3.844 3s3.398-1.281 3.844-3h8.312c.446 1.719 1.992 3 3.844 3s3.398-1.281 3.844-3H32v-8.156l-.063-.157l-2-6L29.72 10H21V6zm1 4v2h9v-2zm20 2h7.281L30 17.125V23h-1.156c-.446-1.719-1.992-3-3.844-3s-3.398 1.281-3.844 3H21zM2 14v2h6v-2zm7 8c1.117 0 2 .883 2 2s-.883 2-2 2s-2-.883-2-2s.883-2 2-2m16 0c1.117 0 2 .883 2 2s-.883 2-2 2s-2-.883-2-2s.883-2 2-2" />
                     </svg>&nbsp;&nbsp;<span><?= @parseSerializedOptionArray($deliveryTime->option_array, selectedLangId()); ?></span>
                 </div>
             </div>
@@ -269,7 +277,7 @@
         <div class="item">
             <div class="title">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 32 32">
-                    <path fill="#7c818b" d="M16 4C9.383 4 4 9.383 4 16s5.383 12 12 12s12-5.383 12-12S22.617 4 16 4m0 2c5.535 0 10 4.465 10 10s-4.465 10-10 10S6 21.535 6 16S10.465 6 16 6m-1 2v9h7v-2h-5V8z"/>
+                    <path fill="#7c818b" d="M16 4C9.383 4 4 9.383 4 16s5.383 12 12 12s12-5.383 12-12S22.617 4 16 4m0 2c5.535 0 10 4.465 10 10s-4.465 10-10 10S6 21.535 6 16S10.465 6 16 6m-1 2v9h7v-2h-5V8z" />
                 </svg>&nbsp;&nbsp;<span><?= trans("estimated_delivery"); ?>:</span>
             </div>&nbsp;
             <?php $estLocation = getEstimatedDeliveryLocation();
@@ -293,3 +301,10 @@
         <strong><?= trans("share"); ?>:</strong>&nbsp;<?= view("product/details/_product_share"); ?>
     </div>
 </div>
+
+<!-- Price Offer Modal -->
+<?php 
+    if ( authCheck() ) {
+        echo view('product/details/_offer_send',['product' => $product]);
+    }
+?>

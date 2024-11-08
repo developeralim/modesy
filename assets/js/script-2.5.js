@@ -1224,45 +1224,6 @@ function deleteBlogComment(commentId, postId, message) {
  */
 
 
-//send message
-$("#formSendChatMessage").submit(function (event) {
-    event.preventDefault();
-    var inputSubject = $("#formSendChatMessage input[name=subject]");
-    var inputMessage = $("#formSendChatMessage textarea[name=message]");
-    if (inputSubject.val().length < 1) {
-        inputSubject.addClass("is-invalid");
-        return false;
-    } else {
-        inputSubject.removeClass("is-invalid");
-    }
-    if (inputMessage.val().length < 1) {
-        inputMessage.addClass("is-invalid");
-        return false;
-    } else {
-        inputMessage.removeClass("is-invalid");
-    }
-    $("#formSendChatMessage .form-group :input").prop("disabled", true);
-    var data = {
-        'subject': inputSubject.val(),
-        'message': inputMessage.val(),
-        'receiver_id': $("#formSendChatMessage input[name=receiver_id]").val(),
-        'product_id': $("#formSendChatMessage input[name=product_id]").val()
-    }
-    $.ajax({
-        type: 'POST',
-        url: MdsConfig.baseURL + '/Ajax/addChatPost',
-        data: setAjaxData(data),
-        success: function (response) {
-            var obj = JSON.parse(response);
-            if (obj.result == 1) {
-                document.getElementById("chatSendMessageResult").innerHTML = obj.htmlContent;
-                inputMessage.val('');
-            }
-            $("#formSendChatMessage .form-group :input").prop("disabled", false);
-        }
-    });
-});
-
 //load chat
 $(document).on('click', '.chat .chat-contact', function () {
     $('.chat-contact').removeClass('active');
@@ -2482,4 +2443,9 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
+});
+
+// Offer sending
+$(document).ready(function () {
+    alert('hello');
 });
