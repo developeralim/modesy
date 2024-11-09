@@ -38,6 +38,7 @@ $routes->post('submit-quote-post', 'DashboardController::submitQuotePost');
 $routes->post('request-quote-post', 'OrderController::requestQuotePost');
 $routes->post('accept-quote-post', 'OrderController::acceptQuote');
 $routes->post('reject-quote-post', 'OrderController::rejectQuote');
+$routes->post('modify-quote-post', 'OrderController::modifyQuotePrice');
 
 //cart
 $routes->post('cart/add-to-cart', 'CartController::addToCart');
@@ -137,6 +138,8 @@ $routes->post('add-coupon-post', 'DashboardController::addCouponPost');
 $routes->post('edit-coupon-post', 'DashboardController::editCouponPost');
 
 $routes->get('Ajax/updateChatGet', 'AjaxController::updateChatGet');
+$routes->get('Ajax/getChats','ChatController::getChats');
+$routes->get('Ajax/getMessages','ChatController::getMessages');
 
 $postArray = [
     //Admin

@@ -99,7 +99,7 @@ class ChatModel extends BaseModel
             $messageId = $this->db->insertID();
             $this->builder->where('id', clrNum($chatId))->update(['updated_at' => date("Y-m-d H:i:s")]);
             //set cache
-            $this->setChatCache($data['receiver_id']);
+            setChatCache($data['receiver_id']);
             //send email
             $this->addMessageEmail($messageId);
             return $messageId;
@@ -219,15 +219,28 @@ class ChatModel extends BaseModel
                     $username = $user->username;
                 }
                 if (!empty($user)) {
+
+                    $firstMessage = getFirstMessage($item->id);
+
                     $item = [
-                        'class' => $item->id === $chatId ? 'active' : '',
-                        'chatId' => $item->id,
-                        'username' => esc($username),
-                        'avatar' => getUserAvatar($user),
-                        'subject' => esc(characterLimiter($item->subject, 280, '...')),
+                        'class'             => $item->id === $chatId ? 'active' : '',
+                        'product_image'     => getProductMainImage($item->product_id,'image_small'), 
+                        'chatId'            => $item->id,
+                        'uuid'              => $item->uuid,
+                        'username'          => esc($username),
+                        'avatar'            => getUserAvatar($user),
+                        'subject'           => esc(characterLimiter($item->subject, 280, '...')),
                         'numUnreadMessages' => $item->num_unread_messages,
-                        'updatedAt' => !empty($item->updated_at) ? timeAgo($item->updated_at) : null
+                        'updatedAt'         => !empty($item->updated_at) ? timeAgo($item->updated_at) : null
                     ];
+
+                    if( $firstMessage && $firstMessage->message ){
+                        $item['firstMessage'] = esc(characterLimiter($firstMessage->message, 280, '...'));
+                    } elseif ( $firstMessage && $firstMessage->quote_id ) {
+                        $quote = getQuoteRequest($firstMessage->quote_id);
+                        $item['firstMessage'] = priceFormatted($quote->price_offered,$quote->price_currency,true);
+                    }
+
                     array_push($array, $item);
                 }
             }
@@ -236,10 +249,10 @@ class ChatModel extends BaseModel
     }
 
     //build messages array
-    public function getMessagesArray($chatId)
+    public function getMessagesArray($chatId,$limit = 10)
     {
         $array = [];
-        $messages = $this->getLatestMessages($chatId, 10);
+        $messages = $this->getLatestMessages($chatId,$limit);
         if (!empty($messages)) {
             foreach ($messages as $message) {
                 if ($message->deleted_user_id != user()->id) {
@@ -248,12 +261,21 @@ class ChatModel extends BaseModel
                         $isRight = false;
                     }
                     $item = [
-                        'id' => $message->id,
-                        'message' => $message->message,
-                        'avatar' => getChatUserAvatar($message),
-                        'time' => timeAgo($message->created_at),
-                        'isRight' => $isRight
+                        'id'         => $message->id,
+                        'message'    => $message->message,
+                        'avatar'     => getChatUserAvatar($message),
+                        'time'       => timeAgo($message->created_at),
+                        'isRight'    => $isRight,
+                        'isReceiver' => user()->id == $message->receiver_id,
+                        'isSender'   => user()->id == $message->sender_id
                     ];
+
+                    if ( $message->quote_id ) {
+                        $item['quote']                              = getQuoteRequest($message->quote_id);
+                        $item['quote']->price_offered_html          = priceFormatted( $item['quote']->price_offered,$item['quote']->price_currency,true );
+                        $item['quote']->seller_price_offered_html   = priceFormatted( $item['quote']->seller_price_offered,$item['quote']->price_currency,true );
+                    }
+
                     array_push($array, $item);
                 }
             }
@@ -265,6 +287,7 @@ class ChatModel extends BaseModel
     public function checkUserChatCache($receiverId)
     {
         $cache = \Config\Services::cache();
+       
         $hasMessage = false;
         if (!empty($cache->get('chat_cache'))) {
             $array = $cache->get('chat_cache');
@@ -275,18 +298,6 @@ class ChatModel extends BaseModel
             $cache->save('chat_cache', $array, 86400);
         }
         return $hasMessage;
-    }
-
-    //set chat cache
-    private function setChatCache($receiverId)
-    {
-        $cache = \Config\Services::cache();
-        $array = array();
-        if (!empty($cache->get('chat_cache'))) {
-            $array = $cache->get('chat_cache');
-        }
-        $array[$receiverId] = 1;
-        $cache->save('chat_cache', $array, 86400);
     }
 
     //get all chats count

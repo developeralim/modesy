@@ -12,7 +12,7 @@
             </div>
             <div class="col-12">
                 <?php if (!empty($chats)): ?>
-                    <div id="mdsChat" class="row chat <?= empty($chat) ? 'chat-empty' : ''; ?>">
+                    <div id="mdsChat" class="row chat position-relative <?= empty($chat) ? 'chat-empty' : ''; ?>">
                         <div class="col chat-left">
                             <div class="chat-left-inner">
                                 <div class="chat-user">
@@ -26,60 +26,19 @@
                                         <?= esc(getUsername(user())); ?>
                                     </div>
                                 </div>
-                                <div class="chat-search">
-                                    <div class="position-relative">
+                                <div class="chat-search d-flex justify-content-between align-items-center">
+                                    <div class="position-relative w-md-75">
                                         <input type="text" name="search" id="chatSearchContacts" class="form-control input-search" maxlength="300" placeholder="<?= trans("search"); ?>">
                                         <i class="icon-search"></i>
                                     </div>
+                                    <button type="button" class="btn-open-chats button-link">
+                                        <strong style="font-size: 30px;">&times;</strong>
+                                    </button>
                                 </div>
                                 <div class="text-recent-chats"><?= trans("recent_chats"); ?></div>
                                 <div class="chat-contacts-container mds-scrollbar">
                                     <div id="chatContactsContainer" class="chat-contacts">
-                                        <?php foreach ($chats as $item):
-                                            $user = new \stdClass();
-                                            if ($item->receiver_id == user()->id) {
-                                                $user->username = $item->sender_username;
-                                                $user->first_name = $item->sender_first_name;
-                                                $user->last_name = $item->sender_last_name;
-                                                $user->avatar = $item->sender_avatar;
-                                                $user->role_id = $item->sender_role_id;
-                                            } else {
-                                                $user->username = $item->receiver_username;
-                                                $user->first_name = $item->receiver_first_name;
-                                                $user->last_name = $item->receiver_last_name;
-                                                $user->avatar = $item->receiver_avatar;
-                                                $user->role_id = $item->receiver_role_id;
-                                            }
-                                            $username = $user->first_name . ' ' . $user->last_name;
-                                            if (isVendorByRoleId($user->role_id)) {
-                                                $username = $user->username;
-                                            }
-                                            if (!empty($user)): ?>
-                                                <a class="item" href="<?= base_url("messages/{$item->uuid}") ?>">
-                                                    <div class="chat-contact <?php if( ! empty($chat) && $chat['id'] == $item->id ) : print('active'); endif; ?>" data-chat-id="<?= $item->id; ?>">
-                                                        <div class="flex-item">
-                                                            <div class="item-img">
-                                                                <img src="<?= getUserAvatar($user); ?>" alt="<?= esc($username); ?>">
-                                                            </div>
-                                                        </div>
-                                                        <div class="flex-item flex-item-center">
-                                                            <h6 class="username">
-                                                                <?= esc($username); ?>
-                                                            </h6>
-                                                            <p class="subject"><?= esc(characterLimiter($item->subject, 280, '...')); ?></p>
-                                                            <?php if (!empty($item->updated_at)): ?>
-                                                                <div class="time"><?= timeAgo($item->updated_at); ?></div>
-                                                            <?php endif; ?>
-                                                        </div>
-                                                        <?php if ($item->num_unread_messages > 0): ?>
-                                                            <div class="flex-item">
-                                                                <label id="chatBadge<?= $item->id; ?>" class="badge badge-success"><?= $item->num_unread_messages ?></label>
-                                                            </div>
-                                                        <?php endif; ?>
-                                                    </div>
-                                                </a>
-                                        <?php endif;
-                                        endforeach; ?>
+                                        <span class="loader"></span>
                                     </div>
                                 </div>
                             </div>
@@ -87,7 +46,7 @@
                         <div class="col chat-right">
                             <?php if ( ! empty( $chat ) ) : ?>
                                 <div id="chatUserContainer" class="chat-header">
-                                    <div class="text-center p-3">
+                                    <div class="text-center p-3 top-header">
                                         <a  href="<?= base_url("profile/{$receiver->slug}"); ?>">
                                             <?= esc(getUsername($receiver)); ?>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 16 16" version="1.1" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
@@ -95,6 +54,7 @@
                                                 <path d="m13.25 2.75-5.5 5.5m3-6.5h3.5v3.5" />
                                             </svg>
                                         </a>
+                                        <button type="button" class="btn-open-chats button-link"><i class="icon-menu"></i></button>
                                     </div>
                                     <hr>
                                     <div class="product-info p-3 d-flex justify-content-between align-items-center">
@@ -107,8 +67,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <?php if( user()->id != $product->user_id ): ?>
-                                            <div class="action-btns d-flex justify-content-between align-items-center">
+                                        <div class="action-btns d-flex justify-content-between align-items-center">
+                                            <?php if( user()->id != $product->user_id ): ?>
                                                 <button class="btn btn-outline-info" data-toggle="modal" data-target="<?= ! authCheck() ? '#loginModal' : '#priceOfferModal' ?>">Make an offer</button>
                                                 <form action="<?= getProductFormData($product)->addToCartUrl ?>" class="mx-2" method="post" id="form_add_cart">
                                                     <?= csrf_field(); ?>
@@ -117,13 +77,15 @@
                                                     <button class="btn btn-info" type="submit">Buy</button>
                                                 </form>
                                                 <?= view('product/details/_offer_send',['product' => getProduct($chat['product_id'])]); ?>
-                                            </div>
-                                        <?php endif; ?>
+                                            <?php endif; ?>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="chat-content">
                                     <div id="chatMessagesContainer" class="messages">
-                                        <?= view('chat/_messages', ['chat' => $chat, 'messages' => $messages]); ?>
+                                        <div id="messagesContainer<?= $chat['id']; ?>" class="messages-inner mds-scrollbar position-relative">
+                                            <span class="loader"></span>
+                                        </div>
                                     </div>
                                     <div id="chatInputContainer" class="chat-input">
                                         <?php if (!empty($chat)):

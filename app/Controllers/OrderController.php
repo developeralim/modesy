@@ -300,7 +300,7 @@ class OrderController extends BaseController
             $seller       = (new AuthModel)->getUser($product->user_id);
 
             if ( $existingBid = $biddingModel->checkActiveQuoteRequest($product->id, user()->id) ) {
-               $biddingModel->rejectQuote( $existingBid );
+               $biddingModel->rejectQuote( $existingBid,true );
             }
 
             $quoteId    = $biddingModel->requestQuote($product);
@@ -312,7 +312,7 @@ class OrderController extends BaseController
                 'quote_id'     => $quoteId,
                 'message'      => ''
             ]);
-
+            
             if ($quoteId) {
                 //send email
                 $seller = getUser($product->user_id);
@@ -336,6 +336,32 @@ class OrderController extends BaseController
         }
 
         return redirect()->back();
+    }
+
+    public function modifyQuotePrice()
+    {
+        $id = inputPost('id');
+        $quoteRequest = $this->biddingModel->getQuoteRequest($id);
+        if ( $this->biddingModel->modifyQuotePrice($quoteRequest) ) {
+            $seller = getUser($quoteRequest->seller_id);
+            if (!empty($seller) && getEmailOptionStatus($this->generalSettings, 'bidding_system') == 1) {
+                $emailData = [
+                    'email_type'    => 'quote',
+                    'email_address' => $seller->email,
+                    'email_subject' => trans("quote_request"),
+                    'template_path' => 'email/main',
+                    'email_data'    => serialize([
+                        'content'       => trans("your_have_an_offer") . '<br>' . trans("quote") . ': ' . '<strong>#' . $quoteRequest->id . '</strong>',
+                        'url'           => generateDashUrl('quote_requests'),
+                        'buttonText'    => trans("view_details")
+                    ])
+                ];
+                addToEmailQueue($emailData);
+            }
+        } else {
+            setErrorMessage(trans("msg_error"));
+        }
+        redirectToBackUrl();
     }
 
     /**

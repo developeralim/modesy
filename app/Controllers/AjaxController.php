@@ -809,10 +809,15 @@ class AjaxController extends BaseController
                 'message'      => inputPost('message')
             ]);
 
+            $product                = getActiveProduct($chat->product_id);
+            $product->price_html    = priceFormatted($product->price,$product->currency,true);
+            $chat->product          = $product;
+
             $jsonData = [
-                'status' => 1,
-                'chatId' => $chat->id,
-                'arrayChats' => $chatModel->getChatsArray($chat->id),
+                'status'        => 1,
+                'chatId'        => $chat->id,
+                'chat'          => $chat,
+                'arrayChats'    => $chatModel->getChatsArray($chat->id),
                 'arrayMessages' => $chatModel->getMessagesArray($chatId),
             ];
         }
@@ -839,9 +844,10 @@ class AjaxController extends BaseController
         if (!authCheck()) {
             exit();
         }
+
         $chatModel = new ChatModel();
         $jsonData = json_encode(['status' => 0]);
-        if ($chatModel->checkUserChatCache(user()->id)) {
+        if ( $chatModel->checkUserChatCache(user()->id) ) {
             $chatId = inputGet('chat_id');
             $jsonData = $this->updateChatHTML($chatId);
         }
@@ -879,12 +885,12 @@ class AjaxController extends BaseController
                 $receiverId = $chat->receiver_id;
             }
             $jsonData = [
-                'status' => 1,
-                'arrayChats' => $chatModel->getChatsArray($chat->id),
-                'htmlchatUser' => view('chat/_chat_user', ['chat' => $chat]),
-                'htmlContentMessages' => view('chat/_messages', ['chat' => $chat, 'messages' => $messages]),
-                'htmlChatForm' => view('chat/_chat_form', ['chat' => $chat]),
-                'receiverId' => $receiverId,
+                'status'                => 1,
+                'arrayChats'            => $chatModel->getChatsArray($chat->id),
+                'htmlchatUser'          => view('chat/_chat_user', ['chat' => $chat]),
+                'htmlContentMessages'   => view('chat/_messages', ['chat' => $chat, 'messages' => $messages]),
+                'htmlChatForm'          => view('chat/_chat_form', ['chat' => $chat]),
+                'receiverId'            => $receiverId,
             ];
             $chatModel->setChatMessagesAsRead($chat->id);
         }
@@ -896,16 +902,25 @@ class AjaxController extends BaseController
     {
         $chatModel = new ChatModel();
         $jsonData = [
-            'status' => 1,
-            'arrayChats' => $chatModel->getChatsArray($chatId),
+            'status'        => 1,
+            'arrayChats'    => $chatModel->getChatsArray($chatId),
         ];
+
         $chat = $chatModel->getChat($chatId);
+
         if (!empty($chat)) {
             if ($chat->sender_id != user()->id && $chat->receiver_id != user()->id) {
                 exit();
             }
-            $jsonData['chatId'] = $chat->id;
-            $jsonData['arrayMessages'] = $chatModel->getMessagesArray($chat->id);
+
+            $product                = getActiveProduct($chat->product_id);
+            $product->price_html    = priceFormatted($product->price,$product->currency,true);
+            $chat->product          = $product;
+
+            $jsonData['chatId']         = $chat->id;
+            $jsonData['chat']           = $chat;
+            $jsonData['product']        = getActiveProduct($chat->product_id);
+            $jsonData['arrayMessages']  = $chatModel->getMessagesArray($chat->id);
             $chatModel->setChatMessagesAsRead($chat->id);
         }
         echo json_encode($jsonData);

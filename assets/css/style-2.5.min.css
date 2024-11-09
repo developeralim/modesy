@@ -5771,7 +5771,7 @@ img {
     right: 0;
 }
 
-.chat-left .chat-contacts img {
+.chat-left .chat-contacts img.profile {
     width: 16px;
     position: absolute;
     top: 50%;
@@ -5819,7 +5819,7 @@ img {
     overflow: hidden;
 }
 
-.chat-left .chat-contacts .item img {
+.chat-left .chat-contacts .item img.profile {
     width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -5984,6 +5984,10 @@ img {
 .chat .chat-content .messages .message-right {
     justify-content: end;
     text-align: right;
+}
+
+.chat .chat-content .messages .message.message-right .item-user {
+    order: 1;
 }
 
 .chat .chat-content .messages .message-right .message-text {
@@ -10949,16 +10953,26 @@ a:hover {
     .bn-container-ds {
         display: none;
     }
-
     .chat .chat-left {
         width: 100% !important;
         padding-bottom: 22px !important;
+        position: absolute;
+        z-index: 9999;
+        background: #fff;
+        height: 100%;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s linear;
     }
-
-    .chat .chat-right {
-        display: none;
+    .chat .chat-left.show-chats {
+        visibility: visible;
+        opacity: 1;
     }
-
+    .chat-header .top-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     .chat .chat-right .chat-header {
         padding: 15px;
     }
@@ -11855,7 +11869,7 @@ a:hover {
 }
 
 .quote-request {
-    padding: 10px;
+    padding: 20px 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
@@ -12238,15 +12252,68 @@ a:hover {
     font-weight: bold;
 }
 
-.quote-status.status_pending_quote {
+.quote-status.status_pending_quote strong.status {
     font-weight: bold;
     color: #cd9732;
 }
-.quote-status.status_pending_payment.mt-2 {
+
+.quote-status.status_pending_payment strong.status {
     color: purple;
     font-weight: bold;
 }
-.quote-status.status_closed {
+
+.quote-status.status_closed strong.status {
     color: #76b302;
     font-weight: bold;
+}
+
+.loader {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #7a7a7a;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+@keyframes rotation {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.counter-offer {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px;
+    background: green;
+    border-radius: 50px;
+    text-align: center;
+}
+.quote-request.seller-offered .quote-prices strong {
+    color: red;
+    position: relative;
+}
+.quote-request.seller-offered .quote-prices strong:before,
+.quote-request.seller-offered .quote-prices strong::after {
+    content: "";
+    height: 30px;
+    width: 3px;
+    background: red;
+    position: absolute;
+    transform: translateY(-4px) rotate(45deg);
+    left: 50%;
+}
+.quote-request.seller-offered .quote-prices strong::after {
+    transform: translateY(-4px) rotate(-45deg);
 }

@@ -67,19 +67,44 @@ class BiddingModel extends BaseModel
                 'status' => 'pending_payment',
                 'updated_at' => date('Y-m-d H:i:s')
             ];
+            
+            setChatCache($quoteRequest->buyer_id);
+            setChatCache($quoteRequest->seller_id);
+            
+            return $this->builder->where('id', $quoteRequest->id)->update($data);
+        }
+        return false;
+    }
+
+    public function modifyQuotePrice( $quoteRequest )
+    {
+        if (!empty($quoteRequest) && user()->id == $quoteRequest->seller_id) {
+            $data = [
+                'seller_price_offered'  => (int) inputPost('price') * 100,
+                'status'                => 'pending_payment',
+                'updated_at'            => date('Y-m-d H:i:s')
+            ];
+            
+            setChatCache($quoteRequest->buyer_id);
+            setChatCache($quoteRequest->seller_id);
+            
             return $this->builder->where('id', $quoteRequest->id)->update($data);
         }
         return false;
     }
 
     //reject quote
-    public function rejectQuote($quoteRequest)
-    {
-        if (!empty($quoteRequest) && user()->id == $quoteRequest->seller_id) {
+    public function rejectQuote($quoteRequest,$auto = false)
+    {       
+        if (!empty($quoteRequest) && user()->id == $quoteRequest->seller_id || $auto) {
             $data = [
-                'status' => 'rejected_quote',
-                'updated_at' => date('Y-m-d H:i:s')
+                'status'        => 'rejected_quote',
+                'updated_at'    => date('Y-m-d H:i:s')
             ];
+
+            setChatCache($quoteRequest->buyer_id);
+            setChatCache($quoteRequest->seller_id);
+            
             return $this->builder->where('id', $quoteRequest->id)->update($data);
         }
         return false;
@@ -154,6 +179,10 @@ class BiddingModel extends BaseModel
         $quoteRequest = $this->getQuoteRequest($id);
         if (!empty($quoteRequest)) {
             if (user()->id == $quoteRequest->seller_id || user()->id == $quoteRequest->buyer_id) {
+
+                setChatCache($quoteRequest->buyer_id);
+                setChatCache($quoteRequest->seller_id);
+
                 if (user()->id == $quoteRequest->buyer_id) {
                     $data = [
                         'is_buyer_deleted' => 1,

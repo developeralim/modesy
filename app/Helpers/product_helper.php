@@ -357,8 +357,8 @@ if (!function_exists('priceFormatted')) {
                 $currencyCode = $selectedCurrency->code;
             }
         }
-        $decPoint = '.';
-        $thousandsSep = ',';
+        $decPoint       = '.';
+        $thousandsSep   = ',';
         if (!empty(Globals::$currencies[$currencyCode]) && Globals::$currencies[$currencyCode]->currency_format != 'us') {
             $decPoint = ',';
             $thousandsSep = '.';

@@ -9,6 +9,7 @@ use App\Models\ProductModel;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
+use Razorpay\Api\Product;
 
 class ChatController extends BaseController
 { 
@@ -72,5 +73,29 @@ class ChatController extends BaseController
         echo view('partials/_footer');
     }
 
+    public function getChats()
+    {
+        return json_encode( $this->chatModel->getChatsArray(
+            chatId:inputGet('chat_id')
+        ));
+    }
 
+    public function getMessages()
+    {
+        $chat     = $this->chatModel->getChat(inputGet('chat_id'));
+
+        if ( $chat ) {
+            $product                = getActiveProduct($chat->product_id);
+            $product->price_html    = priceFormatted($product->price,$product->currency,true);
+            $chat->product          = $product;
+        }
+
+        $messages = $this->chatModel->getMessagesArray(
+            chatId:inputGet('chat_id'),
+            limit:100
+        );
+        
+        $messages = array_reverse( $messages );
+        return json_encode(compact('chat','messages'));
+    }
 }

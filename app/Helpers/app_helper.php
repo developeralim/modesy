@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\BiddingModel;
+use App\Models\ChatModel;
 use App\Models\EarningsModel;
 use Config\Globals;
 
@@ -1003,5 +1005,33 @@ if (!function_exists('formRadio')) {
             '        </div>' . PHP_EOL .
             '    </div>' . PHP_EOL .
             '</div>';
+    }
+}
+
+if ( ! function_exists('getFirstMessage') ) {
+    function getFirstMessage( $chatId )
+    {
+        return current( (new ChatModel)->getMessages( $chatId,1,1, ) );
+    }
+}
+
+if ( ! function_exists('getQuoteRequest') ) {
+    function getQuoteRequest( $id )
+    {
+        return (new BiddingModel)->getQuoteRequest($id);
+    }
+}
+
+if ( ! function_exists('setChatCache') ) {
+    function setChatCache($receiverId)
+    {
+        $cache = \Config\Services::cache();
+        $array = array();
+        if (!empty($cache->get('chat_cache'))) {
+            $array = $cache->get('chat_cache');
+        }
+        $array[$receiverId] = 1;
+       
+        $cache->save('chat_cache', $array, 86400);
     }
 }

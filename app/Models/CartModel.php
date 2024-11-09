@@ -288,7 +288,7 @@ class CartModel extends BaseModel
                         $biddingModel = new BiddingModel();
                         $quoteRequest = $biddingModel->getQuoteRequest($cartItem->quote_request_id);
                         if (!empty($quoteRequest) && $quoteRequest->status == 'pending_payment') {
-                            $priceOffered = getPrice($quoteRequest->price_offered, 'decimal');
+                            $priceOffered = getPrice($quoteRequest->seller_price_offered ?? $quoteRequest->price_offered, 'decimal');
                             //convert currency
                             $baseCurrency = $this->selectedCurrency;
                             if ($this->paymentSettings->currency_converter == 1) {
@@ -743,7 +743,7 @@ class CartModel extends BaseModel
                     $biddingModel = new BiddingModel();
                     $quoteRequest = $biddingModel->getQuoteRequest($cartItem->quote_request_id);
                     if (!empty($quoteRequest) && $quoteRequest->status == 'pending_payment') {
-                        $priceOffered = getPrice($quoteRequest->price_offered, 'decimal');
+                        $priceOffered = getPrice($quoteRequest->seller_price_offered ?? $quoteRequest->price_offered, 'decimal');
                         //convert currency
                         if (!empty($currency)) {
                             $priceOffered = convertCurrencyByExchangeRate($priceOffered, $currency->exchange_rate);
