@@ -21,7 +21,7 @@ class CartController extends BaseController
      *
      * 1. sale: Product purchases
      * 2. service: Membership and Promote purchases
-     *
+     * 
      */
     public function initController(\CodeIgniter\HTTP\RequestInterface $request, \CodeIgniter\HTTP\ResponseInterface $response, \Psr\Log\LoggerInterface $logger)
     {
@@ -268,24 +268,27 @@ class CartController extends BaseController
      */
     public function paymentMethod()
     {
-        $data['title'] = trans("shopping_cart");
-        $data['description'] = trans("shopping_cart") . ' - ' . $this->baseVars->appName;
-        $data['keywords'] = trans("shopping_cart") . ',' . $this->baseVars->appName;
-        $paymentType = inputGet('payment_type');
-        if ($paymentType != 'service') {
+        $data['title']          = trans("shopping_cart");
+        $data['description']    = trans("shopping_cart") . ' - ' . $this->baseVars->appName;
+        $data['keywords']       = trans("shopping_cart") . ',' . $this->baseVars->appName;
+        $paymentType            = inputGet('payment_type');
+
+        if ( $paymentType != 'service' ) {
             $paymentType = 'sale';
         }
+
         //check customer location
         $this->cartModel->setCartCustomerLocation();
         $customerLocation = $this->cartModel->getCartCustomerLocation();
+
         if (empty($customerLocation->countryId) || empty($customerLocation->stateId)) {
             setErrorMessage(trans("msg_cart_select_location"));
             return redirect()->to(generateUrl("settings", "location") . '?payment_type=' . $paymentType);
         }
 
-        $payWithBalance = new \stdClass();
-        $payWithBalance->total = 0;
-        $payWithBalance->currency = 'USD';
+        $payWithBalance             = new \stdClass();
+        $payWithBalance->total      = 0;
+        $payWithBalance->currency   = 'USD';
 
         if ($paymentType == 'sale') {
             $data['cartItems'] = $this->cartModel->getSessCartItems(true);
@@ -314,8 +317,9 @@ class CartController extends BaseController
                 setErrorMessage(trans("msg_digital_product_register_error"));
                 return redirect()->to(generateUrl('register'));
             }
-            $data['cartTotal'] = $this->cartModel->getSessCartTotal();
 
+            $data['cartTotal'] = $this->cartModel->getSessCartTotal();
+            
             $userId = null;
             if (authCheck()) {
                 $userId = user()->id;
@@ -325,8 +329,8 @@ class CartController extends BaseController
             $this->cartModel->unsetSessCartPaymentMethod();
             $data['showShippingCost'] = 1;
             if (!empty($data['cartTotal']) && !empty($data['cartTotal']->total)) {
-                $payWithBalance->total = $data['cartTotal']->total;
-                $payWithBalance->currency = $data['cartTotal']->currency;
+                $payWithBalance->total      = $data['cartTotal']->total;
+                $payWithBalance->currency   = $data['cartTotal']->currency;
             }
         } elseif ($paymentType == 'service') {
             $data['mdsPaymentType'] = 'service';
@@ -342,8 +346,8 @@ class CartController extends BaseController
                 $payWithBalance->currency = $data['servicePayment']->currency;
             }
         }
-        $data['payWithBalance'] = $payWithBalance;
 
+        $data['payWithBalance'] = $payWithBalance;
         echo view('partials/_header', $data);
         echo view('cart/payment_method', $data);
         echo view('partials/_footer');
@@ -1295,13 +1299,14 @@ class CartController extends BaseController
             'result' => 0,
             'htmlContent' => ''
         ];
-        $stateId = inputPost('state_id');
-        $cartItems = $this->cartModel->getSessCartItems();
+
+        $stateId    = inputPost('state_id');
+        $cartItems  = $this->cartModel->getSessCartItems();
         if (!empty($stateId)) {
-            $shippingModel = new ShippingModel();
-            $vars = ['stateId' => $stateId, 'shippingMethods' => $shippingModel->getSellerShippingMethodsArray($cartItems, $stateId)];
-            $data['result'] = 1;
-            $data['htmlContent'] = view('cart/_shipping_methods', $vars);
+            $shippingModel          = new ShippingModel();
+            $vars                   = ['stateId' => $stateId, 'shippingMethods' => $shippingModel->getSellerShippingMethodsArray($cartItems, $stateId)];
+            $data['result']         = 1;
+            $data['htmlContent']    = view('cart/_shipping_methods', $vars);
         }
         echo json_encode($data);
     }

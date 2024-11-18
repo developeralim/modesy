@@ -30,8 +30,8 @@
                                                 <?php if (!empty($shippingAddresses)):
                                                     foreach ($shippingAddresses as $address):
                                                         if ($address->address_type == 'shipping'):
-                                                            $country = getCountry($address->country_id);
-                                                            $state = getState($address->state_id); ?>
+                                                            $country    = getCountry($address->country_id);
+                                                            $state      = getState($address->state_id); ?>
                                                             <div class="col-12 m-b-10">
                                                                 <div class="shipping-address-box shipping-address-box-cart">
                                                                     <div class="custom-control custom-radio">
@@ -88,8 +88,8 @@
                                                     <?php if (!empty($shippingAddresses)):
                                                         foreach ($shippingAddresses as $address):
                                                             if ($address->address_type == 'billing'):
-                                                                $country = getCountry($address->country_id);
-                                                                $state = getState($address->state_id); ?>
+                                                                $country    = getCountry($address->country_id);
+                                                                $state      = getState($address->state_id); ?>
                                                                 <div class="col-12 m-b-10">
                                                                     <div class="shipping-address-box shipping-address-box-cart">
                                                                         <div class="custom-control custom-radio">

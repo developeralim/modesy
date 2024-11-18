@@ -11,11 +11,11 @@ class ShippingModel extends BaseModel
     public function __construct()
     {
         parent::__construct();
-        $this->builderZones = $this->db->table('shipping_zones');
-        $this->builderZoneLocations = $this->db->table('shipping_zone_locations');
-        $this->builderZoneMethods = $this->db->table('shipping_zone_methods');
-        $this->builderClasses = $this->db->table('shipping_classes');
-        $this->buildersDeliveryTimes = $this->db->table('shipping_delivery_times');
+        $this->builderZones             = $this->db->table('shipping_zones');
+        $this->builderZoneLocations     = $this->db->table('shipping_zone_locations');
+        $this->builderZoneMethods       = $this->db->table('shipping_zone_methods');
+        $this->builderClasses           = $this->db->table('shipping_classes');
+        $this->buildersDeliveryTimes    = $this->db->table('shipping_delivery_times');
     }
 
     /*
@@ -28,8 +28,9 @@ class ShippingModel extends BaseModel
     public function getSellerShippingMethodsArray($cartItems, $stateId, $setSession = true)
     {
         //calculate total for each seller
-        $sellerTotal = array();
-        $sellerIds = array();
+        $sellerTotal    = array();
+        $sellerIds      = array();
+    
         if (!empty($cartItems)) {
             foreach ($cartItems as $item) {
                 if ($item->product_type == 'physical') {
@@ -43,32 +44,37 @@ class ShippingModel extends BaseModel
                 }
             }
         }
+
         //get shipping methods by seller
-        $sellerShippingMethods = array();
-        $arrayShippingCost = array();
+        $sellerShippingMethods  = array();
+        $arrayShippingCost      = array();
+
         if (!empty($sellerIds)) {
             foreach ($sellerIds as $sellerId) {
                 $seller = getUser($sellerId);
                 if (!empty($seller)) {
+
                     $item = new \stdClass();
-                    $item->shop_id = $seller->id;
-                    $item->total_shipping_cost = 0;
-                    $item->username = getUsername($seller);
-                    $item->methods = array();
-                    $shippingMethods = $this->getCartShippingMethods($seller->id, $stateId);
+                    $item->shop_id              = $seller->id;
+                    $item->total_shipping_cost  = 0;
+                    $item->username             = getUsername($seller);
+                    $item->methods              = array();
+                    $shippingMethods            = $this->getCartShippingMethods($seller->id, $stateId);
+
                     if (!empty($shippingMethods)) {
                         foreach ($shippingMethods as $shippingMethod) {
-                            $method = new \stdClass();
-                            $method->id = $shippingMethod->id;
-                            $method->method_type = $shippingMethod->method_type;
-                            $method->name = @parseSerializedNameArray($shippingMethod->name_array, selectedLangId());
-                            $method->is_selected = 0;
-                            $method->is_free_shipping = 0;
-                            $method->free_shipping_min_amount = 0;
-                            $method->cost = null;
+                            $method                             = new \stdClass();
+                            $method->id                         = $shippingMethod->id;
+                            $method->method_type                = $shippingMethod->method_type;
+                            $method->name                       = @parseSerializedNameArray($shippingMethod->name_array, selectedLangId());
+                            $method->is_selected                = 0;
+                            $method->is_free_shipping           = 0;
+                            $method->free_shipping_min_amount   = 0;
+                            $method->cost                       = null;
                             //calculate shipping cost
-                            $freeShippingMinAmount = getPrice($shippingMethod->free_shipping_min_amount, 'decimal');
-                            $localPickupCost = getPrice($shippingMethod->local_pickup_cost, 'decimal');
+                            $freeShippingMinAmount              = getPrice($shippingMethod->free_shipping_min_amount, 'decimal');
+                            $localPickupCost                    = getPrice($shippingMethod->local_pickup_cost, 'decimal');
+
                             if ($shippingMethod->method_type == 'free_shipping') {
                                 if (isset($sellerTotal[$seller->id])) {
                                     $total = $sellerTotal[$seller->id];
@@ -97,12 +103,15 @@ class ShippingModel extends BaseModel
                             array_push($item->methods, $method);
                         }
                     }
+
                     array_push($sellerShippingMethods, $item);
                 }
             }
         }
+
         //set selected shipping methods
         $totalShippingCost = 0;
+
         if (!empty($sellerShippingMethods)) {
             foreach ($sellerShippingMethods as $item) {
                 if (!empty($item->methods)) {
@@ -124,6 +133,7 @@ class ShippingModel extends BaseModel
                 }
             }
         }
+
         return $sellerShippingMethods;
     }
 

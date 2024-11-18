@@ -103,7 +103,7 @@
                             <?php else : ?>
                                 <div class="chat-content">
                                     <div class="select-chat-container">
-                                        <label class="badge"><?= trans("select_chat_start_messaging"); ?></label>
+                                        <button class="badge btn btn-light btn-open-chats button-link" style="font-size: 16px;border-radius: 30px;padding:20px;"><?= trans("select_chat_start_messaging"); ?></button>
                                     </div>
                                 </div>
                             <?php endif; ?>

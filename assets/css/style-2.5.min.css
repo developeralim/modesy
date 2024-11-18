@@ -10756,6 +10756,14 @@ a:hover {
         width: 154.6px;
     }
 }
+@media (min-width:992px) {
+    .chat-search .btn-open-chats {
+        display: none;
+    }
+    .chat-search div {
+        width: 100%;
+    }
+}
 
 @media (max-width: 992px) {
     .m-b-15-mobile {
@@ -10867,7 +10875,9 @@ a:hover {
         max-width: 100%;
         width: 224px;
     }
-
+    .chat-search .btn-open-chats {
+        display: block;
+    }
     .product-content-details {
         height: auto !important;
         margin-bottom: 20px;
@@ -10988,7 +10998,6 @@ a:hover {
     .chat .chat-left .chat-search {
         padding: 24px 24px;
     }
-
     .chat-mobile-open .chat-left {
         display: none;
     }

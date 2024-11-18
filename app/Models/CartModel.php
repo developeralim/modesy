@@ -393,6 +393,7 @@ class CartModel extends BaseModel
         if (empty($currencyCode)) {
             $currencyCode = $this->selectedCurrency->code;
         }
+
         $cartTotal = new \stdClass();
         $cartTotal->subtotal = 0;
         $cartTotal->vat = 0;
@@ -695,9 +696,11 @@ class CartModel extends BaseModel
     public function getSessCartTotal()
     {
         $cartTotal = new \stdClass();
+        
         if (!empty(helperGetSession('mds_shopping_cart_total'))) {
             $cartTotal = helperGetSession('mds_shopping_cart_total');
         }
+
         return $cartTotal;
     }
 
