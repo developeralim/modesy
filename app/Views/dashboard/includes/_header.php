@@ -245,6 +245,12 @@
                                     <li class="nav-sales"><a href="<?= generateDashUrl('sales'); ?>"><?= trans("active_sales"); ?></a></li>
                                     <li class="nav-completed-sales"><a href="<?= generateDashUrl('sales'); ?>?st=completed"><?= trans("completed_sales"); ?></a></li>
                                     <li class="nav-cancelled-sales"><a href="<?= generateDashUrl('sales'); ?>?st=cancelled"><?= trans("cancelled_sales"); ?></a></li>
+                                    <?php   
+                                        foreach( \Config\Shippings::$shippings as $slug => $shipping ) : $shipping = new $shipping; 
+                                            if ( $shipping instanceof \App\Services\Shippings\DefaultShipping ) continue;
+                                    ?>
+                                        <li class="nav-cancelled-sales"><a href="<?= generateDashUrl('sales/shipment/'); ?><?= $slug; ?>"><?= $shipping->getShippingName(); ?></a></li>
+                                    <?php endforeach; ?>
                                 </ul>
                             </li>
                         <?php endif;

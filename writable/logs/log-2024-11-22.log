@@ -1,0 +1,1241 @@
+INFO - 2024-11-22 03:54:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 03:54:39 --> Error: Class "GuzzleHttp\Client" not found
+[Method: GET, Route: dashboard/sales]
+in APPPATH\Services\Shippings\BaseShipping.php on line 82.
+ 1 APPPATH\Services\Shippings\MondialRelayShipping.php(183): App\Services\Shippings\BaseShipping->__construct()
+ 2 APPPATH\Controllers\DashboardController.php(759): App\Services\Shippings\MondialRelayShipping->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->sales()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 04:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:04:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 04:10:15 --> ArgumentCountError: Too few arguments to function App\Services\Shippings\MondialRelayShipping::getStatus(), 0 passed in C:\xampp\htdocs\modesy\app\Views\dashboard\sales\sales.php on line 125 and exactly 1 expected
+[Method: GET, Route: dashboard/sales]
+in APPPATH\Services\Shippings\MondialRelayShipping.php on line 196.
+ 1 APPPATH\Views\dashboard\sales\sales.php(125): App\Services\Shippings\MondialRelayShipping->getStatus()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\sales\\sales.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/sales/sales', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(779): view('dashboard/sales/sales', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->sales()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 04:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:10:49 --> CSRF token verified.
+INFO - 2024-11-22 04:13:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:13:34 --> CSRF token verified.
+INFO - 2024-11-22 04:13:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:13:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:13:49 --> CSRF token verified.
+INFO - 2024-11-22 04:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:13:58 --> CSRF token verified.
+INFO - 2024-11-22 04:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 04:20:58 --> ErrorException: Access level to App\Services\Shippings\Methods\Mondial\MondialColisDriveMethod::ID must be public (as in class App\Services\Shippings\MondialRelayShipping)
+[Method: GET, Route: dashboard/sales]
+in APPPATH\Services\Shippings\Methods\Mondial\MondialColisDriveMethod.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-22 04:21:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 04:21:00 --> ErrorException: Access level to App\Services\Shippings\Methods\Mondial\MondialColisDriveMethod::ID must be public (as in class App\Services\Shippings\MondialRelayShipping)
+[Method: GET, Route: dashboard/sales]
+in APPPATH\Services\Shippings\Methods\Mondial\MondialColisDriveMethod.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-22 04:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 04:21:14 --> ErrorException: Access level to App\Services\Shippings\Methods\Mondial\MondialColisDriveMethod::ID must be public (as in class App\Services\Shippings\MondialRelayShipping)
+[Method: GET, Route: dashboard/sales]
+in APPPATH\Services\Shippings\Methods\Mondial\MondialColisDriveMethod.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-22 04:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 04:21:55 --> ErrorException: Access level to App\Services\Shippings\Methods\Mondial\MondialColisDriveMethod::ID must be public (as in class App\Services\Shippings\MondialRelayShipping)
+[Method: GET, Route: dashboard/sales]
+in APPPATH\Services\Shippings\Methods\Mondial\MondialColisDriveMethod.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-22 04:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:22:09 --> CSRF token verified.
+INFO - 2024-11-22 04:23:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:23:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:23:20 --> CSRF token verified.
+INFO - 2024-11-22 04:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 04:30:21 --> ErrorException: Undefined property: stdClass::$shipment
+[Method: GET, Route: dashboard/sales]
+in APPPATH\Config\Routes.php on line 265.
+ 1 APPPATH\Config\Routes.php(265): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$shipment', 'C:\\xampp\\htdocs\\modesy\\app\\Config\\Routes.php', 265)
+ 2 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\modesy\\app\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 04:30:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 04:30:34 --> ErrorException: Undefined property: stdClass::$shipment
+[Method: GET, Route: admin/route-settings]
+in APPPATH\Config\Routes.php on line 265.
+ 1 APPPATH\Config\Routes.php(265): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$shipment', 'C:\\xampp\\htdocs\\modesy\\app\\Config\\Routes.php', 265)
+ 2 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\modesy\\app\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 04:30:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:30:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:30:43 --> CSRF token verified.
+INFO - 2024-11-22 04:30:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:30:53 --> CSRF token verified.
+INFO - 2024-11-22 04:30:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:30:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:30:53 --> CSRF token verified.
+INFO - 2024-11-22 04:31:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:31:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:31:34 --> CSRF token verified.
+INFO - 2024-11-22 04:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:32:26 --> CSRF token verified.
+INFO - 2024-11-22 04:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:32:31 --> CSRF token verified.
+INFO - 2024-11-22 04:33:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:33:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:33:16 --> CSRF token verified.
+INFO - 2024-11-22 04:33:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:33:39 --> CSRF token verified.
+INFO - 2024-11-22 04:33:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:33:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:33:49 --> CSRF token verified.
+INFO - 2024-11-22 04:33:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:33:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:33:52 --> CSRF token verified.
+INFO - 2024-11-22 04:33:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:33:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:33:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:33:59 --> CSRF token verified.
+INFO - 2024-11-22 04:35:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:35:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:35:37 --> CSRF token verified.
+INFO - 2024-11-22 04:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:35:38 --> CSRF token verified.
+INFO - 2024-11-22 04:35:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:35:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:35:42 --> CSRF token verified.
+INFO - 2024-11-22 04:36:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:36:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:36:40 --> CSRF token verified.
+INFO - 2024-11-22 04:36:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:36:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:36:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:36:41 --> CSRF token verified.
+INFO - 2024-11-22 04:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:36:43 --> CSRF token verified.
+INFO - 2024-11-22 04:38:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:38:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:38:53 --> CSRF token verified.
+INFO - 2024-11-22 04:38:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:38:55 --> CSRF token verified.
+INFO - 2024-11-22 04:38:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:38:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:38:57 --> CSRF token verified.
+INFO - 2024-11-22 04:38:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:38:57 --> CSRF token verified.
+INFO - 2024-11-22 04:38:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:38:59 --> CSRF token verified.
+INFO - 2024-11-22 04:40:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:40:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:40:04 --> CSRF token verified.
+INFO - 2024-11-22 04:40:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:40:05 --> CSRF token verified.
+INFO - 2024-11-22 04:41:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:41:22 --> CSRF token verified.
+INFO - 2024-11-22 04:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:41:57 --> CSRF token verified.
+INFO - 2024-11-22 04:43:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:43:20 --> CSRF token verified.
+INFO - 2024-11-22 04:48:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:48:02 --> CSRF token verified.
+INFO - 2024-11-22 04:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:48:52 --> CSRF token verified.
+INFO - 2024-11-22 04:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:49:07 --> CSRF token verified.
+INFO - 2024-11-22 04:49:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:49:49 --> CSRF token verified.
+INFO - 2024-11-22 04:55:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:55:46 --> CSRF token verified.
+INFO - 2024-11-22 04:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:55:57 --> CSRF token verified.
+INFO - 2024-11-22 04:57:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:57:13 --> CSRF token verified.
+INFO - 2024-11-22 04:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:57:57 --> CSRF token verified.
+INFO - 2024-11-22 04:58:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:58:38 --> CSRF token verified.
+INFO - 2024-11-22 04:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 04:59:43 --> CSRF token verified.
+INFO - 2024-11-22 05:02:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:02:31 --> CSRF token verified.
+INFO - 2024-11-22 05:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:03:51 --> CSRF token verified.
+INFO - 2024-11-22 05:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:04:17 --> CSRF token verified.
+INFO - 2024-11-22 05:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:05:30 --> CSRF token verified.
+INFO - 2024-11-22 05:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:12:23 --> CSRF token verified.
+CRITICAL - 2024-11-22 05:12:23 --> ErrorException: Undefined property: stdClass::$shipping
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\MondialRelayShipping.php on line 517.
+ 1 APPPATH\Services\Shippings\MondialRelayShipping.php(517): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$shipping', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\MondialRelayShipping.php', 517)
+ 2 APPPATH\Services\Shippings\MondialRelayShipping.php(373): App\Services\Shippings\MondialRelayShipping->with_additional_params(false)
+ 3 APPPATH\Services\Shippings\MondialRelayShipping.php(608): App\Services\Shippings\MondialRelayShipping->buildOutcomePayload()
+ 4 APPPATH\Controllers\DashboardController.php(1695): App\Services\Shippings\MondialRelayShipping->registerParcelsFromOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 05:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:13:12 --> CSRF token verified.
+INFO - 2024-11-22 05:13:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:13:36 --> CSRF token verified.
+INFO - 2024-11-22 05:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:13:54 --> CSRF token verified.
+INFO - 2024-11-22 05:14:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:14:26 --> CSRF token verified.
+INFO - 2024-11-22 05:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:18:23 --> CSRF token verified.
+INFO - 2024-11-22 05:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:19:10 --> CSRF token verified.
+CRITICAL - 2024-11-22 05:19:10 --> ErrorException: Undefined array key "mondial_relay_shipper_name_1"
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\MondialRelayShipping.php on line 457.
+ 1 APPPATH\Services\Shippings\MondialRelayShipping.php(457): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "mondial_relay_shipper_name_1"', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\MondialRelayShipping.php', 457)
+ 2 APPPATH\Services\Shippings\MondialRelayShipping.php(370): App\Services\Shippings\MondialRelayShipping->with_shipper()
+ 3 APPPATH\Services\Shippings\MondialRelayShipping.php(611): App\Services\Shippings\MondialRelayShipping->buildOutcomePayload()
+ 4 APPPATH\Controllers\DashboardController.php(1695): App\Services\Shippings\MondialRelayShipping->registerParcelsFromOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 05:19:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:19:21 --> CSRF token verified.
+INFO - 2024-11-22 05:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:25:00 --> CSRF token verified.
+INFO - 2024-11-22 05:27:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:27:34 --> CSRF token verified.
+CRITICAL - 2024-11-22 05:27:34 --> ErrorException: Undefined property: stdClass::$shipping
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\MondialRelayShipping.php on line 480.
+ 1 APPPATH\Services\Shippings\MondialRelayShipping.php(480): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$shipping', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\MondialRelayShipping.php', 480)
+ 2 APPPATH\Services\Shippings\MondialRelayShipping.php(374): App\Services\Shippings\MondialRelayShipping->with_recipient()
+ 3 APPPATH\Services\Shippings\MondialRelayShipping.php(614): App\Services\Shippings\MondialRelayShipping->buildOutcomePayload()
+ 4 APPPATH\Controllers\DashboardController.php(1695): App\Services\Shippings\MondialRelayShipping->registerParcelsFromOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 05:27:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:27:48 --> CSRF token verified.
+CRITICAL - 2024-11-22 05:27:48 --> TypeError: unserialize(): Argument #1 ($data) must be of type string, stdClass given
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\MondialRelayShipping.php on line 480.
+ 1 APPPATH\Services\Shippings\MondialRelayShipping.php(480): unserialize(Object(stdClass))
+ 2 APPPATH\Services\Shippings\MondialRelayShipping.php(374): App\Services\Shippings\MondialRelayShipping->with_recipient()
+ 3 APPPATH\Services\Shippings\MondialRelayShipping.php(614): App\Services\Shippings\MondialRelayShipping->buildOutcomePayload()
+ 4 APPPATH\Controllers\DashboardController.php(1695): App\Services\Shippings\MondialRelayShipping->registerParcelsFromOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 05:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:28:12 --> CSRF token verified.
+INFO - 2024-11-22 05:28:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:28:40 --> CSRF token verified.
+INFO - 2024-11-22 05:29:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:29:08 --> CSRF token verified.
+INFO - 2024-11-22 05:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:30:46 --> CSRF token verified.
+INFO - 2024-11-22 05:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:31:58 --> CSRF token verified.
+INFO - 2024-11-22 05:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:32:41 --> CSRF token verified.
+INFO - 2024-11-22 05:36:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:36:53 --> CSRF token verified.
+CRITICAL - 2024-11-22 05:36:53 --> ErrorException: Undefined property: stdClass::$tCountry
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\MondialRelayShipping.php on line 528.
+ 1 APPPATH\Services\Shippings\MondialRelayShipping.php(528): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tCountry', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\MondialRelayShipping.php', 528)
+ 2 APPPATH\Services\Shippings\MondialRelayShipping.php(376): App\Services\Shippings\MondialRelayShipping->with_additional_params(false)
+ 3 APPPATH\Services\Shippings\MondialRelayShipping.php(611): App\Services\Shippings\MondialRelayShipping->buildOutcomePayload()
+ 4 APPPATH\Controllers\DashboardController.php(1695): App\Services\Shippings\MondialRelayShipping->registerParcelsFromOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 05:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:37:13 --> CSRF token verified.
+INFO - 2024-11-22 05:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:38:13 --> CSRF token verified.
+INFO - 2024-11-22 05:38:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:38:26 --> CSRF token verified.
+INFO - 2024-11-22 05:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:40:42 --> CSRF token verified.
+INFO - 2024-11-22 05:41:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:41:06 --> CSRF token verified.
+INFO - 2024-11-22 05:44:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:44:02 --> CSRF token verified.
+INFO - 2024-11-22 05:44:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:44:45 --> CSRF token verified.
+INFO - 2024-11-22 05:45:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:45:47 --> CSRF token verified.
+INFO - 2024-11-22 05:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:46:35 --> CSRF token verified.
+CRITICAL - 2024-11-22 05:46:36 --> ErrorException: Attempt to read property "STAT" on null
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\MondialRelayShipping.php on line 617.
+ 1 APPPATH\Services\Shippings\MondialRelayShipping.php(617): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "STAT" on null', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\MondialRelayShipping.php', 617)
+ 2 APPPATH\Controllers\DashboardController.php(1695): App\Services\Shippings\MondialRelayShipping->registerParcelsFromOrder()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 05:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:46:52 --> CSRF token verified.
+INFO - 2024-11-22 05:47:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:47:12 --> CSRF token verified.
+INFO - 2024-11-22 05:47:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:47:45 --> CSRF token verified.
+INFO - 2024-11-22 05:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:48:00 --> CSRF token verified.
+INFO - 2024-11-22 05:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:48:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:48:12 --> CSRF token verified.
+INFO - 2024-11-22 05:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:48:14 --> CSRF token verified.
+INFO - 2024-11-22 05:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:48:15 --> CSRF token verified.
+INFO - 2024-11-22 05:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 05:48:20 --> CSRF token verified.
+INFO - 2024-11-22 10:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:23 --> CSRF token verified.
+INFO - 2024-11-22 10:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:26 --> CSRF token verified.
+INFO - 2024-11-22 10:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:32 --> CSRF token verified.
+INFO - 2024-11-22 10:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:37 --> CSRF token verified.
+INFO - 2024-11-22 10:57:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:38 --> CSRF token verified.
+INFO - 2024-11-22 10:57:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:42 --> CSRF token verified.
+INFO - 2024-11-22 10:57:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:42 --> CSRF token verified.
+INFO - 2024-11-22 10:57:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:44 --> CSRF token verified.
+INFO - 2024-11-22 10:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:46 --> CSRF token verified.
+INFO - 2024-11-22 10:57:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:47 --> CSRF token verified.
+INFO - 2024-11-22 10:57:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:47 --> CSRF token verified.
+INFO - 2024-11-22 10:57:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:49 --> CSRF token verified.
+INFO - 2024-11-22 10:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:51 --> CSRF token verified.
+INFO - 2024-11-22 10:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:56 --> CSRF token verified.
+INFO - 2024-11-22 10:57:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:56 --> CSRF token verified.
+INFO - 2024-11-22 10:57:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:56 --> CSRF token verified.
+INFO - 2024-11-22 10:57:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:56 --> CSRF token verified.
+INFO - 2024-11-22 10:57:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:57:58 --> CSRF token verified.
+INFO - 2024-11-22 10:58:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:00 --> CSRF token verified.
+INFO - 2024-11-22 10:58:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:03 --> CSRF token verified.
+INFO - 2024-11-22 10:58:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:03 --> CSRF token verified.
+INFO - 2024-11-22 10:58:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:05 --> CSRF token verified.
+INFO - 2024-11-22 10:58:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:11 --> CSRF token verified.
+INFO - 2024-11-22 10:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:15 --> CSRF token verified.
+INFO - 2024-11-22 10:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:15 --> CSRF token verified.
+INFO - 2024-11-22 10:58:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:18 --> CSRF token verified.
+INFO - 2024-11-22 10:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:20 --> CSRF token verified.
+INFO - 2024-11-22 10:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:25 --> CSRF token verified.
+INFO - 2024-11-22 10:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:25 --> CSRF token verified.
+INFO - 2024-11-22 10:58:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:28 --> CSRF token verified.
+INFO - 2024-11-22 10:58:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:30 --> CSRF token verified.
+INFO - 2024-11-22 10:58:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:34 --> CSRF token verified.
+INFO - 2024-11-22 10:58:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:34 --> CSRF token verified.
+INFO - 2024-11-22 10:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:35 --> CSRF token verified.
+INFO - 2024-11-22 10:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:36 --> CSRF token verified.
+INFO - 2024-11-22 10:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:38 --> CSRF token verified.
+INFO - 2024-11-22 10:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:40 --> CSRF token verified.
+INFO - 2024-11-22 10:58:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:58:49 --> CSRF token verified.
+INFO - 2024-11-22 10:59:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:13 --> CSRF token verified.
+INFO - 2024-11-22 10:59:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:13 --> CSRF token verified.
+INFO - 2024-11-22 10:59:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:15 --> CSRF token verified.
+INFO - 2024-11-22 10:59:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:25 --> CSRF token verified.
+INFO - 2024-11-22 10:59:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:28 --> CSRF token verified.
+INFO - 2024-11-22 10:59:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:29 --> CSRF token verified.
+INFO - 2024-11-22 10:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:31 --> CSRF token verified.
+INFO - 2024-11-22 10:59:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:36 --> CSRF token verified.
+INFO - 2024-11-22 10:59:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:41 --> CSRF token verified.
+INFO - 2024-11-22 10:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:43 --> CSRF token verified.
+INFO - 2024-11-22 10:59:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:44 --> CSRF token verified.
+INFO - 2024-11-22 10:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:47 --> CSRF token verified.
+INFO - 2024-11-22 10:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:48 --> CSRF token verified.
+INFO - 2024-11-22 10:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:49 --> CSRF token verified.
+INFO - 2024-11-22 10:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 10:59:50 --> CSRF token verified.
+INFO - 2024-11-22 11:00:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:00:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:00:00 --> CSRF token verified.
+INFO - 2024-11-22 11:00:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:00:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:00:05 --> CSRF token verified.
+INFO - 2024-11-22 11:00:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:00:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:00:07 --> CSRF token verified.
+INFO - 2024-11-22 11:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:00:11 --> CSRF token verified.
+INFO - 2024-11-22 11:00:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:00:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:00:14 --> CSRF token verified.
+INFO - 2024-11-22 11:00:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:00:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:00:40 --> CSRF token verified.
+INFO - 2024-11-22 11:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:01:21 --> CSRF token verified.
+INFO - 2024-11-22 11:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:01:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:01:52 --> CSRF token verified.
+INFO - 2024-11-22 11:03:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:03:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:03:22 --> CSRF token verified.
+INFO - 2024-11-22 11:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:03:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:03:25 --> CSRF token verified.
+INFO - 2024-11-22 11:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:03:26 --> CSRF token verified.
+INFO - 2024-11-22 11:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:04:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:04:06 --> CSRF token verified.
+INFO - 2024-11-22 11:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:04:07 --> CSRF token verified.
+CRITICAL - 2024-11-22 11:04:07 --> Error: Call to undefined method App\Services\Shippings\ChronopostShipping::registerParcelsFromOrder()
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Controllers\DashboardController.php on line 1695.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 11:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:04:34 --> CSRF token verified.
+INFO - 2024-11-22 11:50:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:50:25 --> CSRF token verified.
+INFO - 2024-11-22 11:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:50:27 --> CSRF token verified.
+INFO - 2024-11-22 11:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:50:29 --> CSRF token verified.
+INFO - 2024-11-22 11:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:50:31 --> CSRF token verified.
+INFO - 2024-11-22 11:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:51:27 --> CSRF token verified.
+INFO - 2024-11-22 11:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:52:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:52:07 --> CSRF token verified.
+INFO - 2024-11-22 11:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:52:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:52:25 --> CSRF token verified.
+INFO - 2024-11-22 11:52:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:52:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:52:28 --> CSRF token verified.
+INFO - 2024-11-22 11:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:52:31 --> CSRF token verified.
+INFO - 2024-11-22 11:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:52:32 --> CSRF token verified.
+INFO - 2024-11-22 11:52:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:52:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:52:37 --> CSRF token verified.
+INFO - 2024-11-22 11:52:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:52:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:52:45 --> CSRF token verified.
+INFO - 2024-11-22 11:52:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:54:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:54:33 --> CSRF token verified.
+INFO - 2024-11-22 11:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:54:33 --> CSRF token verified.
+INFO - 2024-11-22 11:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:54:36 --> CSRF token verified.
+INFO - 2024-11-22 11:54:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:54:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:54:39 --> CSRF token verified.
+INFO - 2024-11-22 11:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 11:55:10 --> TypeError: Unsupported operand types: string / string
+[Method: GET, Route: dashboard/sales]
+in APPPATH\Config\Routes.php on line 265.
+ 1 SYSTEMPATH\Router\RouteCollection.php(340): require()
+ 2 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 11:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:55:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:55:25 --> CSRF token verified.
+INFO - 2024-11-22 11:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:55:27 --> CSRF token verified.
+INFO - 2024-11-22 11:55:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:55:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:55:29 --> CSRF token verified.
+INFO - 2024-11-22 11:55:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:55:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:55:30 --> CSRF token verified.
+INFO - 2024-11-22 11:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:55:32 --> CSRF token verified.
+INFO - 2024-11-22 11:56:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:56:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:56:39 --> CSRF token verified.
+INFO - 2024-11-22 11:56:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:56:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:56:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:56:40 --> CSRF token verified.
+INFO - 2024-11-22 11:56:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:56:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:56:47 --> CSRF token verified.
+INFO - 2024-11-22 11:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:56:49 --> CSRF token verified.
+INFO - 2024-11-22 11:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:56:50 --> CSRF token verified.
+INFO - 2024-11-22 11:56:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:56:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:56:51 --> CSRF token verified.
+INFO - 2024-11-22 11:57:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:57:09 --> CSRF token verified.
+INFO - 2024-11-22 11:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:57:10 --> CSRF token verified.
+INFO - 2024-11-22 11:57:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:57:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:57:12 --> CSRF token verified.
+INFO - 2024-11-22 11:58:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:58:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:58:09 --> CSRF token verified.
+INFO - 2024-11-22 11:58:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:58:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:58:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:58:12 --> CSRF token verified.
+INFO - 2024-11-22 11:58:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 11:58:15 --> CSRF token verified.
+INFO - 2024-11-22 12:09:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:09:15 --> CSRF token verified.
+INFO - 2024-11-22 12:09:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 12:09:19 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dashboard/sales/shipment/mondial_relay]
+in APPPATH\Views\dashboard\includes\_header.php on line 6.
+ 1 APPPATH\Views\dashboard\includes\_header.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\includes\\_header.php', 6)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\includes\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/includes/_header', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(1691): view('dashboard/includes/_header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->shipments(Object(App\Services\Shippings\MondialRelayShipping))
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 12:10:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 12:10:48 --> ErrorException: Undefined variable $page
+[Method: GET, Route: dashboard/sales/shipment/mondial_relay]
+in APPPATH\Views\dashboard\sales\sales.php on line 26.
+ 1 APPPATH\Views\dashboard\sales\sales.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\sales\\sales.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\sales\\sales.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/sales/sales', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(1694): view('dashboard/sales/sales', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->shipments(Object(App\Services\Shippings\MondialRelayShipping))
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 12:11:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:11:02 --> CSRF token verified.
+INFO - 2024-11-22 12:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 12:11:46 --> ErrorException: Undefined variable $page
+[Method: GET, Route: dashboard/sales/shipment/mondial_relay]
+in APPPATH\Views\dashboard\sales\shipments.php on line 26.
+ 1 APPPATH\Views\dashboard\sales\shipments.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\sales\\shipments.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\sales\\shipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/sales/shipments', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(1694): view('dashboard/sales/shipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->shipments(Object(App\Services\Shippings\MondialRelayShipping))
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 12:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:12:03 --> CSRF token verified.
+INFO - 2024-11-22 12:17:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 12:17:11 --> Exception: Not Found
+[Method: GET, Route: dashboard/sales/shipment/mondial_relaf]
+in APPPATH\Controllers\DashboardController.php on line 1675.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->shipments('mondial_relaf')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 12:17:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:17:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:17:16 --> CSRF token verified.
+INFO - 2024-11-22 12:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:19:27 --> CSRF token verified.
+INFO - 2024-11-22 12:24:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:24:16 --> CSRF token verified.
+INFO - 2024-11-22 12:27:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:27:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:27:31 --> CSRF token verified.
+INFO - 2024-11-22 12:27:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:27:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:27:32 --> CSRF token verified.
+INFO - 2024-11-22 12:27:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:27:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:27:34 --> CSRF token verified.
+INFO - 2024-11-22 12:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:27:52 --> CSRF token verified.
+INFO - 2024-11-22 12:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:27:53 --> CSRF token verified.
+INFO - 2024-11-22 12:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:27:54 --> CSRF token verified.
+INFO - 2024-11-22 12:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:27:59 --> CSRF token verified.
+INFO - 2024-11-22 12:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:30:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:31:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:31:06 --> CSRF token verified.
+INFO - 2024-11-22 12:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:31:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:31:40 --> CSRF token verified.
+INFO - 2024-11-22 12:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 12:32:22 --> ErrorException: Undefined variable $sale
+[Method: GET, Route: dashboard/sales/shipment/mondial_relay]
+in APPPATH\Views\dashboard\sales\shipments.php on line 67.
+ 1 APPPATH\Views\dashboard\sales\shipments.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sale', 'C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\sales\\shipments.php', 67)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\sales\\shipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/sales/shipments', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(1700): view('dashboard/sales/shipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->shipments(Object(App\Services\Shippings\MondialRelayShipping))
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 12:33:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:33:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:33:13 --> CSRF token verified.
+INFO - 2024-11-22 12:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:38:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:39:10 --> CSRF token verified.
+INFO - 2024-11-22 12:44:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 12:44:26 --> Error: Call to undefined method stdClass::setBuyer()
+[Method: GET, Route: dashboard/sales/shipment/mondial_relay]
+in APPPATH\Views\dashboard\sales\shipments.php on line 66.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/sales/shipments', [], true)
+ 4 APPPATH\Controllers\DashboardController.php(1702): view('dashboard/sales/shipments', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->shipments(Object(App\Services\Shippings\MondialRelayShipping))
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 12:45:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:45:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:45:16 --> CSRF token verified.
+INFO - 2024-11-22 12:45:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:45:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:45:55 --> CSRF token verified.
+INFO - 2024-11-22 12:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:46:43 --> CSRF token verified.
+INFO - 2024-11-22 12:47:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:47:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:47:04 --> CSRF token verified.
+INFO - 2024-11-22 12:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:47:14 --> CSRF token verified.
+INFO - 2024-11-22 12:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:47:25 --> CSRF token verified.
+INFO - 2024-11-22 12:53:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:53:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:53:13 --> CSRF token verified.
+INFO - 2024-11-22 12:54:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 12:54:02 --> ErrorException: Undefined variable $sale
+[Method: GET, Route: dashboard/sales/shipment/mondial_relay]
+in APPPATH\Views\dashboard\sales\shipments.php on line 78.
+ 1 APPPATH\Views\dashboard\sales\shipments.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sale', 'C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\sales\\shipments.php', 78)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\sales\\shipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/sales/shipments', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(1702): view('dashboard/sales/shipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->shipments(Object(App\Services\Shippings\MondialRelayShipping))
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 12:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:54:52 --> CSRF token verified.
+INFO - 2024-11-22 12:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 12:55:07 --> CSRF token verified.
+INFO - 2024-11-22 13:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:02:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:02:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:02:43 --> CSRF token verified.
+INFO - 2024-11-22 13:02:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:02:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:02:52 --> CSRF token verified.
+INFO - 2024-11-22 13:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:03:06 --> CSRF token verified.
+INFO - 2024-11-22 13:04:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:05:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:05:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:05:34 --> CSRF token verified.
+INFO - 2024-11-22 13:06:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:06:04 --> CSRF token verified.
+INFO - 2024-11-22 13:06:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:06:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:06:51 --> CSRF token verified.
+INFO - 2024-11-22 13:07:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 13:22:18 --> Error: Object of class App\Services\Shippings\Methods\Mondial\MondialColisDriveMethod could not be converted to string
+[Method: GET, Route: dashboard/sales/shipment/mondial_relay]
+in APPPATH\Views\dashboard\sales\shipments.php on line 104.
+ 1 APPPATH\Views\dashboard\sales\shipments.php(104): sprintf('%s - %s', 'Dhaka,Bangladesh', Object(App\Services\Shippings\Methods\Mondial\MondialColisDriveMethod))
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\sales\\shipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/sales/shipments', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(1702): view('dashboard/sales/shipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->shipments(Object(App\Services\Shippings\MondialRelayShipping))
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 13:22:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:22:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:22:40 --> CSRF token verified.
+INFO - 2024-11-22 13:24:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 13:24:35 --> Error: Undefined constant App\Services\Shippings\BaseShipping::title
+[Method: GET, Route: dashboard/sales/shipment/mondial_relay]
+in APPPATH\Services\Shippings\BaseShipping.php on line 545.
+ 1 APPPATH\Views\dashboard\sales\shipments.php(106): App\Services\Shippings\BaseShipping->getShippingName()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\sales\\shipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/sales/shipments', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(1702): view('dashboard/sales/shipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->shipments(Object(App\Services\Shippings\MondialRelayShipping))
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 13:25:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 13:25:51 --> Error: Access to undeclared static property App\Services\Shippings\MondialRelayShipping::$title
+[Method: GET, Route: dashboard/sales/shipment/mondial_relay]
+in APPPATH\Controllers\DashboardController.php on line 1680.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->shipments(Object(App\Services\Shippings\MondialRelayShipping))
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 13:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 13:26:48 --> Error: Access to undeclared static property App\Services\Shippings\MondialRelayShipping::$title
+[Method: GET, Route: dashboard/sales/shipment/mondial_relay]
+in APPPATH\Views\dashboard\includes\_header.php on line 252.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/includes/_header', [], true)
+ 4 APPPATH\Controllers\DashboardController.php(1701): view('dashboard/includes/_header', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->shipments(Object(App\Services\Shippings\MondialRelayShipping))
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 13:27:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:27:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:27:19 --> CSRF token verified.
+INFO - 2024-11-22 13:27:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:27:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:27:57 --> CSRF token verified.
+INFO - 2024-11-22 13:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:28:56 --> CSRF token verified.
+INFO - 2024-11-22 13:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 13:28:59 --> Error: Call to undefined method App\Services\Shippings\ChronopostShipping::getMethod()
+[Method: GET, Route: dashboard/sales/shipment/chronopost]
+in APPPATH\Services\Shippings\BaseShipping.php on line 538.
+ 1 APPPATH\Views\dashboard\sales\shipments.php(107): App\Services\Shippings\BaseShipping->getMethodName()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\sales\\shipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/sales/shipments', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(1702): view('dashboard/sales/shipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->shipments(Object(App\Services\Shippings\ChronopostShipping))
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 13:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 13:29:41 --> ErrorException: Class App\Services\Shippings\Methods\Chronopost\Chrono10Method contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (App\Services\Shippings\Interfaces\MethodInterface::getTitle)
+[Method: GET, Route: dashboard/sales/shipment/chronopost]
+in APPPATH\Services\Shippings\Methods\Chronopost\Chrono10Method.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-22 13:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:34:26 --> CSRF token verified.
+INFO - 2024-11-22 13:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:34:30 --> CSRF token verified.
+INFO - 2024-11-22 13:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:34:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:34:32 --> CSRF token verified.
+INFO - 2024-11-22 13:34:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:34:54 --> CSRF token verified.
+INFO - 2024-11-22 13:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:35:50 --> CSRF token verified.
+INFO - 2024-11-22 13:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:36:02 --> CSRF token verified.
+INFO - 2024-11-22 13:36:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:36:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:36:12 --> CSRF token verified.
+INFO - 2024-11-22 13:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:37:37 --> CSRF token verified.
+INFO - 2024-11-22 13:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:37:59 --> CSRF token verified.
+INFO - 2024-11-22 13:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:39:06 --> CSRF token verified.
+INFO - 2024-11-22 13:39:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:39:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:39:40 --> CSRF token verified.
+INFO - 2024-11-22 13:40:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:40:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:40:05 --> CSRF token verified.
+INFO - 2024-11-22 13:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:41:02 --> CSRF token verified.
+INFO - 2024-11-22 13:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:41:42 --> CSRF token verified.
+INFO - 2024-11-22 13:42:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:42:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:42:11 --> CSRF token verified.
+INFO - 2024-11-22 13:42:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:42:42 --> CSRF token verified.
+INFO - 2024-11-22 13:42:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:42:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:42:52 --> CSRF token verified.
+INFO - 2024-11-22 13:43:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:43:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:43:11 --> CSRF token verified.
+INFO - 2024-11-22 13:44:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:44:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:44:14 --> CSRF token verified.
+INFO - 2024-11-22 13:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:45:29 --> CSRF token verified.
+INFO - 2024-11-22 13:46:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:46:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:46:18 --> CSRF token verified.
+INFO - 2024-11-22 13:46:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:46:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:46:19 --> CSRF token verified.
+INFO - 2024-11-22 13:46:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:46:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:46:21 --> CSRF token verified.
+INFO - 2024-11-22 13:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:46:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:46:23 --> CSRF token verified.
+INFO - 2024-11-22 13:46:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:46:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:46:28 --> CSRF token verified.
+INFO - 2024-11-22 13:46:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:46:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:46:29 --> CSRF token verified.
+INFO - 2024-11-22 13:46:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:46:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:46:31 --> CSRF token verified.
+INFO - 2024-11-22 13:46:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:46:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:46:32 --> CSRF token verified.
+INFO - 2024-11-22 13:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:46:33 --> CSRF token verified.
+INFO - 2024-11-22 13:48:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:48:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:48:13 --> CSRF token verified.
+INFO - 2024-11-22 13:49:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 13:49:28 --> Error: Call to undefined method App\Services\Shippings\MondialRelayShipping::getName()
+[Method: GET, Route: dashboard/sales/shipment/mondial_relay]
+in APPPATH\Views\dashboard\sales\shipments.php on line 160.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/sales/shipments', [], true)
+ 4 APPPATH\Controllers\DashboardController.php(1702): view('dashboard/sales/shipments', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->shipments(Object(App\Services\Shippings\MondialRelayShipping))
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 13:50:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:50:55 --> CSRF token verified.
+INFO - 2024-11-22 13:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 13:54:22 --> ErrorException: Access level to App\Services\Shippings\Methods\Mondial\MondialColisDriveMethod::ID must be public (as in class App\Services\Shippings\MondialRelayShipping)
+[Method: GET, Route: dashboard/sales/shipment/mondial_relay]
+in APPPATH\Services\Shippings\Methods\Mondial\MondialColisDriveMethod.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-22 13:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 13:56:14 --> ErrorException: Access level to App\Services\Shippings\Methods\Mondial\MondialColisDriveMethod::ID must be public (as in class App\Services\Shippings\BaseShipping)
+[Method: GET, Route: dashboard/sales/shipment/mondial_relay]
+in APPPATH\Services\Shippings\Methods\Mondial\MondialColisDriveMethod.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-22 13:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:56:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:56:29 --> CSRF token verified.
+INFO - 2024-11-22 13:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:57:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:57:52 --> CSRF token verified.
+INFO - 2024-11-22 13:57:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:57:57 --> CSRF token verified.
+INFO - 2024-11-22 13:57:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:04 --> CSRF token verified.
+INFO - 2024-11-22 13:58:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:08 --> CSRF token verified.
+INFO - 2024-11-22 13:58:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:28 --> CSRF token verified.
+INFO - 2024-11-22 13:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:29 --> CSRF token verified.
+INFO - 2024-11-22 13:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:43 --> CSRF token verified.
+INFO - 2024-11-22 13:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:44 --> CSRF token verified.
+INFO - 2024-11-22 13:58:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:47 --> CSRF token verified.
+INFO - 2024-11-22 13:58:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:56 --> CSRF token verified.
+INFO - 2024-11-22 13:58:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:58:57 --> CSRF token verified.
+INFO - 2024-11-22 13:59:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:59:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:59:02 --> CSRF token verified.
+INFO - 2024-11-22 13:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:59:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:59:05 --> CSRF token verified.
+INFO - 2024-11-22 13:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:59:06 --> CSRF token verified.
+INFO - 2024-11-22 13:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:59:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:59:08 --> CSRF token verified.
+INFO - 2024-11-22 13:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:59:10 --> CSRF token verified.
+INFO - 2024-11-22 13:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:59:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 13:59:12 --> CSRF token verified.
+INFO - 2024-11-22 14:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:00:42 --> CSRF token verified.
+INFO - 2024-11-22 14:00:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:00:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:00:45 --> CSRF token verified.
+INFO - 2024-11-22 14:01:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:01:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:01:17 --> CSRF token verified.
+INFO - 2024-11-22 14:01:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:01:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:01:20 --> CSRF token verified.
+INFO - 2024-11-22 14:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:01:23 --> CSRF token verified.
+INFO - 2024-11-22 14:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:01:27 --> CSRF token verified.
+INFO - 2024-11-22 14:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:01:32 --> CSRF token verified.
+INFO - 2024-11-22 14:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:02:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:02:16 --> CSRF token verified.
+INFO - 2024-11-22 14:02:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:02:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:02:24 --> CSRF token verified.
+INFO - 2024-11-22 14:02:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:02:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:02:35 --> CSRF token verified.
+INFO - 2024-11-22 14:02:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:02:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:02:37 --> CSRF token verified.
+INFO - 2024-11-22 14:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:02:41 --> CSRF token verified.
+INFO - 2024-11-22 14:02:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:02:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:02:45 --> CSRF token verified.
+INFO - 2024-11-22 14:02:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:02:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:02:52 --> CSRF token verified.
+INFO - 2024-11-22 14:02:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:02:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:02:59 --> CSRF token verified.
+INFO - 2024-11-22 14:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:03:03 --> CSRF token verified.
+INFO - 2024-11-22 14:03:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:03:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:03:14 --> CSRF token verified.
+INFO - 2024-11-22 14:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:03:16 --> CSRF token verified.
+INFO - 2024-11-22 14:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:03:18 --> CSRF token verified.
+INFO - 2024-11-22 14:03:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:03:35 --> CSRF token verified.
+INFO - 2024-11-22 14:03:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:03:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:03:38 --> CSRF token verified.
+INFO - 2024-11-22 14:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:03:42 --> CSRF token verified.
+INFO - 2024-11-22 14:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:03:44 --> CSRF token verified.
+INFO - 2024-11-22 14:03:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:03:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:03:45 --> CSRF token verified.
+INFO - 2024-11-22 14:04:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:04:42 --> CSRF token verified.
+INFO - 2024-11-22 14:04:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:04:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:04:51 --> CSRF token verified.
+INFO - 2024-11-22 14:04:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 14:04:53 --> Exception: Not Found
+[Method: GET, Route: dashboard/sales/shipment/chronopost]
+in APPPATH\Controllers\DashboardController.php on line 1675.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->shipments('chronopost')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 14:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:05:02 --> CSRF token verified.
+INFO - 2024-11-22 14:05:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:05:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:05:08 --> CSRF token verified.
+INFO - 2024-11-22 14:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 14:05:23 --> Exception: Not Found
+[Method: GET, Route: dashboard/sales/shipment/chrOnopost]
+in APPPATH\Controllers\DashboardController.php on line 1675.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->shipments('chrOnopost')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 14:05:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-22 14:05:28 --> Exception: Not Found
+[Method: GET, Route: dashboard/sales/shipment/chronopost]
+in APPPATH\Controllers\DashboardController.php on line 1675.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->shipments('chronopost')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-22 14:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:06:01 --> CSRF token verified.
+INFO - 2024-11-22 14:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:06:04 --> CSRF token verified.
+INFO - 2024-11-22 14:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:06:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:06:07 --> CSRF token verified.
+INFO - 2024-11-22 14:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:06:09 --> CSRF token verified.
+INFO - 2024-11-22 14:06:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:06:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:06:14 --> CSRF token verified.
+INFO - 2024-11-22 14:06:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:06:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:06:17 --> CSRF token verified.
+INFO - 2024-11-22 14:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:06:18 --> CSRF token verified.
+INFO - 2024-11-22 14:06:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:06:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:06:20 --> CSRF token verified.
+INFO - 2024-11-22 14:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-22 14:06:21 --> CSRF token verified.

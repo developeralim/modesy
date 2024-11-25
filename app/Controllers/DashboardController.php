@@ -21,6 +21,7 @@ use App\Models\ShippingModel;
 use App\Models\UploadModel;
 use App\Models\VariationModel;
 use Config\Globals;
+use Exception;
 
 class DashboardController extends BaseController
 {
@@ -53,16 +54,16 @@ class DashboardController extends BaseController
             setActiveLangPostRequest();
         }
 
-        $this->orderAdminModel = new OrderAdminModel();
-        $this->orderModel = new OrderModel();
-        $this->productAdminModel = new ProductAdminModel();
-        $this->membershipModel = new MembershipModel();
-        $this->shippingModel = new ShippingModel();
-        $this->couponModel = new CouponModel();
-        $this->fileModel = new FileModel();
-        $this->userId = user()->id;
-        $this->perPage = 15;
-        $this->isDashboard = true;
+        $this->orderAdminModel      = new OrderAdminModel();
+        $this->orderModel           = new OrderModel();
+        $this->productAdminModel    = new ProductAdminModel();
+        $this->membershipModel      = new MembershipModel();
+        $this->shippingModel        = new ShippingModel();
+        $this->couponModel          = new CouponModel();
+        $this->fileModel            = new FileModel();
+        $this->userId               = user()->id;
+        $this->perPage              = 15;
+        $this->isDashboard          = true;
 
         checkVendorCommissionDept();
     }
@@ -72,11 +73,11 @@ class DashboardController extends BaseController
      */
     public function index()
     {
-        $data['title'] = getUsername(user());
-        $data['description'] = getUsername(user()) . ' - ' . $this->baseVars->appName;
-        $data['keywords'] = getUsername(user()) . ',' . $this->baseVars->appName;
-        $data['user'] = user();
-        $data["activeTab"] = 'products';
+        $data['title']          = getUsername(user());
+        $data['description']    = getUsername(user()) . ' - ' . $this->baseVars->appName;
+        $data['keywords']       = getUsername(user()) . ',' . $this->baseVars->appName;
+        $data['user']           = user();
+        $data["activeTab"]      = 'products';
         $data['latestSales'] = $this->orderModel->getSalesBySellerLimited($this->userId, 6);
         $data['latestComments'] = $this->commonModel->getVendorCommentsPaginated($this->userId, 6, 0);
         
@@ -735,7 +736,9 @@ class DashboardController extends BaseController
         if (!$this->baseVars->isSaleActive) {
             return redirect()->to(dashboardUrl());
         }
-        $st = inputGet('st');
+
+        $st         = inputGet('st');
+
         $page = 'sales';
         $status = 'active';
         if ($st == 'completed') {
@@ -745,12 +748,18 @@ class DashboardController extends BaseController
             $page = 'cancelled_sales';
             $status = 'cancelled';
         }
+
         $data = $this->setMetaData(trans($page));
-        $data['page'] = $page;
-        $data['numRows'] = $this->orderModel->getSalesCount($status, $this->userId);
-        $data['pager'] = paginate($this->perPage, $data['numRows']);
-        $data['sales'] = $this->orderModel->getSalesPaginated($status, $this->userId, $this->perPage, $data['pager']->offset);
-        
+        $data['page']       = $page;
+        $data['numRows']    = $this->orderModel->getSalesCount($status, $this->userId);
+        $data['pager']      = paginate($this->perPage, $data['numRows']);
+        $data['sales']      = $this->orderModel->getSalesPaginated(
+            $status, 
+            $this->userId, 
+            $this->perPage, 
+            $data['pager']->offset,
+        );
+
         echo view('dashboard/includes/_header', $data);
         echo view('dashboard/sales/sales', $data);
         echo view('dashboard/includes/_footer');
@@ -1418,14 +1427,17 @@ class DashboardController extends BaseController
     public function editShippingZone($id)
     {
         $data = $this->setMetaData(trans("edit_shipping_zone"));
+        
         $data['shippingZone'] = $this->shippingModel->getShippingZone($id);
+        
         if (empty($data['shippingZone'])) {
             return redirect()->to(generateDashUrl('shipping_settings'));
         }
+
         $data['continents'] = getContinents();
         $data['countries'] = $this->locationModel->getCountries();
         $data['shippingClasses'] = $this->shippingModel->getActiveShippingClasses($this->userId);
-
+       
         echo view('dashboard/includes/_header', $data);
         echo view('dashboard/shipping/edit_shipping_zone', $data);
         echo view('dashboard/includes/_footer');
@@ -1436,8 +1448,8 @@ class DashboardController extends BaseController
      */
     public function editShippingZonePost()
     {
-        $zoneId = inputPost('zone_id');
-        $shippingZone = $this->shippingModel->getShippingZone($zoneId);
+        $zoneId         = inputPost('zone_id');
+        $shippingZone   = $this->shippingModel->getShippingZone($zoneId);
         if (empty($shippingZone)) {
             return redirect()->to(generateDashUrl('shipping_settings'));
         }
@@ -1461,14 +1473,22 @@ class DashboardController extends BaseController
     //select shipping method
     public function selectShippingMethod()
     {
-        $selectedOption = inputPost('selected_option');
-        $shippingClasses = $this->shippingModel->getActiveShippingClasses($this->userId);
-        $vars = ['selectedOption' => $selectedOption, 'optionUniqueId' => uniqid(), 'shippingClasses' => $shippingClasses];
-        $htmlContent = view('dashboard/shipping/_response_shipping_method', $vars);
-        $data = [
-            'result' => 1,
-            'htmlContent' => $htmlContent
+        $selectedOption     = inputPost('selected_option');
+        $shippingClasses    = $this->shippingModel->getActiveShippingClasses($this->userId);
+        $vars               = [
+            'selectedOption'    => $selectedOption, 
+            'optionUniqueId'    => uniqid(), 
+            'shippingClasses'   => $shippingClasses,
+            'method'            => new \Config\Shippings::$methods[$selectedOption]
         ];
+        
+        $htmlContent        = view('dashboard/shipping/_response_shipping_method', $vars);
+
+        $data = [
+            'result'        => 1,
+            'htmlContent'   => $htmlContent
+        ];
+
         echo json_encode($data);
     }
 
@@ -1643,5 +1663,59 @@ class DashboardController extends BaseController
             $export->exportAsXml();
         }
         redirectToBackUrl();
+    }
+
+    public function shipments( $shipping )
+    {
+        if (!$this->baseVars->isSaleActive) {
+            return redirect()->to(dashboardUrl());
+        }
+
+        if ( empty( \Config\Shippings::$shippings[$shipping] ) ) { 
+            throw new Exception('Not Found');
+        }   
+
+        $shipping = new \Config\Shippings::$shippings[$shipping];
+
+        $data = $this->setMetaData($shipping->getShippingName() . " shipments");
+
+        $status = 'active';
+
+        $data['numRows']     = $this->orderModel->getSalesCount(
+            $status, 
+            $this->userId,
+            $shipping
+        );
+
+        $data['pager']       = paginate($this->perPage, $data['numRows']);
+        $data['shipments']   = $this->orderModel->getSalesPaginated(
+            $status, 
+            $this->userId, 
+            $this->perPage, 
+            $data['pager']->offset,
+            $shipping
+        );
+
+        $data['shipping'] = $shipping;
+
+        echo view('dashboard/includes/_header', $data);
+        echo view('dashboard/sales/shipments', $data);
+        echo view('dashboard/includes/_footer');
+    }
+
+    public function generateShippingLabel()
+    {
+        
+        $shipping = inputPost('shipping');
+        $shipment = getOrder( inputPost('shipment') );
+
+        if ( empty( $shipping ) || ! isset( \Config\Shippings::$shippings[$shipping] ) ) {
+            redirectToBackUrl();
+        }
+
+        $shipping = new \Config\Shippings::$shippings[$shipping];
+        $shipping->setOrder($shipment);
+        $shipping->setBuyer( getUser( $shipment->buyer_id ) );
+        $shipping->registerParcelsFromOrder();
     }
 }

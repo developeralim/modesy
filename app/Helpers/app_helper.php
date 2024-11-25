@@ -3,6 +3,7 @@
 use App\Models\BiddingModel;
 use App\Models\ChatModel;
 use App\Models\EarningsModel;
+use App\Models\ShippingModel;
 use Config\Globals;
 
 //get default language id
@@ -481,7 +482,15 @@ if (!function_exists('getShippingPaymentMethodsByZone')) {
 if (!function_exists('getShippingMethods')) {
     function getShippingMethods()
     {
-        return ['flat_rate', 'local_pickup', 'free_shipping'];
+        static $methods = array();
+        if ( empty( $methods ) ) {
+            foreach( \Config\Shippings::$methods as $id => $shipping_method ) {
+                if ( ( $shipping_method = new $shipping_method ) instanceof \App\Services\Shippings\Interfaces\MethodInterface ) {
+                    array_push($methods,$shipping_method->getName());
+                }
+            }
+        }
+        return $methods;
     }
 }
 
@@ -493,11 +502,11 @@ if (!function_exists('getShippingClassCostByMethod')) {
             $model = new \App\Models\ShippingModel();
             $shippingClass = $model->getShippingClass($classId);
             if (!empty($shippingClass) && $shippingClass->status == 1) {
-                $costArray = unserializeData($costArray);
+                $costArray = json_decode($costArray,true);
                 if (!empty($costArray)) {
-                    foreach ($costArray as $item) {
-                        if ($item['class_id'] == $classId && !empty($item['cost'])) {
-                            return esc($item['cost']);
+                    foreach ($costArray as $costClassId => $cost) {
+                        if ( $costClassId == $classId && ! empty( $cost )) {
+                            return esc( $cost );
                         }
                     }
                 }
@@ -1015,6 +1024,13 @@ if ( ! function_exists('getFirstMessage') ) {
     }
 }
 
+if ( ! function_exists('getShippingMethod') ) {
+    function getShippingMethod( $id )
+    {
+        return (new ShippingModel)->getShippingMethod( $id );
+    }
+}
+
 if ( ! function_exists('getQuoteRequest') ) {
     function getQuoteRequest( $id )
     {
@@ -1035,3 +1051,18 @@ if ( ! function_exists('setChatCache') ) {
         $cache->save('chat_cache', $array, 86400);
     }
 }
+
+if ( ! function_exists('remove_accents') ) {
+    function remove_accents($string)
+    {
+        return iconv('UTF-8', 'ASCII//TRANSLIT', $string);
+    }
+}
+
+if ( ! function_exists('orderMeta') ) {
+    function orderMeta($order,$meta_key)
+    {
+        return new stdClass;
+    }
+}
+

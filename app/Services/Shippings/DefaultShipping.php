@@ -2,18 +2,10 @@
 namespace App\Services\Shippings;
 
 class DefaultShipping extends BaseShipping {
+    const TITLE = "Default Shipping";
 
-    public function __construct()
+    public function getShippingId()
     {
-        parent::__construct();
-    }
-
-    public function getMethods(): array
-    {
-        return [
-            \App\Services\Shippings\Methods\FlatRateMethod::class,
-            \App\Services\Shippings\Methods\FreeShippingMethod::class,
-            \App\Services\Shippings\Methods\LocalPickupMethod::class,
-        ];
+        return 'default';
     }
 }

@@ -42,40 +42,47 @@ class OrderModel extends BaseModel
         $cartTotal = helperGetSession('mds_shopping_cart_total_final');
         if (!empty($cartTotal)) {
             $data = [
-                'order_number' => uniqid(),
-                'buyer_id' => 0,
-                'buyer_type' => 'guest',
-                'price_subtotal' => getPrice($cartTotal->subtotal, 'database'),
-                'price_vat' => getPrice($cartTotal->vat, 'database'),
-                'price_shipping' => getPrice($cartTotal->shipping_cost, 'database'),
-                'price_total' => getPrice($cartTotal->total, 'database'),
-                'price_currency' => $cartTotal->currency,
-                'coupon_code' => '',
-                'coupon_products' => '',
-                'coupon_discount_rate' => $cartTotal->coupon_discount_rate,
-                'coupon_discount' => getPrice($cartTotal->coupon_discount, 'database'),
-                'coupon_seller_id' => $cartTotal->coupon_seller_id,
-                'transaction_fee_rate' => $cartTotal->transaction_fee_rate,
-                'transaction_fee' => getPrice($cartTotal->transaction_fee, 'database'),
-                'status' => 0,
-                'payment_method' => $paymentMethod,
-                'payment_status' => $paymentStatus,
-                'affiliate_data' => '',
-                'updated_at' => date('Y-m-d H:i:s'),
-                'created_at' => date('Y-m-d H:i:s')
+                'order_number'          => uniqid(),
+                'buyer_id'              => 0,
+                'buyer_type'            => 'guest',
+                'price_subtotal'        => getPrice($cartTotal->subtotal, 'database'),
+                'price_vat'             => getPrice($cartTotal->vat, 'database'),
+                'price_shipping'        => getPrice($cartTotal->shipping_cost, 'database'),
+                'price_total'           => getPrice($cartTotal->total, 'database'),
+                'price_currency'        => $cartTotal->currency,
+                'coupon_code'           => '',
+                'coupon_products'       => '',
+                'coupon_discount_rate'  => $cartTotal->coupon_discount_rate,
+                'coupon_discount'       => getPrice($cartTotal->coupon_discount, 'database'),
+                'coupon_seller_id'      => $cartTotal->coupon_seller_id,
+                'transaction_fee_rate'  => $cartTotal->transaction_fee_rate,
+                'transaction_fee'       => getPrice($cartTotal->transaction_fee, 'database'),
+                'status'                => 0,
+                'payment_method'        => $paymentMethod,
+                'payment_status'        => $paymentStatus,
+                'affiliate_data'        => '',
+                'updated_at'            => date('Y-m-d H:i:s'),
+                'created_at'            => date('Y-m-d H:i:s')
             ];
+
+            // Shipping
+            if (!empty(helperGetSession('mds_seller_shipping_costs'))) {
+                $sellerShippingCosts = helperGetSession('mds_seller_shipping_costs');
+                $sellerShippingCost  =  array_shift($sellerShippingCosts);
+                $data['shipping_method'] = $sellerShippingCost->shipping_method_id;
+            }   
 
             //affiliate
             if (!empty($cartTotal->affiliate_commission) || !empty($cartTotal->affiliate_discount)) {
                 $arrayAffiliate = [
-                    'id' => $cartTotal->affiliate_id,
-                    'referrerId' => $cartTotal->affiliate_referrer_id,
-                    'sellerId' => $cartTotal->affiliate_seller_id,
-                    'productId' => $cartTotal->affiliate_product_id,
-                    'commissionRate' => $cartTotal->affiliate_commission_rate,
-                    'commission' => $cartTotal->affiliate_commission,
-                    'discountRate' => $cartTotal->affiliate_discount_rate,
-                    'discount' => $cartTotal->affiliate_discount
+                    'id'                => $cartTotal->affiliate_id,
+                    'referrerId'        => $cartTotal->affiliate_referrer_id,
+                    'sellerId'          => $cartTotal->affiliate_seller_id,
+                    'productId'         => $cartTotal->affiliate_product_id,
+                    'commissionRate'    => $cartTotal->affiliate_commission_rate,
+                    'commission'        => $cartTotal->affiliate_commission,
+                    'discountRate'      => $cartTotal->affiliate_discount_rate,
+                    'discount'          => $cartTotal->affiliate_discount
                 ];
                 $data['affiliate_data'] = serialize($arrayAffiliate);
             }
@@ -486,20 +493,41 @@ class OrderModel extends BaseModel
     }
 
     //get sales count
-    public function getSalesCount($status, $userId)
+    public function getSalesCount($status, $userId,$shipping = null)
     {
         $this->filterSales($status);
-        return $this->builder->join('order_products', 'order_products.order_id = orders.id')->select('orders.id')->groupBy('orders.id')
-            ->where('order_products.seller_id', clrNum($userId))->where('order_products.order_status !=', 'refund_approved')->countAllResults();
+        $query = $this->builder->join('order_products', 'order_products.order_id = orders.id')
+                    ->join('shipping_zone_methods','shipping_zone_methods.id = orders.shipping_method');
+
+        if ( $shipping ) {
+            $query->whereIn('shipping_zone_methods.method_type',inputGet('shipping_method') ? [inputGet('shipping_method')] : array_keys( $shipping->methods ));
+        } 
+
+        return $query->select('orders.id')
+            ->groupBy('orders.id')
+            ->where('order_products.seller_id', clrNum($userId))->where('order_products.order_status !=', 'refund_approved')
+            ->countAllResults();
     }
 
     //get paginated sales
-    public function getSalesPaginated($status, $userId, $perPage, $offset)
+    public function getSalesPaginated($status, $userId, $perPage, $offset,$shipping = null)
     {
         $this->filterSales($status);
-        return $this->builder->join('order_products', 'order_products.order_id = orders.id')->select('orders.*')->groupBy('orders.id')->where('order_products.seller_id', clrNum($userId))
-            ->where('order_products.order_status !=', 'refund_approved')->orderBy('orders.id DESC')->limit($perPage, $offset)->get()->getResult();
-    }    //get paginated sales
+        $query = $this->builder->join('order_products', 'order_products.order_id = orders.id')
+                            ->join('shipping_zone_methods','shipping_zone_methods.id = orders.shipping_method')
+                            ->select('orders.*')
+                            ->groupBy('orders.id')
+                            ->where('order_products.seller_id', clrNum($userId))
+                            ->where('order_products.order_status !=', 'refund_approved');
+        
+        if ( $shipping ) {
+            $query->whereIn('shipping_zone_methods.method_type',inputGet('shipping_method') ? [inputGet('shipping_method')] : array_keys( $shipping->methods ));
+        }                            
+
+        return $query->orderBy('orders.id DESC')->limit($perPage, $offset)
+            ->get()
+            ->getResult();
+    }
 
     //get export sales
     public function getSalesExport($status, $userId)

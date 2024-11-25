@@ -1,0 +1,644 @@
+INFO - 2024-11-25 02:56:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:06 --> CSRF token verified.
+INFO - 2024-11-25 02:56:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:09 --> CSRF token verified.
+INFO - 2024-11-25 02:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:18 --> CSRF token verified.
+INFO - 2024-11-25 02:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:21 --> CSRF token verified.
+INFO - 2024-11-25 02:56:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:23 --> CSRF token verified.
+INFO - 2024-11-25 02:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:26 --> CSRF token verified.
+INFO - 2024-11-25 02:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:29 --> CSRF token verified.
+INFO - 2024-11-25 02:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:31 --> CSRF token verified.
+INFO - 2024-11-25 02:56:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:32 --> CSRF token verified.
+INFO - 2024-11-25 02:56:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:34 --> CSRF token verified.
+INFO - 2024-11-25 02:56:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:35 --> CSRF token verified.
+INFO - 2024-11-25 02:56:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 02:56:36 --> CSRF token verified.
+INFO - 2024-11-25 04:49:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 04:49:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 04:49:37 --> CSRF token verified.
+INFO - 2024-11-25 04:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 04:49:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 04:49:40 --> CSRF token verified.
+INFO - 2024-11-25 04:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 04:50:05 --> CSRF token verified.
+INFO - 2024-11-25 04:50:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 04:50:50 --> CSRF token verified.
+INFO - 2024-11-25 04:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 04:54:56 --> CSRF token verified.
+CRITICAL - 2024-11-25 04:54:56 --> ErrorException: Undefined property: App\Services\Shippings\ChronopostShipping::$shipping_method
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 64.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Services\\Shippings\\ChronopostShipping::$shipping_method', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\Traits\\Chronopost\\WebService.php', 64)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(50): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 3 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 04:55:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 04:55:31 --> CSRF token verified.
+CRITICAL - 2024-11-25 04:55:31 --> ErrorException: Undefined property: App\Services\Shippings\ChronopostShipping::$shipping_method
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 64.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Services\\Shippings\\ChronopostShipping::$shipping_method', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\Traits\\Chronopost\\WebService.php', 64)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(50): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 3 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 04:55:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 04:55:53 --> CSRF token verified.
+INFO - 2024-11-25 05:44:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 05:44:58 --> CSRF token verified.
+CRITICAL - 2024-11-25 05:44:58 --> ParseError: syntax error, unexpected token "}"
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\ChronopostShipping.php on line 60.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\ChronopostShipping.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Services\\Shippings\\ChronopostShipping')
+ 3 APPPATH\Controllers\DashboardController.php(1716): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Services\\Shippings\\ChronopostShipping')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 05:45:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 05:45:18 --> CSRF token verified.
+CRITICAL - 2024-11-25 05:45:18 --> Error: Call to undefined function App\Services\Shippings\Helpers\Chronopost\chrono_check_packages_dimensions()
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\ChronopostShipping.php on line 58.
+ 1 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 05:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 05:46:46 --> CSRF token verified.
+CRITICAL - 2024-11-25 05:46:46 --> Error: Call to undefined function App\Services\Shippings\Helpers\Chronopost\chrono_check_packages_dimensions()
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\ChronopostShipping.php on line 58.
+ 1 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 05:48:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 05:48:17 --> CSRF token verified.
+CRITICAL - 2024-11-25 05:48:17 --> Error: Call to undefined function App\Services\Shippings\Helpers\Chronopost\chrono_check_packages_dimensions()
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\ChronopostShipping.php on line 56.
+ 1 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 05:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 05:56:02 --> CSRF token verified.
+CRITICAL - 2024-11-25 05:56:02 --> Error: Class "App\Services\Shippings\Helpers\Chronopost\Utility" not found
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\ChronopostShipping.php on line 57.
+ 1 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 05:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 05:57:05 --> CSRF token verified.
+CRITICAL - 2024-11-25 05:57:05 --> Error: Non-static method App\Services\Shippings\Helpers\ChronopostUtility::chrono_check_packages_dimensions() cannot be called statically
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\ChronopostShipping.php on line 57.
+ 1 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 05:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 05:57:20 --> CSRF token verified.
+INFO - 2024-11-25 06:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 06:00:21 --> CSRF token verified.
+INFO - 2024-11-25 06:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 06:00:43 --> CSRF token verified.
+INFO - 2024-11-25 06:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 06:02:00 --> CSRF token verified.
+CRITICAL - 2024-11-25 06:02:00 --> ErrorException: Trying to access array offset on value of type int
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\Helpers\ChronopostUtility.php on line 22.
+ 1 APPPATH\Services\Shippings\Helpers\ChronopostUtility.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\Helpers\\ChronopostUtility.php', 22)
+ 2 APPPATH\Services\Shippings\Helpers\ChronopostUtility.php(44): App\Services\Shippings\Helpers\ChronopostUtility->chrono_check_packages_dimensions('chrono10', [...])
+ 3 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(78): App\Services\Shippings\Helpers\ChronopostUtility::__callStatic('chrono_check_packages_dimensions', [...])
+ 4 APPPATH\Services\Shippings\ChronopostShipping.php(57): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 5 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 06:02:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 06:02:50 --> CSRF token verified.
+INFO - 2024-11-25 06:07:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 06:07:57 --> CSRF token verified.
+CRITICAL - 2024-11-25 06:07:57 --> ErrorException: Undefined variable $shipping_method_instance
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 98.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $shipping_method_instance', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\Traits\\Chronopost\\WebService.php', 98)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(60): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 3 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 06:08:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 06:08:27 --> CSRF token verified.
+INFO - 2024-11-25 06:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 06:09:00 --> CSRF token verified.
+CRITICAL - 2024-11-25 06:09:00 --> Error: Using $this when not in object context
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\Traits\Chronopost\Package.php on line 11.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(100): App\Services\Shippings\ChronopostShipping::getTotalWeight()
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(60): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 3 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 06:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 06:10:10 --> CSRF token verified.
+INFO - 2024-11-25 06:10:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 06:10:27 --> CSRF token verified.
+INFO - 2024-11-25 06:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 06:12:55 --> CSRF token verified.
+INFO - 2024-11-25 06:14:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 06:14:02 --> CSRF token verified.
+INFO - 2024-11-25 06:19:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 06:19:18 --> CSRF token verified.
+INFO - 2024-11-25 12:01:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 12:01:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 12:01:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 12:01:35 --> CSRF token verified.
+INFO - 2024-11-25 12:01:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 12:01:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 12:01:38 --> CSRF token verified.
+INFO - 2024-11-25 12:01:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 12:01:40 --> CSRF token verified.
+INFO - 2024-11-25 12:02:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 12:02:29 --> CSRF token verified.
+INFO - 2024-11-25 12:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 12:14:47 --> CSRF token verified.
+INFO - 2024-11-25 12:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 12:15:26 --> CSRF token verified.
+CRITICAL - 2024-11-25 12:15:26 --> ErrorException: Undefined property: stdClass::$quantity
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\Traits\Chronopost\Package.php on line 37.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\Package.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$quantity', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\Traits\\Chronopost\\Package.php', 37)
+ 2 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(100): App\Services\Shippings\ChronopostShipping->getTotalWeight()
+ 3 APPPATH\Services\Shippings\ChronopostShipping.php(60): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 4 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 12:16:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 12:16:32 --> CSRF token verified.
+INFO - 2024-11-25 12:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 12:16:59 --> CSRF token verified.
+INFO - 2024-11-25 13:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 13:45:46 --> CSRF token verified.
+CRITICAL - 2024-11-25 13:45:46 --> ErrorException: Undefined array key "number"
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 123.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "number"', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\Traits\\Chronopost\\WebService.php', 123)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(138): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 3 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 13:46:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 13:46:59 --> CSRF token verified.
+WARNING - 2024-11-25 13:46:59 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 59.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(59): trim(null)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(110): App\Services\Shippings\ChronopostShipping->checkMobileNumber(null)
+ 3 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(128): App\Services\Shippings\ChronopostShipping->withCustomer()
+ 4 APPPATH\Services\Shippings\ChronopostShipping.php(138): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 5 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-25 13:46:59 --> Error: Call to undefined function App\Services\Shippings\Helpers\now()
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\Helpers\ChronopostUtility.php on line 100.
+ 1 APPPATH\Services\Shippings\Helpers\ChronopostUtility.php(136): App\Services\Shippings\Helpers\ChronopostUtility->chrono_is_sending_day()
+ 2 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(174): App\Services\Shippings\Helpers\ChronopostUtility::__callStatic('chrono_is_sending_day', [])
+ 3 APPPATH\Services\Shippings\ChronopostShipping.php(138): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 4 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 13:49:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 13:49:32 --> CSRF token verified.
+WARNING - 2024-11-25 13:49:32 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 59.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(59): trim(null)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(110): App\Services\Shippings\ChronopostShipping->checkMobileNumber(null)
+ 3 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(128): App\Services\Shippings\ChronopostShipping->withCustomer()
+ 4 APPPATH\Services\Shippings\ChronopostShipping.php(138): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 5 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-25 13:49:32 --> ErrorException: Undefined array key 1
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 244.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(244): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\Traits\\Chronopost\\WebService.php', 244)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(138): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 3 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 13:50:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 13:50:40 --> CSRF token verified.
+WARNING - 2024-11-25 13:50:40 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 59.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(59): trim(null)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(110): App\Services\Shippings\ChronopostShipping->checkMobileNumber(null)
+ 3 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(128): App\Services\Shippings\ChronopostShipping->withCustomer()
+ 4 APPPATH\Services\Shippings\ChronopostShipping.php(138): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 5 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 13:51:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 13:51:03 --> CSRF token verified.
+WARNING - 2024-11-25 13:51:03 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 59.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(59): trim(null)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(110): App\Services\Shippings\ChronopostShipping->checkMobileNumber(null)
+ 3 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(128): App\Services\Shippings\ChronopostShipping->withCustomer()
+ 4 APPPATH\Services\Shippings\ChronopostShipping.php(138): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 5 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 14:02:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:02:55 --> CSRF token verified.
+WARNING - 2024-11-25 14:02:55 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 60.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(60): trim(null)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(110): App\Services\Shippings\ChronopostShipping->checkMobileNumber(null)
+ 3 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(129): App\Services\Shippings\ChronopostShipping->withCustomer()
+ 4 APPPATH\Services\Shippings\ChronopostShipping.php(138): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 5 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 14:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:05:29 --> CSRF token verified.
+WARNING - 2024-11-25 14:05:29 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 61.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(61): trim(null)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(111): App\Services\Shippings\ChronopostShipping->checkMobileNumber(null)
+ 3 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(130): App\Services\Shippings\ChronopostShipping->withCustomer()
+ 4 APPPATH\Services\Shippings\ChronopostShipping.php(139): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 5 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-25 14:05:29 --> SoapFault: SOAP-ERROR: Parsing WSDL: Couldn't load from 'https://www.chronopost.fr/shipping-cxf/ShippingServiceWS?wsdl' : failed to load external entity "https://www.chronopost.fr/shipping-cxf/ShippingServiceWS?wsdl"
+
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 340.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(340): SoapClient->__construct('https://www.chronopost.fr/shipping-cxf/ShippingServiceWS?wsdl', [...])
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(139): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 3 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 14:06:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:06:58 --> CSRF token verified.
+WARNING - 2024-11-25 14:06:58 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 61.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(61): trim(null)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(111): App\Services\Shippings\ChronopostShipping->checkMobileNumber(null)
+ 3 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(130): App\Services\Shippings\ChronopostShipping->withCustomer()
+ 4 APPPATH\Services\Shippings\ChronopostShipping.php(139): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 5 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-25 14:06:58 --> SoapFault: SOAP-ERROR: Parsing WSDL: Couldn't load from 'https://www.chronopost.fr/shipping-cxf/ShippingServiceWS?wsdl' : failed to load external entity "https://www.chronopost.fr/shipping-cxf/ShippingServiceWS?wsdl"
+
+[Method: POST, Route: dashboard/sales/shipment/generate-label]
+in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 340.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(340): SoapClient->__construct('https://www.chronopost.fr/shipping-cxf/ShippingServiceWS?wsdl', [...])
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(139): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 3 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 14:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:10:18 --> CSRF token verified.
+WARNING - 2024-11-25 14:10:18 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 61.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(61): trim(null)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(111): App\Services\Shippings\ChronopostShipping->checkMobileNumber(null)
+ 3 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(130): App\Services\Shippings\ChronopostShipping->withCustomer()
+ 4 APPPATH\Services\Shippings\ChronopostShipping.php(139): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 5 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 14:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:12:38 --> CSRF token verified.
+WARNING - 2024-11-25 14:12:38 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 63.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(63): trim(null)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(111): App\Services\Shippings\ChronopostShipping->checkMobileNumber(null)
+ 3 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(132): App\Services\Shippings\ChronopostShipping->withCustomer()
+ 4 APPPATH\Services\Shippings\ChronopostShipping.php(139): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 5 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 14:17:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:17:34 --> CSRF token verified.
+WARNING - 2024-11-25 14:17:34 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 63.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(63): trim(null)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(111): App\Services\Shippings\ChronopostShipping->checkMobileNumber(null)
+ 3 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(132): App\Services\Shippings\ChronopostShipping->withCustomer()
+ 4 APPPATH\Services\Shippings\ChronopostShipping.php(139): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 5 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 14:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:19:12 --> CSRF token verified.
+WARNING - 2024-11-25 14:19:12 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 63.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(63): trim(null)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(111): App\Services\Shippings\ChronopostShipping->checkMobileNumber(null)
+ 3 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(132): App\Services\Shippings\ChronopostShipping->withCustomer()
+ 4 APPPATH\Services\Shippings\ChronopostShipping.php(139): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 5 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 14:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:21:14 --> CSRF token verified.
+WARNING - 2024-11-25 14:21:14 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 63.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(63): trim(null)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(111): App\Services\Shippings\ChronopostShipping->checkMobileNumber(null)
+ 3 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(132): App\Services\Shippings\ChronopostShipping->withCustomer()
+ 4 APPPATH\Services\Shippings\ChronopostShipping.php(139): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 5 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 14:31:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:31:47 --> CSRF token verified.
+WARNING - 2024-11-25 14:31:47 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 63.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(63): trim(null)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(111): App\Services\Shippings\ChronopostShipping->checkMobileNumber(null)
+ 3 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(132): App\Services\Shippings\ChronopostShipping->withCustomer()
+ 4 APPPATH\Services\Shippings\ChronopostShipping.php(139): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 5 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 14:33:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:33:02 --> CSRF token verified.
+WARNING - 2024-11-25 14:33:02 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 63.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(63): trim(null)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(111): App\Services\Shippings\ChronopostShipping->checkMobileNumber(null)
+ 3 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(132): App\Services\Shippings\ChronopostShipping->withCustomer()
+ 4 APPPATH\Services\Shippings\ChronopostShipping.php(139): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 5 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 14:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:34:16 --> CSRF token verified.
+WARNING - 2024-11-25 14:34:16 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Services\Shippings\Traits\Chronopost\WebService.php on line 63.
+ 1 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(63): trim(null)
+ 2 APPPATH\Services\Shippings\ChronopostShipping.php(111): App\Services\Shippings\ChronopostShipping->checkMobileNumber(null)
+ 3 APPPATH\Services\Shippings\Traits\Chronopost\WebService.php(132): App\Services\Shippings\ChronopostShipping->withCustomer()
+ 4 APPPATH\Services\Shippings\ChronopostShipping.php(139): App\Services\Shippings\ChronopostShipping->saveAndCreateShipmentLabel()
+ 5 APPPATH\Controllers\DashboardController.php(1719): App\Services\Shippings\ChronopostShipping->registerParcelsFromOrder()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->generateShippingLabel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-25 14:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:42:39 --> CSRF token verified.
+INFO - 2024-11-25 14:45:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:07 --> CSRF token verified.
+INFO - 2024-11-25 14:45:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:09 --> CSRF token verified.
+INFO - 2024-11-25 14:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:14 --> CSRF token verified.
+INFO - 2024-11-25 14:45:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:17 --> CSRF token verified.
+INFO - 2024-11-25 14:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:19 --> CSRF token verified.
+INFO - 2024-11-25 14:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:21 --> CSRF token verified.
+INFO - 2024-11-25 14:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:24 --> CSRF token verified.
+INFO - 2024-11-25 14:45:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:27 --> CSRF token verified.
+INFO - 2024-11-25 14:45:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:28 --> CSRF token verified.
+INFO - 2024-11-25 14:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:29 --> CSRF token verified.
+INFO - 2024-11-25 14:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:30 --> CSRF token verified.
+INFO - 2024-11-25 14:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:35 --> CSRF token verified.
+INFO - 2024-11-25 14:45:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:43 --> CSRF token verified.
+INFO - 2024-11-25 14:45:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:45 --> CSRF token verified.
+INFO - 2024-11-25 14:45:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:47 --> CSRF token verified.
+INFO - 2024-11-25 14:45:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:45:51 --> CSRF token verified.
+INFO - 2024-11-25 14:45:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:00 --> CSRF token verified.
+INFO - 2024-11-25 14:46:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:05 --> CSRF token verified.
+INFO - 2024-11-25 14:46:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:06 --> CSRF token verified.
+INFO - 2024-11-25 14:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:07 --> CSRF token verified.
+INFO - 2024-11-25 14:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:08 --> CSRF token verified.
+INFO - 2024-11-25 14:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:09 --> CSRF token verified.
+INFO - 2024-11-25 14:46:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:10 --> CSRF token verified.
+INFO - 2024-11-25 14:46:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:11 --> CSRF token verified.
+INFO - 2024-11-25 14:46:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:12 --> CSRF token verified.
+INFO - 2024-11-25 14:46:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:13 --> CSRF token verified.
+INFO - 2024-11-25 14:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:33 --> CSRF token verified.
+INFO - 2024-11-25 14:46:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:38 --> CSRF token verified.
+INFO - 2024-11-25 14:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:46 --> CSRF token verified.
+INFO - 2024-11-25 14:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:46 --> CSRF token verified.
+INFO - 2024-11-25 14:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:53 --> CSRF token verified.
+INFO - 2024-11-25 14:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:53 --> CSRF token verified.
+INFO - 2024-11-25 14:46:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:56 --> CSRF token verified.
+INFO - 2024-11-25 14:46:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:46:58 --> CSRF token verified.
+INFO - 2024-11-25 14:47:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:47:17 --> CSRF token verified.
+INFO - 2024-11-25 14:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:47:37 --> CSRF token verified.
+INFO - 2024-11-25 14:48:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:48:01 --> CSRF token verified.
+INFO - 2024-11-25 14:48:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:48:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:48:02 --> CSRF token verified.
+INFO - 2024-11-25 14:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:48:06 --> CSRF token verified.
+INFO - 2024-11-25 14:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:48:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:48:07 --> CSRF token verified.
+INFO - 2024-11-25 14:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:48:11 --> CSRF token verified.
+INFO - 2024-11-25 14:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:48:11 --> CSRF token verified.
+INFO - 2024-11-25 14:48:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:48:13 --> CSRF token verified.
+INFO - 2024-11-25 14:48:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:48:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:48:13 --> CSRF token verified.
+INFO - 2024-11-25 14:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:48:23 --> CSRF token verified.
+INFO - 2024-11-25 14:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:48:25 --> CSRF token verified.
+INFO - 2024-11-25 14:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:50:39 --> CSRF token verified.
+INFO - 2024-11-25 14:52:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:52:18 --> CSRF token verified.
+INFO - 2024-11-25 14:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:53:57 --> CSRF token verified.
+INFO - 2024-11-25 14:57:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-25 14:57:06 --> CSRF token verified.

@@ -1,0 +1,1509 @@
+INFO - 2024-11-19 01:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:01:22 --> CSRF token verified.
+INFO - 2024-11-19 01:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:04:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:07:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:07:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:07:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:08:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:08:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:10:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:12:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:13:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 01:18:13 --> ErrorException: Undefined property: App\Services\Shippings\Methods\FlatRateMethod::$title
+[Method: GET, Route: dashboard/edit-shipping-zone/2]
+in APPPATH\Helpers\app_helper.php on line 490.
+ 1 APPPATH\Helpers\app_helper.php(490): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Services\\Shippings\\Methods\\FlatRateMethod::$title', 'C:\\xampp\\htdocs\\modesy\\app\\Helpers\\app_helper.php', 490)
+ 2 [internal function]: {closure}('App\\Services\\Shippings\\Methods\\FlatRateMethod', 0)
+ 3 APPPATH\Helpers\app_helper.php(489): array_walk([...], Object(Closure))
+ 4 SYSTEMPATH\Common.php(640): include_once('C:\\xampp\\htdocs\\modesy\\app\\Helpers\\app_helper.php')
+ 5 SYSTEMPATH\Controller.php(93): helper([...])
+ 6 APPPATH\Controllers\BaseController.php(84): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 7 APPPATH\Controllers\DashboardController.php(40): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\DashboardController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 9 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 01:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:19:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:19:39 --> CSRF token verified.
+INFO - 2024-11-19 01:31:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:31:58 --> CSRF token verified.
+INFO - 2024-11-19 01:32:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:32:40 --> CSRF token verified.
+INFO - 2024-11-19 01:40:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:40:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:40:57 --> CSRF token verified.
+INFO - 2024-11-19 01:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:41:00 --> CSRF token verified.
+INFO - 2024-11-19 01:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:41:02 --> CSRF token verified.
+INFO - 2024-11-19 01:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:41:08 --> CSRF token verified.
+INFO - 2024-11-19 01:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:41:10 --> CSRF token verified.
+INFO - 2024-11-19 01:41:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:41:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:41:26 --> CSRF token verified.
+INFO - 2024-11-19 01:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:41:28 --> CSRF token verified.
+INFO - 2024-11-19 01:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:41:28 --> CSRF token verified.
+INFO - 2024-11-19 01:41:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:41:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:41:32 --> CSRF token verified.
+INFO - 2024-11-19 01:49:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:49:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:49:58 --> CSRF token verified.
+INFO - 2024-11-19 01:49:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:50:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:50:00 --> CSRF token verified.
+INFO - 2024-11-19 01:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:50:04 --> CSRF token verified.
+INFO - 2024-11-19 01:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:50:05 --> CSRF token verified.
+INFO - 2024-11-19 01:52:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:52:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:52:12 --> CSRF token verified.
+INFO - 2024-11-19 01:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:53:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:53:29 --> CSRF token verified.
+INFO - 2024-11-19 01:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:53:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:53:47 --> CSRF token verified.
+INFO - 2024-11-19 01:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:53:49 --> CSRF token verified.
+INFO - 2024-11-19 01:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:53:49 --> CSRF token verified.
+INFO - 2024-11-19 01:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:53:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:53:53 --> CSRF token verified.
+INFO - 2024-11-19 01:54:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:54:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:54:14 --> CSRF token verified.
+INFO - 2024-11-19 01:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:54:33 --> CSRF token verified.
+INFO - 2024-11-19 01:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:54:34 --> CSRF token verified.
+INFO - 2024-11-19 01:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:54:34 --> CSRF token verified.
+INFO - 2024-11-19 01:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:54:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 01:54:38 --> CSRF token verified.
+INFO - 2024-11-19 02:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:23:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:29:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:29:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:29:42 --> CSRF token verified.
+INFO - 2024-11-19 02:46:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:46:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:46:20 --> CSRF token verified.
+INFO - 2024-11-19 02:46:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:46:23 --> CSRF token verified.
+INFO - 2024-11-19 02:46:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:46:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:46:24 --> CSRF token verified.
+INFO - 2024-11-19 02:46:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:46:26 --> CSRF token verified.
+INFO - 2024-11-19 02:46:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:46:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:46:26 --> CSRF token verified.
+INFO - 2024-11-19 02:53:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:53:27 --> CSRF token verified.
+INFO - 2024-11-19 02:53:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:53:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:53:32 --> CSRF token verified.
+INFO - 2024-11-19 02:53:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:53:40 --> CSRF token verified.
+INFO - 2024-11-19 02:53:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:53:40 --> CSRF token verified.
+INFO - 2024-11-19 02:53:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:53:41 --> CSRF token verified.
+INFO - 2024-11-19 02:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:53:48 --> CSRF token verified.
+INFO - 2024-11-19 02:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:53:48 --> CSRF token verified.
+INFO - 2024-11-19 02:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:53:50 --> CSRF token verified.
+INFO - 2024-11-19 02:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:53:51 --> CSRF token verified.
+INFO - 2024-11-19 02:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:53:56 --> CSRF token verified.
+INFO - 2024-11-19 02:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:53:56 --> CSRF token verified.
+INFO - 2024-11-19 02:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:53:58 --> CSRF token verified.
+INFO - 2024-11-19 02:54:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:54:02 --> CSRF token verified.
+INFO - 2024-11-19 02:54:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:54:17 --> CSRF token verified.
+INFO - 2024-11-19 02:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:54:25 --> CSRF token verified.
+INFO - 2024-11-19 02:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:54:25 --> CSRF token verified.
+INFO - 2024-11-19 02:54:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:54:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:54:28 --> CSRF token verified.
+INFO - 2024-11-19 02:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:54:30 --> CSRF token verified.
+INFO - 2024-11-19 02:54:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:54:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:54:39 --> CSRF token verified.
+INFO - 2024-11-19 02:54:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:54:43 --> CSRF token verified.
+INFO - 2024-11-19 02:54:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:54:46 --> CSRF token verified.
+INFO - 2024-11-19 02:54:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:54:53 --> CSRF token verified.
+INFO - 2024-11-19 02:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:55:00 --> CSRF token verified.
+INFO - 2024-11-19 02:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:55:13 --> CSRF token verified.
+INFO - 2024-11-19 02:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:55:16 --> CSRF token verified.
+INFO - 2024-11-19 02:55:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:55:19 --> CSRF token verified.
+INFO - 2024-11-19 02:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:55:20 --> CSRF token verified.
+INFO - 2024-11-19 02:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:55:23 --> CSRF token verified.
+INFO - 2024-11-19 02:55:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:55:25 --> CSRF token verified.
+INFO - 2024-11-19 02:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:55:33 --> CSRF token verified.
+INFO - 2024-11-19 02:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:55:33 --> CSRF token verified.
+INFO - 2024-11-19 02:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:55:34 --> CSRF token verified.
+INFO - 2024-11-19 02:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:55:34 --> CSRF token verified.
+INFO - 2024-11-19 02:55:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:55:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:55:40 --> CSRF token verified.
+INFO - 2024-11-19 02:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:55:42 --> CSRF token verified.
+INFO - 2024-11-19 02:55:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:55:45 --> CSRF token verified.
+INFO - 2024-11-19 02:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:55:48 --> CSRF token verified.
+INFO - 2024-11-19 02:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:55:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:55:49 --> CSRF token verified.
+INFO - 2024-11-19 02:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:56:30 --> CSRF token verified.
+INFO - 2024-11-19 02:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:56:37 --> CSRF token verified.
+INFO - 2024-11-19 02:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:56:37 --> CSRF token verified.
+INFO - 2024-11-19 02:56:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:56:40 --> CSRF token verified.
+INFO - 2024-11-19 02:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:56:44 --> CSRF token verified.
+INFO - 2024-11-19 02:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:58:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:58:33 --> CSRF token verified.
+INFO - 2024-11-19 02:58:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:58:39 --> CSRF token verified.
+CRITICAL - 2024-11-19 02:58:39 --> ErrorException: Undefined variable $cartItem
+[Method: POST, Route: Cart/getShippingMethodsByLocation]
+in APPPATH\Controllers\CartController.php on line 1305.
+ 1 APPPATH\Controllers\CartController.php(1305): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cartItem', 'C:\\xampp\\htdocs\\modesy\\app\\Controllers\\CartController.php', 1305)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->getShippingMethodsByLocation()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 02:58:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:58:58 --> CSRF token verified.
+INFO - 2024-11-19 02:59:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 02:59:26 --> CSRF token verified.
+INFO - 2024-11-19 03:00:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 03:00:14 --> CSRF token verified.
+INFO - 2024-11-19 03:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 03:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 03:12:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 03:12:53 --> ErrorException: Undefined array key "flat_rate"
+[Method: GET, Route: cart/shipping]
+in APPPATH\Models\ShippingModel.php on line 68.
+ 1 APPPATH\Models\ShippingModel.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "flat_rate"', 'C:\\xampp\\htdocs\\modesy\\app\\Models\\ShippingModel.php', 68)
+ 2 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 03:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 03:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 03:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+WARNING - 2024-11-19 03:21:10 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$id is deprecated in APPPATH\Models\ShippingModel.php on line 69.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:21:10 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$method_type is deprecated in APPPATH\Models\ShippingModel.php on line 70.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:21:10 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$name is deprecated in APPPATH\Models\ShippingModel.php on line 71.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:21:10 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 72.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:21:10 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_free_shipping is deprecated in APPPATH\Models\ShippingModel.php on line 73.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:21:10 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$free_shipping_min_amount is deprecated in APPPATH\Models\ShippingModel.php on line 74.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:21:10 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$cost is deprecated in APPPATH\Models\ShippingModel.php on line 75.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 03:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+WARNING - 2024-11-19 03:21:54 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$id is deprecated in APPPATH\Models\ShippingModel.php on line 69.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:21:54 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$method_type is deprecated in APPPATH\Models\ShippingModel.php on line 70.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:21:54 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$name is deprecated in APPPATH\Models\ShippingModel.php on line 71.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:21:54 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 72.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:21:54 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_free_shipping is deprecated in APPPATH\Models\ShippingModel.php on line 73.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:21:54 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$free_shipping_min_amount is deprecated in APPPATH\Models\ShippingModel.php on line 74.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:21:54 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$cost is deprecated in APPPATH\Models\ShippingModel.php on line 75.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 03:24:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+WARNING - 2024-11-19 03:24:13 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$id is deprecated in APPPATH\Models\ShippingModel.php on line 69.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:24:13 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$method_type is deprecated in APPPATH\Models\ShippingModel.php on line 70.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:24:13 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$name is deprecated in APPPATH\Models\ShippingModel.php on line 71.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:24:13 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 72.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:24:13 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_free_shipping is deprecated in APPPATH\Models\ShippingModel.php on line 73.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:24:13 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$free_shipping_min_amount is deprecated in APPPATH\Models\ShippingModel.php on line 74.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:24:13 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$cost is deprecated in APPPATH\Models\ShippingModel.php on line 75.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 03:24:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 03:24:40 --> TypeError: App\Services\Shippings\BaseShipping::__construct(): Argument #1 ($entity) must be of type array, stdClass given, called in C:\xampp\htdocs\modesy\app\Models\ShippingModel.php on line 68
+[Method: GET, Route: cart/shipping]
+in APPPATH\Services\Shippings\BaseShipping.php on line 10.
+ 1 APPPATH\Models\ShippingModel.php(68): App\Services\Shippings\BaseShipping->__construct(Object(stdClass))
+ 2 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 03:25:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+WARNING - 2024-11-19 03:25:03 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$id is deprecated in APPPATH\Models\ShippingModel.php on line 69.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:25:03 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$method_type is deprecated in APPPATH\Models\ShippingModel.php on line 70.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:25:03 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$name is deprecated in APPPATH\Models\ShippingModel.php on line 71.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:25:03 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 72.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:25:03 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_free_shipping is deprecated in APPPATH\Models\ShippingModel.php on line 73.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:25:03 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$free_shipping_min_amount is deprecated in APPPATH\Models\ShippingModel.php on line 74.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-11-19 03:25:03 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$cost is deprecated in APPPATH\Models\ShippingModel.php on line 75.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 03:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 03:36:18 --> TypeError: App\Services\Shippings\BaseShipping::setSeller(): Argument #1 ($seller) must be of type App\Models\AuthModel, stdClass given, called in C:\xampp\htdocs\modesy\app\Models\ShippingModel.php on line 71
+[Method: GET, Route: cart/shipping]
+in APPPATH\Services\Shippings\BaseShipping.php on line 30.
+ 1 APPPATH\Models\ShippingModel.php(71): App\Services\Shippings\BaseShipping->setSeller(Object(stdClass))
+ 2 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 03:37:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 03:42:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 03:45:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 03:45:51 --> Error: Undefined constant App\Services\Shippings\BaseShipping::ID
+[Method: GET, Route: cart/shipping]
+in APPPATH\Services\Shippings\BaseShipping.php on line 48.
+ 1 APPPATH\Models\ShippingModel.php(73): App\Services\Shippings\BaseShipping->calculateCost()
+ 2 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 03:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 03:46:03 --> Error: Cannot access private constant App\Services\Shippings\Methods\Default\FlatRateMethod::ID
+[Method: GET, Route: cart/shipping]
+in APPPATH\Services\Shippings\BaseShipping.php on line 48.
+ 1 APPPATH\Models\ShippingModel.php(73): App\Services\Shippings\BaseShipping->calculateCost()
+ 2 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 03:46:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 03:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 03:52:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 03:53:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 03:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 03:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 03:57:03 --> ErrorException: Undefined property: App\Services\Shippings\Methods\Default\FlatRateMethod::$entity
+[Method: GET, Route: cart/shipping]
+in APPPATH\Services\Shippings\Methods\Default\FlatRateMethod.php on line 22.
+ 1 APPPATH\Services\Shippings\Methods\Default\FlatRateMethod.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Services\\Shippings\\Methods\\Default\\FlatRateMethod::$entity', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\Methods\\Default\\FlatRateMethod.php', 22)
+ 2 APPPATH\Models\ShippingModel.php(73): App\Services\Shippings\Methods\Default\FlatRateMethod->calculateCost()
+ 3 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 03:57:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:15:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:15:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:16:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 04:20:04 --> ErrorException: Undefined variable $seller
+[Method: GET, Route: cart/shipping]
+in APPPATH\Services\Shippings\BaseShipping.php on line 73.
+ 1 APPPATH\Services\Shippings\BaseShipping.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $seller', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\BaseShipping.php', 73)
+ 2 APPPATH\Models\ShippingModel.php(76): App\Services\Shippings\BaseShipping->calculateCost()
+ 3 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:21:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:23:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:24:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:24:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:24:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 04:36:18 --> ErrorException: Undefined variable $currency
+[Method: GET, Route: cart/shipping]
+in APPPATH\Services\Shippings\BaseShipping.php on line 79.
+ 1 APPPATH\Services\Shippings\BaseShipping.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $currency', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\BaseShipping.php', 79)
+ 2 APPPATH\Models\ShippingModel.php(77): App\Services\Shippings\BaseShipping->calculateCost()
+ 3 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:37:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:42:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+WARNING - 2024-11-19 04:45:34 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:46:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+WARNING - 2024-11-19 04:46:17 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:46:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+WARNING - 2024-11-19 04:46:27 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-19 04:46:27 --> ErrorException: Undefined property: App\Services\Shippings\Methods\Default\FlatRateMethod::$id
+[Method: GET, Route: cart/shipping]
+in APPPATH\Views\cart\_shipping_methods.php on line 45.
+ 1 APPPATH\Views\cart\_shipping_methods.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Services\\Shippings\\Methods\\Default\\FlatRateMethod::$id', 'C:\\xampp\\htdocs\\modesy\\app\\Views\\cart\\_shipping_methods.php', 45)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\cart\\_shipping_methods.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('cart/_shipping_methods', [], true)
+ 5 APPPATH\Views\cart\shipping_information.php(134): view('cart/_shipping_methods')
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\cart\\shipping_information.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('cart/shipping_information', [], true)
+ 9 APPPATH\Controllers\CartController.php(238): view('cart/shipping_information', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+WARNING - 2024-11-19 04:47:08 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:48:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+WARNING - 2024-11-19 04:48:24 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:48:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+WARNING - 2024-11-19 04:48:32 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-19 04:48:32 --> ErrorException: Undefined property: App\Services\Shippings\Methods\Default\FlatRateMethod::$id
+[Method: GET, Route: cart/shipping]
+in APPPATH\Views\cart\_shipping_methods.php on line 45.
+ 1 APPPATH\Views\cart\_shipping_methods.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Services\\Shippings\\Methods\\Default\\FlatRateMethod::$id', 'C:\\xampp\\htdocs\\modesy\\app\\Views\\cart\\_shipping_methods.php', 45)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\cart\\_shipping_methods.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('cart/_shipping_methods', [], true)
+ 5 APPPATH\Views\cart\shipping_information.php(134): view('cart/_shipping_methods')
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\cart\\shipping_information.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('cart/shipping_information', [], true)
+ 9 APPPATH\Controllers\CartController.php(238): view('cart/shipping_information', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+WARNING - 2024-11-19 04:49:20 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-19 04:49:20 --> Error: Cannot access protected property App\Services\Shippings\Methods\Default\FlatRateMethod::$entity
+[Method: GET, Route: cart/shipping]
+in APPPATH\Views\cart\_shipping_methods.php on line 45.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('cart/_shipping_methods', [], true)
+ 4 APPPATH\Views\cart\shipping_information.php(134): view('cart/_shipping_methods')
+ 5 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\cart\\shipping_information.php')
+ 6 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('cart/shipping_information', [], true)
+ 8 APPPATH\Controllers\CartController.php(238): view('cart/shipping_information', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:50:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+WARNING - 2024-11-19 04:50:17 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-19 04:50:17 --> ErrorException: Undefined property: App\Services\Shippings\Methods\Default\FlatRateMethod::$method_type
+[Method: GET, Route: cart/shipping]
+in APPPATH\Views\cart\_shipping_methods.php on line 50.
+ 1 APPPATH\Views\cart\_shipping_methods.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Services\\Shippings\\Methods\\Default\\FlatRateMethod::$method_type', 'C:\\xampp\\htdocs\\modesy\\app\\Views\\cart\\_shipping_methods.php', 50)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\cart\\_shipping_methods.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('cart/_shipping_methods', [], true)
+ 5 APPPATH\Views\cart\shipping_information.php(134): view('cart/_shipping_methods')
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\cart\\shipping_information.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('cart/shipping_information', [], true)
+ 9 APPPATH\Controllers\CartController.php(238): view('cart/shipping_information', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+WARNING - 2024-11-19 04:53:03 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:53:03 --> CSRF token verified.
+INFO - 2024-11-19 04:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:53:07 --> CSRF token verified.
+WARNING - 2024-11-19 04:53:07 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(1308): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '309')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->getShippingMethodsByLocation()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:53:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:53:09 --> CSRF token verified.
+WARNING - 2024-11-19 04:53:09 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(1308): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->getShippingMethodsByLocation()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:53:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+WARNING - 2024-11-19 04:53:19 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:53:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:53:19 --> CSRF token verified.
+INFO - 2024-11-19 04:53:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:53:22 --> CSRF token verified.
+WARNING - 2024-11-19 04:53:22 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(1308): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '309')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->getShippingMethodsByLocation()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:53:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:53:24 --> CSRF token verified.
+WARNING - 2024-11-19 04:53:24 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(1308): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->getShippingMethodsByLocation()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:53:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:53:26 --> CSRF token verified.
+WARNING - 2024-11-19 04:53:27 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(1308): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '309')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->getShippingMethodsByLocation()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+WARNING - 2024-11-19 04:55:04 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:55:04 --> CSRF token verified.
+INFO - 2024-11-19 04:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:55:06 --> CSRF token verified.
+WARNING - 2024-11-19 04:55:06 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(1308): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '309')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->getShippingMethodsByLocation()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:55:07 --> CSRF token verified.
+WARNING - 2024-11-19 04:55:07 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(1308): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->getShippingMethodsByLocation()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:55:10 --> CSRF token verified.
+INFO - 2024-11-19 04:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+WARNING - 2024-11-19 04:55:10 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:55:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:55:11 --> CSRF token verified.
+INFO - 2024-11-19 04:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:55:13 --> CSRF token verified.
+INFO - 2024-11-19 04:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:55:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:55:14 --> CSRF token verified.
+INFO - 2024-11-19 04:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+WARNING - 2024-11-19 04:55:16 --> [DEPRECATED] Creation of dynamic property App\Services\Shippings\Methods\Default\FlatRateMethod::$is_selected is deprecated in APPPATH\Models\ShippingModel.php on line 108.
+ 1 APPPATH\Controllers\CartController.php(225): App\Models\ShippingModel->getSellerShippingMethodsArray([...], '308')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->shipping()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:55:16 --> CSRF token verified.
+INFO - 2024-11-19 04:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:55:34 --> CSRF token verified.
+INFO - 2024-11-19 04:55:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 04:55:40 --> ArgumentCountError: Too few arguments to function App\Services\Shippings\BaseShipping::__construct(), 0 passed in C:\xampp\htdocs\modesy\app\Helpers\app_helper.php on line 487 and exactly 1 expected
+[Method: GET, Route: dashboard/edit-shipping-zone/3]
+in APPPATH\Services\Shippings\BaseShipping.php on line 50.
+ 1 APPPATH\Helpers\app_helper.php(487): App\Services\Shippings\BaseShipping->__construct()
+ 2 APPPATH\Views\dashboard\shipping\edit_shipping_zone.php(144): getShippingMethods()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\shipping\\edit_shipping_zone.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/shipping/edit_shipping_zone', [], true)
+ 6 APPPATH\Controllers\DashboardController.php(1430): view('dashboard/shipping/edit_shipping_zone', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->editShippingZone('3')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 04:55:47 --> ArgumentCountError: Too few arguments to function App\Services\Shippings\BaseShipping::__construct(), 0 passed in C:\xampp\htdocs\modesy\app\Helpers\app_helper.php on line 487 and exactly 1 expected
+[Method: GET, Route: dashboard/edit-shipping-zone/3]
+in APPPATH\Services\Shippings\BaseShipping.php on line 50.
+ 1 APPPATH\Helpers\app_helper.php(487): App\Services\Shippings\BaseShipping->__construct()
+ 2 APPPATH\Views\dashboard\shipping\edit_shipping_zone.php(144): getShippingMethods()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\shipping\\edit_shipping_zone.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/shipping/edit_shipping_zone', [], true)
+ 6 APPPATH\Controllers\DashboardController.php(1430): view('dashboard/shipping/edit_shipping_zone', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->editShippingZone('3')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 04:58:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:58:19 --> CSRF token verified.
+INFO - 2024-11-19 04:58:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:58:23 --> CSRF token verified.
+INFO - 2024-11-19 04:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:58:26 --> CSRF token verified.
+INFO - 2024-11-19 04:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:58:37 --> CSRF token verified.
+INFO - 2024-11-19 04:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:58:46 --> CSRF token verified.
+INFO - 2024-11-19 04:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:58:50 --> CSRF token verified.
+INFO - 2024-11-19 04:58:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:58:57 --> CSRF token verified.
+INFO - 2024-11-19 04:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:59:00 --> CSRF token verified.
+INFO - 2024-11-19 04:59:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:59:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:59:02 --> CSRF token verified.
+INFO - 2024-11-19 04:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:59:06 --> CSRF token verified.
+INFO - 2024-11-19 04:59:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:59:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:59:08 --> CSRF token verified.
+INFO - 2024-11-19 04:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:59:14 --> CSRF token verified.
+INFO - 2024-11-19 04:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 04:59:37 --> CSRF token verified.
+INFO - 2024-11-19 05:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:00:37 --> CSRF token verified.
+INFO - 2024-11-19 05:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:00:43 --> CSRF token verified.
+INFO - 2024-11-19 05:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:00:53 --> CSRF token verified.
+INFO - 2024-11-19 05:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:01:11 --> CSRF token verified.
+INFO - 2024-11-19 05:01:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:01:16 --> CSRF token verified.
+INFO - 2024-11-19 05:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:02:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:02:11 --> CSRF token verified.
+INFO - 2024-11-19 05:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:02:15 --> CSRF token verified.
+INFO - 2024-11-19 05:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:03:24 --> CSRF token verified.
+INFO - 2024-11-19 05:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:03:47 --> CSRF token verified.
+INFO - 2024-11-19 05:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:04:37 --> CSRF token verified.
+INFO - 2024-11-19 05:04:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:04:41 --> CSRF token verified.
+INFO - 2024-11-19 05:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:24:14 --> CSRF token verified.
+INFO - 2024-11-19 05:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:24:23 --> CSRF token verified.
+INFO - 2024-11-19 05:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 05:32:12 --> ErrorException: Declaration of App\Services\Shippings\BaseShipping::renderInputForm() must be compatible with App\Services\Shippings\Interfaces\ShippingInterface::renderInputForm(): string
+[Method: GET, Route: dashboard/edit-shipping-zone/3]
+in APPPATH\Services\Shippings\BaseShipping.php on line 119.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-19 05:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 05:32:21 --> ErrorException: Declaration of App\Services\Shippings\BaseShipping::renderInputForm() must be compatible with App\Services\Shippings\Interfaces\ShippingInterface::renderInputForm(): string
+[Method: GET, Route: dashboard/edit-shipping-zone/3]
+in APPPATH\Services\Shippings\BaseShipping.php on line 119.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-19 05:32:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 05:32:23 --> ErrorException: Declaration of App\Services\Shippings\BaseShipping::renderInputForm() must be compatible with App\Services\Shippings\Interfaces\ShippingInterface::renderInputForm(): string
+[Method: GET, Route: dashboard/edit-shipping-zone/3]
+in APPPATH\Services\Shippings\BaseShipping.php on line 119.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-19 05:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 05:32:57 --> ErrorException: Declaration of App\Services\Shippings\BaseShipping::renderInputForm() must be compatible with App\Services\Shippings\Interfaces\ShippingInterface::renderInputForm(): string
+[Method: GET, Route: dashboard/edit-shipping-zone/3]
+in APPPATH\Services\Shippings\BaseShipping.php on line 119.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-19 05:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 05:33:01 --> ErrorException: Declaration of App\Services\Shippings\BaseShipping::renderInputForm() must be compatible with App\Services\Shippings\Interfaces\ShippingInterface::renderInputForm(): string
+[Method: GET, Route: dashboard/edit-shipping-zone/3]
+in APPPATH\Services\Shippings\BaseShipping.php on line 119.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-19 05:33:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 05:33:17 --> ErrorException: Declaration of App\Services\Shippings\BaseShipping::renderInputForm() must be compatible with App\Services\Shippings\Interfaces\ShippingInterface::renderInputForm(): string
+[Method: GET, Route: dashboard/edit-shipping-zone/3]
+in APPPATH\Services\Shippings\BaseShipping.php on line 119.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-19 05:33:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 05:33:38 --> ErrorException: Declaration of App\Services\Shippings\BaseShipping::renderInputForm() must be compatible with App\Services\Shippings\Interfaces\ShippingInterface::renderInputForm(): string
+[Method: GET, Route: dashboard/edit-shipping-zone/3]
+in APPPATH\Services\Shippings\BaseShipping.php on line 119.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-19 05:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:33:44 --> CSRF token verified.
+INFO - 2024-11-19 05:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 05:33:47 --> ErrorException: Declaration of App\Services\Shippings\BaseShipping::renderInputForm() must be compatible with App\Services\Shippings\Interfaces\ShippingInterface::renderInputForm(): string
+[Method: GET, Route: dashboard/edit-shipping-zone/3]
+in APPPATH\Services\Shippings\BaseShipping.php on line 119.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-19 05:33:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 05:33:59 --> ErrorException: Declaration of App\Services\Shippings\BaseShipping::renderInputForm() must be compatible with App\Services\Shippings\Interfaces\ShippingInterface::renderInputForm(): string
+[Method: GET, Route: dashboard/edit-shipping-zone/3]
+in APPPATH\Services\Shippings\BaseShipping.php on line 119.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-19 05:34:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 05:34:47 --> ErrorException: Declaration of App\Services\Shippings\BaseShipping::renderInputForm() must be compatible with App\Services\Shippings\Interfaces\ShippingInterface::renderInputForm(): string
+[Method: GET, Route: dashboard/edit-shipping-zone/3]
+in APPPATH\Services\Shippings\BaseShipping.php on line 119.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-19 05:35:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 05:35:43 --> ErrorException: Class App\Services\Shippings\Methods\Default\FreeShippingMethod contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (App\Services\Shippings\BaseShipping::getInputs)
+[Method: GET, Route: dashboard/edit-shipping-zone/3]
+in APPPATH\Services\Shippings\Methods\Default\FreeShippingMethod.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-19 05:36:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-11-19 05:36:53 --> ErrorException: Class App\Services\Shippings\Methods\Mondial\MondialColisDriveMethod contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (App\Services\Shippings\BaseShipping::getInputs)
+[Method: GET, Route: dashboard/edit-shipping-zone/3]
+in APPPATH\Services\Shippings\Methods\Mondial\MondialColisDriveMethod.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-19 05:38:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:38:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:38:18 --> CSRF token verified.
+INFO - 2024-11-19 05:38:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:38:24 --> CSRF token verified.
+CRITICAL - 2024-11-19 05:38:24 --> ErrorException: Undefined variable $method
+[Method: POST, Route: Dashboard/selectShippingMethod]
+in APPPATH\Views\dashboard\shipping\_response_shipping_method.php on line 22.
+ 1 APPPATH\Views\dashboard\shipping\_response_shipping_method.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $method', 'C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\shipping\\_response_shipping_method.php', 22)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\shipping\\_response_shipping_method.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/shipping/_response_shipping_method', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(1467): view('dashboard/shipping/_response_shipping_method', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->selectShippingMethod()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 05:38:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:38:35 --> CSRF token verified.
+CRITICAL - 2024-11-19 05:38:35 --> ErrorException: Undefined variable $method
+[Method: POST, Route: Dashboard/selectShippingMethod]
+in APPPATH\Views\dashboard\shipping\_response_shipping_method.php on line 22.
+ 1 APPPATH\Views\dashboard\shipping\_response_shipping_method.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $method', 'C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\shipping\\_response_shipping_method.php', 22)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\shipping\\_response_shipping_method.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/shipping/_response_shipping_method', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(1467): view('dashboard/shipping/_response_shipping_method', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->selectShippingMethod()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 05:39:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:39:16 --> CSRF token verified.
+INFO - 2024-11-19 05:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:39:20 --> CSRF token verified.
+CRITICAL - 2024-11-19 05:39:20 --> Error: Call to a member function renderInputForm() on string
+[Method: POST, Route: Dashboard/selectShippingMethod]
+in APPPATH\Views\dashboard\shipping\_response_shipping_method.php on line 22.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/shipping/_response_shipping_method', [], true)
+ 4 APPPATH\Controllers\DashboardController.php(1473): view('dashboard/shipping/_response_shipping_method', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->selectShippingMethod()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 05:39:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:39:26 --> CSRF token verified.
+CRITICAL - 2024-11-19 05:39:26 --> Error: Call to a member function renderInputForm() on string
+[Method: POST, Route: Dashboard/selectShippingMethod]
+in APPPATH\Views\dashboard\shipping\_response_shipping_method.php on line 22.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/shipping/_response_shipping_method', [], true)
+ 4 APPPATH\Controllers\DashboardController.php(1473): view('dashboard/shipping/_response_shipping_method', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->selectShippingMethod()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 05:39:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:39:48 --> CSRF token verified.
+INFO - 2024-11-19 05:39:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:39:52 --> CSRF token verified.
+INFO - 2024-11-19 05:40:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:40:04 --> CSRF token verified.
+INFO - 2024-11-19 05:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:44:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:44:00 --> CSRF token verified.
+INFO - 2024-11-19 05:44:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:44:03 --> CSRF token verified.
+INFO - 2024-11-19 05:44:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:44:21 --> CSRF token verified.
+INFO - 2024-11-19 05:44:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:44:40 --> CSRF token verified.
+INFO - 2024-11-19 05:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:58:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:58:05 --> CSRF token verified.
+INFO - 2024-11-19 05:58:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 05:58:08 --> CSRF token verified.
+INFO - 2024-11-19 06:06:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:06:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:06:07 --> CSRF token verified.
+INFO - 2024-11-19 06:06:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:06:10 --> CSRF token verified.
+CRITICAL - 2024-11-19 06:06:10 --> ErrorException: App\Services\Shippings\BaseShipping::App\Services\Shippings\{closure}(): Argument #3 ($attributesFormat) must be passed by reference, value given
+[Method: POST, Route: Dashboard/selectShippingMethod]
+in APPPATH\Services\Shippings\BaseShipping.php on line 149.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'App\\Services\\Shippings\\BaseShipping::App\\Services\\Shippings\\{closure}(): Argument #3 ($attributesFormat) must be passed by reference, value given', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\BaseShipping.php', 149)
+ 2 APPPATH\Services\Shippings\BaseShipping.php(149): array_walk([...], Object(Closure), '')
+ 3 APPPATH\Views\dashboard\shipping\_response_shipping_method.php(22): App\Services\Shippings\BaseShipping->renderInputForm()
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\shipping\\_response_shipping_method.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/shipping/_response_shipping_method', [], true)
+ 7 APPPATH\Controllers\DashboardController.php(1473): view('dashboard/shipping/_response_shipping_method', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->selectShippingMethod()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 06:06:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:06:17 --> CSRF token verified.
+CRITICAL - 2024-11-19 06:06:17 --> ErrorException: App\Services\Shippings\BaseShipping::App\Services\Shippings\{closure}(): Argument #3 ($attributesFormat) must be passed by reference, value given
+[Method: POST, Route: Dashboard/selectShippingMethod]
+in APPPATH\Services\Shippings\BaseShipping.php on line 149.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'App\\Services\\Shippings\\BaseShipping::App\\Services\\Shippings\\{closure}(): Argument #3 ($attributesFormat) must be passed by reference, value given', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\BaseShipping.php', 149)
+ 2 APPPATH\Services\Shippings\BaseShipping.php(149): array_walk([...], Object(Closure), '')
+ 3 APPPATH\Views\dashboard\shipping\_response_shipping_method.php(22): App\Services\Shippings\BaseShipping->renderInputForm()
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\shipping\\_response_shipping_method.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/shipping/_response_shipping_method', [], true)
+ 7 APPPATH\Controllers\DashboardController.php(1473): view('dashboard/shipping/_response_shipping_method', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->selectShippingMethod()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 06:07:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:07:19 --> CSRF token verified.
+INFO - 2024-11-19 06:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:07:22 --> CSRF token verified.
+INFO - 2024-11-19 06:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:07:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:07:50 --> CSRF token verified.
+INFO - 2024-11-19 06:07:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:07:54 --> CSRF token verified.
+INFO - 2024-11-19 06:08:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:08:32 --> CSRF token verified.
+INFO - 2024-11-19 06:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:09:01 --> CSRF token verified.
+INFO - 2024-11-19 06:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:09:05 --> CSRF token verified.
+CRITICAL - 2024-11-19 06:09:05 --> ErrorException: Undefined property: stdClass::$code
+[Method: POST, Route: Dashboard/selectShippingMethod]
+in APPPATH\Services\Shippings\BaseShipping.php on line 129.
+ 1 APPPATH\Services\Shippings\BaseShipping.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$code', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\BaseShipping.php', 129)
+ 2 APPPATH\Views\dashboard\shipping\_response_shipping_method.php(22): App\Services\Shippings\BaseShipping->renderInputForm()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\shipping\\_response_shipping_method.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/shipping/_response_shipping_method', [], true)
+ 6 APPPATH\Controllers\DashboardController.php(1473): view('dashboard/shipping/_response_shipping_method', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->selectShippingMethod()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 06:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:09:12 --> CSRF token verified.
+CRITICAL - 2024-11-19 06:09:12 --> ErrorException: Undefined property: stdClass::$code
+[Method: POST, Route: Dashboard/selectShippingMethod]
+in APPPATH\Services\Shippings\BaseShipping.php on line 129.
+ 1 APPPATH\Services\Shippings\BaseShipping.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$code', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\BaseShipping.php', 129)
+ 2 APPPATH\Views\dashboard\shipping\_response_shipping_method.php(22): App\Services\Shippings\BaseShipping->renderInputForm()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\shipping\\_response_shipping_method.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/shipping/_response_shipping_method', [], true)
+ 6 APPPATH\Controllers\DashboardController.php(1473): view('dashboard/shipping/_response_shipping_method', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->selectShippingMethod()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 06:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:09:26 --> CSRF token verified.
+INFO - 2024-11-19 06:09:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:09:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:09:39 --> CSRF token verified.
+INFO - 2024-11-19 06:09:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:09:42 --> CSRF token verified.
+INFO - 2024-11-19 06:16:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:16:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:16:02 --> CSRF token verified.
+INFO - 2024-11-19 06:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:16:04 --> CSRF token verified.
+INFO - 2024-11-19 06:19:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:19:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:19:21 --> CSRF token verified.
+INFO - 2024-11-19 06:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:19:23 --> CSRF token verified.
+CRITICAL - 2024-11-19 06:19:23 --> ErrorException: Undefined variable $title
+[Method: POST, Route: Dashboard/selectShippingMethod]
+in APPPATH\Services\Shippings\BaseShipping.php on line 175.
+ 1 APPPATH\Services\Shippings\BaseShipping.php(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\BaseShipping.php', 175)
+ 2 APPPATH\Views\dashboard\shipping\_response_shipping_method.php(22): App\Services\Shippings\BaseShipping->renderInputForm()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\shipping\\_response_shipping_method.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/shipping/_response_shipping_method', [], true)
+ 6 APPPATH\Controllers\DashboardController.php(1473): view('dashboard/shipping/_response_shipping_method', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->selectShippingMethod()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 06:19:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:19:30 --> CSRF token verified.
+CRITICAL - 2024-11-19 06:19:30 --> ErrorException: Undefined variable $title
+[Method: POST, Route: Dashboard/selectShippingMethod]
+in APPPATH\Services\Shippings\BaseShipping.php on line 175.
+ 1 APPPATH\Services\Shippings\BaseShipping.php(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\modesy\\app\\Services\\Shippings\\BaseShipping.php', 175)
+ 2 APPPATH\Views\dashboard\shipping\_response_shipping_method.php(22): App\Services\Shippings\BaseShipping->renderInputForm()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\shipping\\_response_shipping_method.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/shipping/_response_shipping_method', [], true)
+ 6 APPPATH\Controllers\DashboardController.php(1473): view('dashboard/shipping/_response_shipping_method', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->selectShippingMethod()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 06:20:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:20:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:20:07 --> CSRF token verified.
+INFO - 2024-11-19 06:20:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:20:10 --> CSRF token verified.
+INFO - 2024-11-19 06:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:25:29 --> CSRF token verified.
+INFO - 2024-11-19 06:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:25:32 --> CSRF token verified.
+CRITICAL - 2024-11-19 06:25:32 --> TypeError: array_walk(): Argument #1 ($array) must be of type array, bool given
+[Method: POST, Route: Dashboard/selectShippingMethod]
+in APPPATH\Services\Shippings\BaseShipping.php on line 169.
+ 1 APPPATH\Services\Shippings\BaseShipping.php(169): array_walk(true, Object(Closure))
+ 2 APPPATH\Views\dashboard\shipping\_response_shipping_method.php(22): App\Services\Shippings\BaseShipping->renderInputForm()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\shipping\\_response_shipping_method.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/shipping/_response_shipping_method', [], true)
+ 6 APPPATH\Controllers\DashboardController.php(1473): view('dashboard/shipping/_response_shipping_method', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->selectShippingMethod()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 06:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:25:38 --> CSRF token verified.
+CRITICAL - 2024-11-19 06:25:38 --> TypeError: array_walk(): Argument #1 ($array) must be of type array, bool given
+[Method: POST, Route: Dashboard/selectShippingMethod]
+in APPPATH\Services\Shippings\BaseShipping.php on line 169.
+ 1 APPPATH\Services\Shippings\BaseShipping.php(169): array_walk(true, Object(Closure))
+ 2 APPPATH\Views\dashboard\shipping\_response_shipping_method.php(22): App\Services\Shippings\BaseShipping->renderInputForm()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\shipping\\_response_shipping_method.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/shipping/_response_shipping_method', [], true)
+ 6 APPPATH\Controllers\DashboardController.php(1473): view('dashboard/shipping/_response_shipping_method', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->selectShippingMethod()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 06:26:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:26:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:26:44 --> CSRF token verified.
+INFO - 2024-11-19 06:26:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:26:47 --> CSRF token verified.
+INFO - 2024-11-19 06:28:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:28:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:28:10 --> CSRF token verified.
+INFO - 2024-11-19 06:28:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:28:15 --> CSRF token verified.
+INFO - 2024-11-19 06:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:29:34 --> CSRF token verified.
+INFO - 2024-11-19 06:29:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:29:36 --> CSRF token verified.
+INFO - 2024-11-19 06:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:30:18 --> CSRF token verified.
+INFO - 2024-11-19 06:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:30:21 --> CSRF token verified.
+INFO - 2024-11-19 06:32:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:32:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:32:25 --> CSRF token verified.
+INFO - 2024-11-19 06:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:32:27 --> CSRF token verified.
+INFO - 2024-11-19 06:32:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:32:51 --> CSRF token verified.
+INFO - 2024-11-19 06:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:32:53 --> CSRF token verified.
+INFO - 2024-11-19 06:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:39:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:39:59 --> CSRF token verified.
+INFO - 2024-11-19 06:40:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:40:01 --> CSRF token verified.
+CRITICAL - 2024-11-19 06:40:01 --> ValueError: Argument number specifier must be greater than zero and less than 2147483647
+[Method: POST, Route: Dashboard/selectShippingMethod]
+in APPPATH\Services\Shippings\BaseShipping.php on line 214.
+ 1 APPPATH\Services\Shippings\BaseShipping.php(214): sprintf('<div class="%1$s">
+                         <div class="custom-control custom-radio">
+                            <input type="radio" name="%2$s" class="%3$s" placeholder="%4$s" %5$s>
+                            <label for="status_%$6s_1" class="custom-control-label">%6$s</label>
+                        </div>
+                    </div>', 'col-md-6 col-sm-12', 'status_flat_rate', 'custom-control-input', 'English', 'checked = "1"', 'Enable')
+ 2 APPPATH\Views\dashboard\shipping\_response_shipping_method.php(22): App\Services\Shippings\BaseShipping->renderInputForm()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\shipping\\_response_shipping_method.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/shipping/_response_shipping_method', [], true)
+ 6 APPPATH\Controllers\DashboardController.php(1473): view('dashboard/shipping/_response_shipping_method', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->selectShippingMethod()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 06:40:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:40:07 --> CSRF token verified.
+CRITICAL - 2024-11-19 06:40:07 --> ValueError: Argument number specifier must be greater than zero and less than 2147483647
+[Method: POST, Route: Dashboard/selectShippingMethod]
+in APPPATH\Services\Shippings\BaseShipping.php on line 214.
+ 1 APPPATH\Services\Shippings\BaseShipping.php(214): sprintf('<div class="%1$s">
+                         <div class="custom-control custom-radio">
+                            <input type="radio" name="%2$s" class="%3$s" placeholder="%4$s" %5$s>
+                            <label for="status_%$6s_1" class="custom-control-label">%6$s</label>
+                        </div>
+                    </div>', 'col-md-6 col-sm-12', 'status_flat_rate', 'custom-control-input', 'English', 'checked = "1"', 'Enable')
+ 2 APPPATH\Views\dashboard\shipping\_response_shipping_method.php(22): App\Services\Shippings\BaseShipping->renderInputForm()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\shipping\\_response_shipping_method.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/shipping/_response_shipping_method', [], true)
+ 6 APPPATH\Controllers\DashboardController.php(1473): view('dashboard/shipping/_response_shipping_method', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->selectShippingMethod()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 06:40:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:40:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:40:36 --> CSRF token verified.
+INFO - 2024-11-19 06:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:40:39 --> CSRF token verified.
+INFO - 2024-11-19 06:42:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:42:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:42:00 --> CSRF token verified.
+INFO - 2024-11-19 06:42:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:42:02 --> CSRF token verified.
+INFO - 2024-11-19 06:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:43:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:43:07 --> CSRF token verified.
+INFO - 2024-11-19 06:43:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:43:08 --> CSRF token verified.
+INFO - 2024-11-19 06:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:44:43 --> CSRF token verified.
+INFO - 2024-11-19 06:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:44:46 --> CSRF token verified.
+INFO - 2024-11-19 06:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:46:53 --> CSRF token verified.
+INFO - 2024-11-19 06:46:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:46:55 --> CSRF token verified.
+INFO - 2024-11-19 06:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:48:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:48:21 --> CSRF token verified.
+INFO - 2024-11-19 06:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:48:25 --> CSRF token verified.
+INFO - 2024-11-19 06:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:51:11 --> CSRF token verified.
+INFO - 2024-11-19 06:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:51:14 --> CSRF token verified.
+INFO - 2024-11-19 06:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:51:32 --> CSRF token verified.
+INFO - 2024-11-19 06:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:52:36 --> CSRF token verified.
+INFO - 2024-11-19 06:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 06:52:54 --> CSRF token verified.
+INFO - 2024-11-19 07:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:04:30 --> CSRF token verified.
+INFO - 2024-11-19 07:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:04:34 --> CSRF token verified.
+INFO - 2024-11-19 07:06:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:06:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:06:02 --> CSRF token verified.
+INFO - 2024-11-19 07:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:06:05 --> CSRF token verified.
+INFO - 2024-11-19 07:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:08:01 --> CSRF token verified.
+INFO - 2024-11-19 07:08:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:08:04 --> CSRF token verified.
+CRITICAL - 2024-11-19 07:08:04 --> TypeError: Cannot access offset of type string on string
+[Method: POST, Route: Dashboard/selectShippingMethod]
+in APPPATH\Services\Shippings\BaseShipping.php on line 194.
+ 1 APPPATH\Views\dashboard\shipping\_response_shipping_method.php(22): App\Services\Shippings\BaseShipping->renderInputForm()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\shipping\\_response_shipping_method.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/shipping/_response_shipping_method', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(1473): view('dashboard/shipping/_response_shipping_method', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->selectShippingMethod()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 07:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:08:10 --> CSRF token verified.
+CRITICAL - 2024-11-19 07:08:10 --> TypeError: Cannot access offset of type string on string
+[Method: POST, Route: Dashboard/selectShippingMethod]
+in APPPATH\Services\Shippings\BaseShipping.php on line 194.
+ 1 APPPATH\Views\dashboard\shipping\_response_shipping_method.php(22): App\Services\Shippings\BaseShipping->renderInputForm()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\modesy\\app\\Views\\dashboard\\shipping\\_response_shipping_method.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('dashboard/shipping/_response_shipping_method', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(1473): view('dashboard/shipping/_response_shipping_method', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->selectShippingMethod()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-19 07:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:08:31 --> CSRF token verified.
+INFO - 2024-11-19 07:08:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:08:34 --> CSRF token verified.
+INFO - 2024-11-19 07:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:10:18 --> CSRF token verified.
+INFO - 2024-11-19 07:10:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:10:22 --> CSRF token verified.
+INFO - 2024-11-19 07:11:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:11:08 --> CSRF token verified.
+INFO - 2024-11-19 07:11:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:11:11 --> CSRF token verified.
+INFO - 2024-11-19 07:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:11:49 --> CSRF token verified.
+INFO - 2024-11-19 07:12:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:12:01 --> CSRF token verified.
+INFO - 2024-11-19 07:12:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:12:01 --> CSRF token verified.
+INFO - 2024-11-19 07:13:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:13:06 --> CSRF token verified.
+INFO - 2024-11-19 07:20:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:20:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:20:42 --> CSRF token verified.
+INFO - 2024-11-19 07:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:20:47 --> CSRF token verified.
+INFO - 2024-11-19 07:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:21:27 --> CSRF token verified.
+INFO - 2024-11-19 07:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:21:30 --> CSRF token verified.
+INFO - 2024-11-19 07:21:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:21:51 --> CSRF token verified.
+INFO - 2024-11-19 07:21:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:21:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-19 07:21:58 --> CSRF token verified.
