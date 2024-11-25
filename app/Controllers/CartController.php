@@ -240,7 +240,7 @@ class CartController extends BaseController
             echo view('cart/shipping_information_guest', $data);
         }
         echo view('partials/_footer');
-    }
+    } 
 
     /**
      * Shipping Post
@@ -1296,12 +1296,13 @@ class CartController extends BaseController
     public function getShippingMethodsByLocation()
     {
         $data = [
-            'result' => 0,
-            'htmlContent' => ''
+            'result'        => 0,
+            'htmlContent'   => ''
         ];
 
         $stateId    = inputPost('state_id');
         $cartItems  = $this->cartModel->getSessCartItems();
+        
         if (!empty($stateId)) {
             $shippingModel          = new ShippingModel();
             $vars                   = ['stateId' => $stateId, 'shippingMethods' => $shippingModel->getSellerShippingMethodsArray($cartItems, $stateId)];

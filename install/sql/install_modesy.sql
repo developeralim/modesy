@@ -3223,7 +3223,7 @@ CREATE TABLE `shipping_zone_methods` (
   `method_type` varchar(100) DEFAULT NULL,
   `flat_rate_cost_calculation_type` varchar(100) DEFAULT NULL,
   `flat_rate_cost` bigint(20) DEFAULT NULL,
-  `flat_rate_class_costs_array` text DEFAULT NULL,
+  `shipping_classes_array` text DEFAULT NULL,
   `local_pickup_cost` bigint(20) DEFAULT NULL,
   `free_shipping_min_amount` bigint(20) DEFAULT NULL,
   `status` tinyint(1) DEFAULT 1

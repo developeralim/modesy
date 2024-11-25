@@ -262,6 +262,8 @@ if (!empty($languages)) {
         $routes->get($key . $csrt->dashboard . '/' . $csrt->products, 'DashboardController::products');
         $routes->get($key . $csrt->dashboard . '/' . $csrt->bulk_product_upload, 'DashboardController::bulkProductUpload');
         $routes->get($key . $csrt->dashboard . '/' . $csrt->sales, 'DashboardController::sales');
+        $routes->get($key . $csrt->dashboard . '/' . $csrt->sales . '/' . $csrt->shipment . '/(:any)', 'DashboardController::shipments/$1');
+        $routes->post($key . $csrt->dashboard . '/' . $csrt->sales . '/' . $csrt->shipment . '/' . $csrt->generate_label, 'DashboardController::generateShippingLabel');
         $routes->get($key . $csrt->dashboard . '/' . $csrt->sale . '/(:num)', 'DashboardController::sale/$1');
         $routes->get($key . $csrt->dashboard . '/' . $csrt->quote_requests, 'DashboardController::quoteRequests');
         $routes->get($key . $csrt->dashboard . '/' . $csrt->cash_on_delivery, 'DashboardController::cashOnDelivery');

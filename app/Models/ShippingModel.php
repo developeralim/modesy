@@ -1,5 +1,7 @@
 <?php namespace App\Models;
 
+use Exception;
+
 class ShippingModel extends BaseModel
 {
     protected $builderZones;
@@ -60,46 +62,38 @@ class ShippingModel extends BaseModel
                     $item->username             = getUsername($seller);
                     $item->methods              = array();
                     $shippingMethods            = $this->getCartShippingMethods($seller->id, $stateId);
-
+                    
                     if (!empty($shippingMethods)) {
                         foreach ($shippingMethods as $shippingMethod) {
-                            $method                             = new \stdClass();
-                            $method->id                         = $shippingMethod->id;
-                            $method->method_type                = $shippingMethod->method_type;
-                            $method->name                       = @parseSerializedNameArray($shippingMethod->name_array, selectedLangId());
-                            $method->is_selected                = 0;
-                            $method->is_free_shipping           = 0;
-                            $method->free_shipping_min_amount   = 0;
-                            $method->cost                       = null;
-                            //calculate shipping cost
-                            $freeShippingMinAmount              = getPrice($shippingMethod->free_shipping_min_amount, 'decimal');
-                            $localPickupCost                    = getPrice($shippingMethod->local_pickup_cost, 'decimal');
 
-                            if ($shippingMethod->method_type == 'free_shipping') {
-                                if (isset($sellerTotal[$seller->id])) {
-                                    $total = $sellerTotal[$seller->id];
-                                    if ($this->defaultCurrency->code != $this->selectedCurrency->code) {
-                                        $freeShippingMinAmount = convertCurrencyByExchangeRate($freeShippingMinAmount, $this->selectedCurrency->exchange_rate);
-                                    }
-                                    if ($total >= $freeShippingMinAmount) {
-                                        $method->is_free_shipping = 1;
-                                        $method->free_shipping_min_amount = $freeShippingMinAmount;
-                                    }
-                                }
-                            } elseif ($shippingMethod->method_type == 'local_pickup') {
-                                $method->cost = $localPickupCost;
-                            } elseif ($shippingMethod->method_type == 'flat_rate') {
-                                $method->cost = $this->getFlatRateCost($shippingMethod, $cartItems, $sellerId);
-                            }
-                            if (!empty($method->cost)) {
-                                $method->cost = number_format($method->cost, 2, '.', '');
-                            }
-                            //add shipping cost
-                            $arrayShippingCost[$method->id] = $method->cost;
+                            //$extra_inputs = json_decode($shippingMethod->extra_inputs,true);
+
+                            // if ((
+                            //     $shippingMethod->flat_rate_cost_calculation_type == 'price_rule' &&
+                            //     isset( $sellerTotal[$seller->id] ) && 
+                            //     isset( $extra_inputs['price_rule']['from'],$extra_inputs['price_rule']['to'] ) &&  
+                            //     $sellerTotal[$seller->id] >= $extra_inputs['price_rule']['from'] && 
+                            //     $sellerTotal[$seller->id] <= $extra_inputs['price_rule']['to']
+                            // )) {
+                            //     continue;
+                            // }
+
+                            /** @var \App\Services\Shippings\Interfaces\ShippingInterface $method */
+                            $method = new \Config\Shippings::$methods[$shippingMethod->method_type];
+                                
+                            $method->setEntity( $shippingMethod );
+                            $method->setSeller( $seller );
+                            $method->setSellerTotal( $sellerTotal[$seller->id] ?? 0 );
+                            $method->setCartItems( $cartItems );
+                            $method->setCurrency( $this->selectedCurrency );
+
+                            $arrayShippingCost[ $shippingMethod->id ] = $method->calculateCost();
+                    
                             if ($setSession == true) {
                                 helperSetSession('mds_array_shipping_cost', $arrayShippingCost);
                                 helperSetSession('mds_array_cart_seller_ids', $sellerIds);
                             }
+                            
                             array_push($item->methods, $method);
                         }
                     }
@@ -108,7 +102,7 @@ class ShippingModel extends BaseModel
                 }
             }
         }
-
+        
         //set selected shipping methods
         $totalShippingCost = 0;
 
@@ -118,63 +112,75 @@ class ShippingModel extends BaseModel
                     $i = 0;
                     foreach ($item->methods as $method) {
                         if ($i == 0) {
-                            if ($method->method_type == 'free_shipping') {
-                                if ($method->is_free_shipping == 1) {
+                            if ( $method->getName() == 'free_shipping' ) {
+                                if ( $method->is_free_shipping == 1 ) {
                                     $method->is_selected = 1;
                                     $i++;
                                 }
                             } else {
                                 $method->is_selected = 1;
-                                $totalShippingCost += $method->cost;
+                                $totalShippingCost += $method->calculateCost();
                                 $i++;
                             }
                         }
                     }
                 }
+
+                $item->total_shipping_cost = $totalShippingCost;
             }
         }
-
+       
         return $sellerShippingMethods;
     }
 
     //get cart shipping methods
     public function getCartShippingMethods($sellerId, $stateId)
     {
-        $continentCode = '';
-        $countryId = '';
+        $continentCode  = '';
+        $countryId       = '';
         //get the state
         $state = getState($stateId);
+
         if (!empty($state)) {
             //get country
             $country = getCountry($state->country_id);
+
             if (!empty($country)) {
-                $countryId = $country->id;
-                $continentCode = $country->continent_code;
+                $countryId      = $country->id;
+                $continentCode  = $country->continent_code;
             }
+
             //get shipping options by state
-            $zoneLocations = array();
-            $zoneIds = array();
+            $zoneLocations  = array();
+            $zoneIds        = array();
+
             if (!empty($state->id)) {
                 $zoneLocations = $this->builderZoneLocations->where('state_id', clrNum($state->id))->where('user_id', clrNum($sellerId))->get()->getResult();
             }
+
             //get shipping options by country
             if (empty($zoneLocations) && countItems($zoneLocations) < 1 && !empty($countryId)) {
                 $zoneLocations = $this->builderZoneLocations->where('country_id', clrNum($countryId))->where('state_id', 0)->where('user_id', clrNum($sellerId))->get()->getResult();
             }
+
             //get shipping options by continent
             if (empty($zoneLocations) && countItems($zoneLocations) < 1 && !empty($continentCode)) {
                 $zoneLocations = $this->builderZoneLocations->where('continent_code', cleanStr($continentCode))->where('country_id', 0)->where('state_id', 0)->where('user_id', clrNum($sellerId))->get()->getResult();
             }
+
             if (!empty($zoneLocations)) {
                 foreach ($zoneLocations as $location) {
                     array_push($zoneIds, $location->zone_id);
                 }
             }
+
             //get shipping methods
             if (!empty($zoneIds)) {
                 return $this->builderZoneMethods->whereIn('zone_id', $zoneIds, FALSE)->where('user_id', clrNum($sellerId))->where('status', 1)->orderBy("FIELD(method_type, 'free_shipping', 'local_pickup', 'flat_rate')")->get()->getResult();
             }
+
         }
+
         return array();
     }
 
@@ -212,41 +218,6 @@ class ShippingModel extends BaseModel
         helperSetSession('mds_selected_shipping_method_ids', $selectedShippingMethodIds);
         helperSetSession('mds_seller_shipping_costs', $arraySellerShippingCosts);
         return $result;
-    }
-
-    //get flat rate cost
-    public function getFlatRateCost($shippingMethod, $cartItems, $sellerId)
-    {
-        $totalCost = 0;
-        if (!empty($shippingMethod)) {
-            $items = array();
-            if (!empty($cartItems)) {
-                foreach ($cartItems as $cartItem) {
-                    if ($cartItem->seller_id == $sellerId && $cartItem->product_type == 'physical') {
-                        $cost = $shippingMethod->flat_rate_cost;
-                        if (!empty($cartItem->shipping_class_id)) {
-                            $classCost = getShippingClassCostByMethod($shippingMethod->flat_rate_class_costs_array, $cartItem->shipping_class_id);
-                            if (!empty($classCost)) {
-                                $cost = $classCost;
-                            }
-                        }
-                        if ($shippingMethod->flat_rate_cost_calculation_type == 'each_product') {
-                            $totalCost += $cost * $cartItem->quantity;
-                        } elseif ($shippingMethod->flat_rate_cost_calculation_type == 'each_different_product') {
-                            $totalCost += $cost;
-                        } elseif ($shippingMethod->flat_rate_cost_calculation_type == 'cart_total') {
-                            if ($cost > $totalCost) {
-                                $totalCost = $cost;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        if (!empty($totalCost)) {
-            $totalCost = getPrice($totalCost, 'decimal');
-        }
-        return $totalCost;
     }
 
     //get product shipping cost
@@ -360,8 +331,8 @@ class ShippingModel extends BaseModel
         $estDeliveryArray = array();
         foreach ($this->activeLanguages as $language) {
             $item = [
-                'lang_id' => $language->id,
-                'name' => inputPost('zone_name_lang_' . $language->id)
+                'lang_id'   => $language->id,
+                'name'      => inputPost('zone_name_lang_' . $language->id)
             ];
             array_push($nameArray, $item);
             $item = [
@@ -375,6 +346,7 @@ class ShippingModel extends BaseModel
             'estimated_delivery' => serialize($estDeliveryArray),
             'user_id' => user()->id
         ];
+        
         if ($this->builderZones->insert($data)) {
             $zoneId = $this->db->insertID();
             //add locations
@@ -390,6 +362,7 @@ class ShippingModel extends BaseModel
     public function addShippingZoneLocations($zoneId)
     {
         $continentCodes = inputPost('continent');
+
         if (!empty($continentCodes)) {
             foreach ($continentCodes as $continentCode) {
                 if (in_array($continentCode, array('EU', 'AS', 'AF', 'NA', 'SA', 'OC', 'AN'))) {
@@ -397,18 +370,20 @@ class ShippingModel extends BaseModel
                     $zoneContinent = $this->builderZoneLocations->where('continent_code', cleanStr($continentCode))->where('zone_id', clrNum($zoneId))->get()->getRow();
                     if (empty($zoneContinent)) {
                         $item = [
-                            'zone_id' => $zoneId,
-                            'user_id' => user()->id,
-                            'continent_code' => $continentCode,
-                            'country_id' => 0,
-                            'state_id' => 0
+                            'zone_id'           => $zoneId,
+                            'user_id'           => user()->id,
+                            'continent_code'    => $continentCode,
+                            'country_id'        => 0,
+                            'state_id'          => 0
                         ];
                         $this->builderZoneLocations->insert($item);
                     }
                 }
             }
         }
+
         $countryIds = inputPost('country');
+
         if (!empty($countryIds)) {
             foreach ($countryIds as $countryId) {
                 $country = getCountry($countryId);
@@ -428,7 +403,9 @@ class ShippingModel extends BaseModel
                 }
             }
         }
+
         $stateIds = inputPost('state');
+
         if (!empty($stateIds)) {
             foreach ($stateIds as $stateId) {
                 $state = getState($stateId);
@@ -456,53 +433,67 @@ class ShippingModel extends BaseModel
     //add shipping zone payment methods
     public function addShippingZonePaymentMethods($zoneId)
     {
-        $optionUniqueIds = inputPost('option_unique_id');
-        if (!empty($optionUniqueIds)) {
-            foreach ($optionUniqueIds as $optionUniqueId) {
-                $nameArray = array();
-                foreach ($this->activeLanguages as $language) {
-                    $item = [
-                        'lang_id' => $language->id,
-                        'name' => inputPost('method_name_' . $optionUniqueId . '_lang_' . $language->id)
-                    ];
-                    array_push($nameArray, $item);
+        $methods        = inputPost('methods');
+        $defaultInputs  = [
+            'flat_rate_cost_calculation_type',
+            'flat_rate_cost',
+            'local_pickup_cost',
+            'free_shipping_min_amount',
+            'shipping_classes_array',
+            'status'
+        ];  
+       
+        if ( ! empty($methods) ) {
+            foreach ( $methods as $methodType => $methodArray ) {
+              
+                if ( empty( $methodArray ) ) {
+                    continue;
                 }
-                $data = [
-                    'name_array' => serialize($nameArray),
-                    'zone_id' => $zoneId,
-                    'user_id' => user()->id,
-                    'method_type' => inputPost('method_type_' . $optionUniqueId),
-                    'flat_rate_cost_calculation_type' => inputPost('flat_rate_cost_calculation_type_' . $optionUniqueId),
-                    'flat_rate_cost' => inputPost('flat_rate_cost_' . $optionUniqueId),
-                    'local_pickup_cost' => inputPost('local_pickup_cost_' . $optionUniqueId),
-                    'free_shipping_min_amount' => inputPost('free_shipping_min_amount_' . $optionUniqueId),
-                    'status' => inputPost('status_' . $optionUniqueId)
-                ];
-                $data['flat_rate_cost_calculation_type'] = !empty($data['flat_rate_cost_calculation_type']) ? $data['flat_rate_cost_calculation_type'] : '';
-                $data['flat_rate_cost'] = !empty($data['flat_rate_cost']) ? $data['flat_rate_cost'] : 0;
-                $data['local_pickup_cost'] = !empty($data['local_pickup_cost']) ? $data['local_pickup_cost'] : 0;
-                $data['free_shipping_min_amount'] = !empty($data['free_shipping_min_amount']) ? $data['free_shipping_min_amount'] : 0;
-                $data["flat_rate_cost"] = getPrice($data['flat_rate_cost'], 'database');
-                $data["local_pickup_cost"] = getPrice($data['local_pickup_cost'], 'database');
-                $data["free_shipping_min_amount"] = getPrice($data['free_shipping_min_amount'], 'database');
-                //shipping classes
-                $classArray = array();
-                $shippingClasses = $this->getActiveShippingClasses(user()->id);
-                if (!empty($shippingClasses)) {
-                    foreach ($shippingClasses as $shippingClass) {
+
+                foreach( $methodArray as $uniquId => $values ) {
+                   
+                    /** @var \App\Services\Shippings\Interfaces\ShippingInterface $method */
+                    $method = new \Config\Shippings::$methods[$methodType];
+                    $inputs = array_filter($method->getInputs(),function( $input ){
+                        return isset($input['name']) && $input['name'] !== 'method_name';
+                    });
+
+                    $nameArray = array();
+
+                    foreach ($this->activeLanguages as $language) {
                         $item = [
-                            'class_id' => $shippingClass->id,
-                            'cost' => inputPost('flat_rate_cost_' . $optionUniqueId . '_class_' . $shippingClass->id)
+                            'lang_id'   => $language->id,
+                            'name'      => $values['method_name']
                         ];
-                        $item['cost'] = getPrice($item['cost'], 'database');
-                        array_push($classArray, $item);
+
+                        array_push($nameArray, $item);
                     }
+
+                    $data = [
+                        'user_id'                           => user()->id,
+                        'name_array'                        => serialize($nameArray),
+                        'zone_id'                           => $zoneId,
+                        'method_type'                       => $methodType,
+                    ];
+
+                    $extra = [];
+                  
+                    array_walk($inputs,function( $input ) use( $defaultInputs,&$extra,&$data,$values ){
+                        $name  = $input['name'];
+                        $value = isset( $input['cast'] ) && is_callable($input['cast']) ? call_user_func($input['cast'],$values[$name]) : $values[$name];
+
+                        if ( in_array( $name,$defaultInputs ) ) {
+                            $data[$name] = $value;
+                        } else {
+                            $extra[$name] = $value;
+                        }
+
+                    });
+                    
+                    $data['extra_inputs'] = json_encode($extra);
+
+                    $this->builderZoneMethods->insert($data);
                 }
-                $data['flat_rate_class_costs_array'] = '';
-                if (!empty($classArray)) {
-                    $data['flat_rate_class_costs_array'] = serialize($classArray);
-                }
-                $this->builderZoneMethods->insert($data);
             }
         }
     }
@@ -510,90 +501,111 @@ class ShippingModel extends BaseModel
     //edit shipping zone
     public function editShippingZone($zoneId)
     {
-        $nameArray = array();
-        $estDeliveryArray = array();
+        $nameArray          = array();
+        $estDeliveryArray   = array();
+
         foreach ($this->activeLanguages as $language) {
             $item = [
-                'lang_id' => $language->id,
-                'name' => inputPost('zone_name_lang_' . $language->id)
+                'lang_id'   => $language->id,
+                'name'      => inputPost('zone_name_lang_' . $language->id)
             ];
+
             array_push($nameArray, $item);
+
             $item = [
-                'lang_id' => $language->id,
-                'name' => inputPost('estimated_delivery_lang_' . $language->id)
+                'lang_id'   => $language->id,
+                'name'      => inputPost('estimated_delivery_lang_' . $language->id)
             ];
+
             array_push($estDeliveryArray, $item);
         }
+
         $data = [
-            'name_array' => serialize($nameArray),
-            'estimated_delivery' => serialize($estDeliveryArray),
+            'name_array'            => serialize($nameArray),
+            'estimated_delivery'    => serialize($estDeliveryArray),
         ];
-        if ($this->builderZones->where('id', clrNum($zoneId))->update($data)) {
+
+
+        if ( $this->builderZones->where('id', clrNum($zoneId))->update($data) ) {
             //add locations
             $this->addShippingZoneLocations($zoneId);
             //edit paymenet methods
             $this->editShippingZonePaymentMethods($zoneId);
+
             return true;
         }
+
         return false;
     }
 
     //edit shipping zone payment methods
     public function editShippingZonePaymentMethods($zoneId)
     {
-        $optionUniqueIds = inputPost('option_unique_id');
-        if (!empty($optionUniqueIds)) {
-            foreach ($optionUniqueIds as $optionUniqueId) {
-                $nameArray = array();
-                foreach ($this->activeLanguages as $language) {
-                    $item = [
-                        'lang_id' => $language->id,
-                        'name' => inputPost('method_name_' . $optionUniqueId . '_lang_' . $language->id)
-                    ];
-                    array_push($nameArray, $item);
+
+        $methods        = inputPost('methods');
+        $defaultInputs  = [
+            'flat_rate_cost_calculation_type',
+            'flat_rate_cost',
+            'local_pickup_cost',
+            'free_shipping_min_amount',
+            'shipping_classes_array',
+            'status'
+        ];  
+       
+        if ( ! empty($methods) ) {
+            foreach ( $methods as $methodType => $methodArray ) {
+              
+                if ( empty( $methodArray ) ) {
+                    continue;
                 }
-                $data = [
-                    'name_array' => serialize($nameArray),
-                    'zone_id' => $zoneId,
-                    'method_type' => inputPost('method_type_' . $optionUniqueId),
-                    'flat_rate_cost_calculation_type' => inputPost('flat_rate_cost_calculation_type_' . $optionUniqueId),
-                    'flat_rate_cost' => inputPost('flat_rate_cost_' . $optionUniqueId),
-                    'local_pickup_cost' => inputPost('local_pickup_cost_' . $optionUniqueId),
-                    'free_shipping_min_amount' => inputPost('free_shipping_min_amount_' . $optionUniqueId),
-                    'status' => inputPost('status_' . $optionUniqueId)
-                ];
-                $data['flat_rate_cost_calculation_type'] = !empty($data['flat_rate_cost_calculation_type']) ? $data['flat_rate_cost_calculation_type'] : '';
-                $data['flat_rate_cost'] = !empty($data['flat_rate_cost']) ? $data['flat_rate_cost'] : 0;
-                $data['local_pickup_cost'] = !empty($data['local_pickup_cost']) ? $data['local_pickup_cost'] : 0;
-                $data['free_shipping_min_amount'] = !empty($data['free_shipping_min_amount']) ? $data['free_shipping_min_amount'] : 0;
-                $data['flat_rate_cost'] = getPrice($data['flat_rate_cost'], 'database');
-                $data['local_pickup_cost'] = getPrice($data['local_pickup_cost'], 'database');
-                $data['free_shipping_min_amount'] = getPrice($data['free_shipping_min_amount'], 'database');
-                //shipping classes
-                $classArray = array();
-                $shippingClasses = $this->getShippingClasses(user()->id);
-                if (!empty($shippingClasses)) {
-                    foreach ($shippingClasses as $shippingClass) {
+
+                foreach( $methodArray as $uniquId => $values ) {
+                    
+                    /** @var \App\Services\Shippings\Interfaces\ShippingInterface $method */
+                    $method = new \Config\Shippings::$methods[$methodType];
+                    $inputs = array_filter($method->getInputs(),function( $input ){
+                        return isset($input['name']) && $input['name'] !== 'method_name';
+                    });
+            
+                    $nameArray = array();
+
+                    foreach ($this->activeLanguages as $language) {
                         $item = [
-                            'class_id' => $shippingClass->id,
-                            'cost' => inputPost('flat_rate_cost_' . $optionUniqueId . '_class_' . $shippingClass->id)
+                            'lang_id'   => $language->id,
+                            'name'      => $values['method_name']
                         ];
-                        if (empty($item['cost'])) {
-                            $item['cost'] = 0;
-                        }
-                        $item['cost'] = getPrice($item['cost'], 'database');
-                        array_push($classArray, $item);
+
+                        array_push($nameArray, $item);
                     }
-                }
-                $data['flat_rate_class_costs_array'] = '';
-                if (!empty($classArray)) {
-                    $data['flat_rate_class_costs_array'] = serialize($classArray);
-                }
-                if (inputPost('method_operation_' . $optionUniqueId, true) == 'edit') {
-                    $this->builderZoneMethods->where('id', clrNum($optionUniqueId))->update($data);
-                } else {
-                    $data['user_id'] = user()->id;
-                    $this->builderZoneMethods->insert($data);
+
+                    $data = [
+                        'user_id'                           => user()->id,
+                        'name_array'                        => serialize($nameArray),
+                        'zone_id'                           => $zoneId,
+                        'method_type'                       => $methodType,
+                    ];
+
+                    $extra = [];
+                  
+                    array_walk($inputs,function( $input ) use( $defaultInputs,&$extra,&$data,$values ){
+                        $name  = $input['name'];
+                        $value = isset( $input['cast'] ) && is_callable($input['cast']) ? call_user_func($input['cast'],$values[$name]) : $values[$name];
+
+                        if ( in_array( $name,$defaultInputs ) ) {
+                            $data[$name] = $value;
+                        } else {
+                            $extra[$name] = $value;
+                        }
+
+                    });
+                    
+                    $data['extra_inputs'] = json_encode($extra);
+              
+                    if (isset( $values['id'] ) ) {
+                        $this->builderZoneMethods->where('id', $values['id'])->update($data);
+                    } else {
+                        $this->builderZoneMethods->insert($data);
+                    }
                 }
             }
         }
@@ -775,6 +787,15 @@ class ShippingModel extends BaseModel
         if (!empty($row)) {
             return $this->builderZoneMethods->where('id', clrNum($id))->delete();
         }
+    }
+
+    public function getShippingMethod($id)
+    {
+        return $this->builderZoneMethods->select('shipping_zone_methods.*')
+                ->where('shipping_zone_methods.id', clrNum($id))
+                ->get()
+                ->getRow();
+        
     }
 
     //delete shipping delivery time

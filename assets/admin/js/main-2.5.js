@@ -882,17 +882,28 @@ function deleteCategoryImage(categoryId) {
     });
 };
 
-$(document).bind('ready ajaxComplete', function () {
-    $(".select2").select2({
-        placeholder: $(this).attr('data-placeholder'),
-        height: 40,
-        dir: MdsConfig.directionality,
-        "language": {
+var initSelect2 = function(){
+    var select2 = $(".select2");
+    var config  = {
+        placeholder : $(this).attr('data-placeholder'),
+        height      : 42,
+        dir         : MdsConfig.rtl == true ? "rtl" : "ltr",
+        "language"  : {
             "noResults": function () {
                 return MdsConfig.textNoResultsFound;
             }
         },
-    });
+    };
+
+    if ( select2.data('dropdown-parent') ) {
+        config['dropdownParent'] = $(`${select2.data('dropdown-parent')}`);
+    }
+    
+    select2.select2(config);
+}
+
+$(document).bind('ready ajaxComplete', function () {
+    initSelect2();
 });
 
 $(document).on('input keyup paste', '.number-spinner input', function () {

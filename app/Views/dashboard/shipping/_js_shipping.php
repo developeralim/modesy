@@ -94,7 +94,7 @@
     });
 
     //delete shipping method database
-    function deleteShippingMethod(id, message) {
+    function deleteShippingMethod(id, message,target) {
         swal({
             text: message,
             icon: 'warning',
@@ -111,7 +111,7 @@
                     url: MdsConfig.baseURL + '/Dashboard/deleteShippingMethodPost',
                     data: setAjaxData(data),
                     success: function (response) {
-                        $("#row_shipping_method_" + id).remove();
+                        $("#row_shipping_method_" + target).remove();
                     }
                 });
             }

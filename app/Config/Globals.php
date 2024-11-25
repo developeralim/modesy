@@ -17,13 +17,13 @@ class Globals extends BaseConfig
     public static $defaultLang = array();
     public static $languageTranslations = array();
     public static $rolesPermissions = array();
-    public static $activeLang = array();
+    public static $activeLang;
     public static $langBaseUrl = '';
     public static $langSegment = '';
     public static $authCheck = false;
     public static $authUser = null;
     public static $currencies = array();
-    public static $defaultCurrency = array();
+    public static $defaultCurrency;
     public static $defaultLocation = array();
 
     public static function setGlobals()
