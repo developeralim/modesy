@@ -370,3 +370,280 @@ INFO - 2024-11-18 17:02:14 --> CSRF token verified.
 INFO - 2024-11-18 17:20:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
 INFO - 2024-11-18 17:20:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
 INFO - 2024-11-18 17:20:42 --> CSRF token verified.
+ERROR - 2024-11-18 19:01:48 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'modesy' in C:\xampp\htdocs\modesy\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\modesy\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'modesy', 3306, '', 0)
+#1 C:\xampp\htdocs\modesy\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\modesy\system\Session\Handlers\DatabaseHandler.php(100): CodeIgniter\Database\BaseConnection->initialize()
+#3 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->open('ci_sessions', 'mds_session')
+#4 C:\xampp\htdocs\modesy\system\Session\Session.php(920): session_start()
+#5 C:\xampp\htdocs\modesy\system\Session\Session.php(242): CodeIgniter\Session\Session->startSession()
+#6 C:\xampp\htdocs\modesy\system\Config\Services.php(710): CodeIgniter\Session\Session->start()
+#7 C:\xampp\htdocs\modesy\system\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#8 C:\xampp\htdocs\modesy\system\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 C:\xampp\htdocs\modesy\system\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#10 C:\xampp\htdocs\modesy\system\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+#11 C:\xampp\htdocs\modesy\app\Config\Globals.php(32): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#12 C:\xampp\htdocs\modesy\app\Config\Globals.php(245): Config\Globals::setGlobals()
+#13 C:\xampp\htdocs\modesy\system\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\modesy\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\modesy\system\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+#16 C:\xampp\htdocs\modesy\app\Config\Routes.php(6): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+#17 C:\xampp\htdocs\modesy\system\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs...')
+#18 C:\xampp\htdocs\modesy\system\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+#19 C:\xampp\htdocs\modesy\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#20 C:\xampp\htdocs\modesy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 C:\xampp\htdocs\modesy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#22 C:\xampp\htdocs\modesy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#23 C:\xampp\htdocs\modesy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#24 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'modesy' in C:\xampp\htdocs\modesy\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\modesy\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\modesy\system\Session\Handlers\DatabaseHandler.php(100): CodeIgniter\Database\BaseConnection->initialize()
+#2 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->open('ci_sessions', 'mds_session')
+#3 C:\xampp\htdocs\modesy\system\Session\Session.php(920): session_start()
+#4 C:\xampp\htdocs\modesy\system\Session\Session.php(242): CodeIgniter\Session\Session->startSession()
+#5 C:\xampp\htdocs\modesy\system\Config\Services.php(710): CodeIgniter\Session\Session->start()
+#6 C:\xampp\htdocs\modesy\system\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#7 C:\xampp\htdocs\modesy\system\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#8 C:\xampp\htdocs\modesy\system\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#9 C:\xampp\htdocs\modesy\system\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+#10 C:\xampp\htdocs\modesy\app\Config\Globals.php(32): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#11 C:\xampp\htdocs\modesy\app\Config\Globals.php(245): Config\Globals::setGlobals()
+#12 C:\xampp\htdocs\modesy\system\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\modesy\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\modesy\system\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+#15 C:\xampp\htdocs\modesy\app\Config\Routes.php(6): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+#16 C:\xampp\htdocs\modesy\system\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs...')
+#17 C:\xampp\htdocs\modesy\system\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+#18 C:\xampp\htdocs\modesy\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#19 C:\xampp\htdocs\modesy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#20 C:\xampp\htdocs\modesy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#21 C:\xampp\htdocs\modesy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#22 C:\xampp\htdocs\modesy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#23 {main}
+CRITICAL - 2024-11-18 19:01:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'modesy'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(100): CodeIgniter\Database\BaseConnection->initialize()
+ 2 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->open('ci_sessions', 'mds_session')
+ 3 SYSTEMPATH\Session\Session.php(920): session_start()
+ 4 SYSTEMPATH\Session\Session.php(242): CodeIgniter\Session\Session->startSession()
+ 5 SYSTEMPATH\Config\Services.php(710): CodeIgniter\Session\Session->start()
+ 6 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 7 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 8 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 9 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+10 APPPATH\Config\Globals.php(32): CodeIgniter\Config\BaseService::__callStatic('session', [])
+11 APPPATH\Config\Globals.php(245): Config\Globals::setGlobals()
+12 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\modesy\\app\\Config\\Globals.php')
+13 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\modesy\\app\\Config\\Globals.php')
+14 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+15 APPPATH\Config\Routes.php(6): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+16 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\modesy\\app\\Config\\Routes.php')
+17 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+18 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+19 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+20 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+21 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+22 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-11-18 19:02:00 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'modesy' in C:\xampp\htdocs\modesy\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\modesy\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'modesy', 3306, '', 0)
+#1 C:\xampp\htdocs\modesy\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\modesy\system\Session\Handlers\DatabaseHandler.php(100): CodeIgniter\Database\BaseConnection->initialize()
+#3 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->open('ci_sessions', 'mds_session')
+#4 C:\xampp\htdocs\modesy\system\Session\Session.php(920): session_start()
+#5 C:\xampp\htdocs\modesy\system\Session\Session.php(242): CodeIgniter\Session\Session->startSession()
+#6 C:\xampp\htdocs\modesy\system\Config\Services.php(710): CodeIgniter\Session\Session->start()
+#7 C:\xampp\htdocs\modesy\system\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#8 C:\xampp\htdocs\modesy\system\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 C:\xampp\htdocs\modesy\system\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#10 C:\xampp\htdocs\modesy\system\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+#11 C:\xampp\htdocs\modesy\app\Config\Globals.php(32): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#12 C:\xampp\htdocs\modesy\app\Config\Globals.php(245): Config\Globals::setGlobals()
+#13 C:\xampp\htdocs\modesy\system\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\modesy\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\modesy\system\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+#16 C:\xampp\htdocs\modesy\app\Config\Routes.php(6): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+#17 C:\xampp\htdocs\modesy\system\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs...')
+#18 C:\xampp\htdocs\modesy\system\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+#19 C:\xampp\htdocs\modesy\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#20 C:\xampp\htdocs\modesy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 C:\xampp\htdocs\modesy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#22 C:\xampp\htdocs\modesy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#23 C:\xampp\htdocs\modesy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#24 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'modesy' in C:\xampp\htdocs\modesy\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\modesy\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\modesy\system\Session\Handlers\DatabaseHandler.php(100): CodeIgniter\Database\BaseConnection->initialize()
+#2 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->open('ci_sessions', 'mds_session')
+#3 C:\xampp\htdocs\modesy\system\Session\Session.php(920): session_start()
+#4 C:\xampp\htdocs\modesy\system\Session\Session.php(242): CodeIgniter\Session\Session->startSession()
+#5 C:\xampp\htdocs\modesy\system\Config\Services.php(710): CodeIgniter\Session\Session->start()
+#6 C:\xampp\htdocs\modesy\system\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#7 C:\xampp\htdocs\modesy\system\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#8 C:\xampp\htdocs\modesy\system\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#9 C:\xampp\htdocs\modesy\system\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+#10 C:\xampp\htdocs\modesy\app\Config\Globals.php(32): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#11 C:\xampp\htdocs\modesy\app\Config\Globals.php(245): Config\Globals::setGlobals()
+#12 C:\xampp\htdocs\modesy\system\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\modesy\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\modesy\system\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+#15 C:\xampp\htdocs\modesy\app\Config\Routes.php(6): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+#16 C:\xampp\htdocs\modesy\system\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs...')
+#17 C:\xampp\htdocs\modesy\system\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+#18 C:\xampp\htdocs\modesy\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#19 C:\xampp\htdocs\modesy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#20 C:\xampp\htdocs\modesy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#21 C:\xampp\htdocs\modesy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#22 C:\xampp\htdocs\modesy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#23 {main}
+CRITICAL - 2024-11-18 19:02:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'modesy'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(100): CodeIgniter\Database\BaseConnection->initialize()
+ 2 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->open('ci_sessions', 'mds_session')
+ 3 SYSTEMPATH\Session\Session.php(920): session_start()
+ 4 SYSTEMPATH\Session\Session.php(242): CodeIgniter\Session\Session->startSession()
+ 5 SYSTEMPATH\Config\Services.php(710): CodeIgniter\Session\Session->start()
+ 6 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 7 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 8 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 9 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+10 APPPATH\Config\Globals.php(32): CodeIgniter\Config\BaseService::__callStatic('session', [])
+11 APPPATH\Config\Globals.php(245): Config\Globals::setGlobals()
+12 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\modesy\\app\\Config\\Globals.php')
+13 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\modesy\\app\\Config\\Globals.php')
+14 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+15 APPPATH\Config\Routes.php(6): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+16 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\modesy\\app\\Config\\Routes.php')
+17 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+18 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+19 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+20 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+21 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+22 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-11-18 19:03:02 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'modesy' in C:\xampp\htdocs\modesy\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\modesy\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'modesy', 3306, '', 0)
+#1 C:\xampp\htdocs\modesy\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\modesy\system\Session\Handlers\DatabaseHandler.php(100): CodeIgniter\Database\BaseConnection->initialize()
+#3 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->open('ci_sessions', 'mds_session')
+#4 C:\xampp\htdocs\modesy\system\Session\Session.php(920): session_start()
+#5 C:\xampp\htdocs\modesy\system\Session\Session.php(242): CodeIgniter\Session\Session->startSession()
+#6 C:\xampp\htdocs\modesy\system\Config\Services.php(710): CodeIgniter\Session\Session->start()
+#7 C:\xampp\htdocs\modesy\system\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#8 C:\xampp\htdocs\modesy\system\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 C:\xampp\htdocs\modesy\system\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#10 C:\xampp\htdocs\modesy\system\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+#11 C:\xampp\htdocs\modesy\app\Config\Globals.php(32): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#12 C:\xampp\htdocs\modesy\app\Config\Globals.php(245): Config\Globals::setGlobals()
+#13 C:\xampp\htdocs\modesy\system\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\modesy\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\modesy\system\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+#16 C:\xampp\htdocs\modesy\app\Config\Routes.php(6): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+#17 C:\xampp\htdocs\modesy\system\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs...')
+#18 C:\xampp\htdocs\modesy\system\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+#19 C:\xampp\htdocs\modesy\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#20 C:\xampp\htdocs\modesy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#21 C:\xampp\htdocs\modesy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#22 C:\xampp\htdocs\modesy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#23 C:\xampp\htdocs\modesy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#24 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'modesy' in C:\xampp\htdocs\modesy\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\modesy\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\modesy\system\Session\Handlers\DatabaseHandler.php(100): CodeIgniter\Database\BaseConnection->initialize()
+#2 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->open('ci_sessions', 'mds_session')
+#3 C:\xampp\htdocs\modesy\system\Session\Session.php(920): session_start()
+#4 C:\xampp\htdocs\modesy\system\Session\Session.php(242): CodeIgniter\Session\Session->startSession()
+#5 C:\xampp\htdocs\modesy\system\Config\Services.php(710): CodeIgniter\Session\Session->start()
+#6 C:\xampp\htdocs\modesy\system\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#7 C:\xampp\htdocs\modesy\system\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#8 C:\xampp\htdocs\modesy\system\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#9 C:\xampp\htdocs\modesy\system\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+#10 C:\xampp\htdocs\modesy\app\Config\Globals.php(32): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#11 C:\xampp\htdocs\modesy\app\Config\Globals.php(245): Config\Globals::setGlobals()
+#12 C:\xampp\htdocs\modesy\system\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\modesy\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\modesy\system\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+#15 C:\xampp\htdocs\modesy\app\Config\Routes.php(6): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+#16 C:\xampp\htdocs\modesy\system\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs...')
+#17 C:\xampp\htdocs\modesy\system\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+#18 C:\xampp\htdocs\modesy\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#19 C:\xampp\htdocs\modesy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#20 C:\xampp\htdocs\modesy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#21 C:\xampp\htdocs\modesy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#22 C:\xampp\htdocs\modesy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#23 {main}
+CRITICAL - 2024-11-18 19:03:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'modesy'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(100): CodeIgniter\Database\BaseConnection->initialize()
+ 2 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->open('ci_sessions', 'mds_session')
+ 3 SYSTEMPATH\Session\Session.php(920): session_start()
+ 4 SYSTEMPATH\Session\Session.php(242): CodeIgniter\Session\Session->startSession()
+ 5 SYSTEMPATH\Config\Services.php(710): CodeIgniter\Session\Session->start()
+ 6 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 7 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 8 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 9 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+10 APPPATH\Config\Globals.php(32): CodeIgniter\Config\BaseService::__callStatic('session', [])
+11 APPPATH\Config\Globals.php(245): Config\Globals::setGlobals()
+12 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\modesy\\app\\Config\\Globals.php')
+13 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\modesy\\app\\Config\\Globals.php')
+14 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+15 APPPATH\Config\Routes.php(6): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+16 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\modesy\\app\\Config\\Routes.php')
+17 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+18 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+19 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+20 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+21 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+22 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-18 21:20:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:20:57 --> CSRF token verified.
+INFO - 2024-11-18 21:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:20:59 --> CSRF token verified.
+INFO - 2024-11-18 21:21:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:21:03 --> CSRF token verified.
+INFO - 2024-11-18 21:21:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:21:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:21:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:21:05 --> CSRF token verified.
+INFO - 2024-11-18 21:21:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:21:10 --> CSRF token verified.
+INFO - 2024-11-18 21:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:21:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:21:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:21:29 --> CSRF token verified.
+INFO - 2024-11-18 21:21:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:21:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:21:36 --> CSRF token verified.
+INFO - 2024-11-18 21:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:21:40 --> CSRF token verified.
+INFO - 2024-11-18 21:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:21:43 --> CSRF token verified.
+INFO - 2024-11-18 21:21:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:21:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:21:59 --> CSRF token verified.
+INFO - 2024-11-18 21:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:22:26 --> CSRF token verified.
+INFO - 2024-11-18 21:22:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:22:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-18 21:22:33 --> CSRF token verified.
