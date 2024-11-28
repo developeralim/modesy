@@ -9,7 +9,7 @@ class ChronopostShipping extends BaseShipping {
 
     use WebService,Package;
 
-    const TITLE     = "chronopost";
+    const TITLE     = "Chronopost";
     const API_URL   = 'https://www.chronopost.fr/shipping-cxf/ShippingServiceWS?wsdl';
 
     protected $configs = [];
@@ -137,5 +137,10 @@ class ChronopostShipping extends BaseShipping {
     public function registerParcelsFromOrder()
     {
         $this->saveAndCreateShipmentLabel();
+    }
+
+    public function settings(): array
+    {
+        return [];
     }
 }

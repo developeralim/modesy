@@ -639,4 +639,30 @@ class MondialRelayShipping extends BaseShipping {
 		return true;
 	}
 
+    public function settings(): array
+    {
+        return [
+            array(
+                'type'    => 'repeater',
+                'inputs'  => [
+                    array(
+                        'type' => 'text',
+                        'name' => 'account_number' 
+                    ),
+                    array(
+                        'type' => 'text',
+                        'name' => 'account_label' 
+                    ),
+                    array(
+                        'type' => 'text',
+                        'name' => 'subaccount_number' 
+                    ),
+                    array(
+                        'type' => 'text',
+                        'name' => 'password' 
+                    ),
+                ]
+            )
+        ];
+    }
 }

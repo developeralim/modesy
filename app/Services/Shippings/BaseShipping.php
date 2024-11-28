@@ -387,6 +387,11 @@ abstract class BaseShipping implements ShippingInterface {
     {
         $inputs         = $this->getInputs();
         $baseName       = "methods[{$this->getName()}]" . "[".$this->uniqid."]";
+        return $this->inputsWalker( $inputs,$baseName );
+    }
+
+    private function inputsWalker( $inputs = [],$baseName = '' ) : string
+    {
         $htmlContent    = '<div class="row">';
 
         foreach( $inputs as $index => $input ) {
@@ -564,5 +569,20 @@ abstract class BaseShipping implements ShippingInterface {
     public function trackingNumber()
     {
         return '';
+    }
+
+    abstract public function settings() : array;
+
+    public function settingsForm()
+    {
+        $settings = $this->settings();
+
+        foreach( $settings as $setting ) {
+            switch ( $setting['type'] ) {
+                case 'repeater':
+                    
+                    break;
+            }
+        }
     }
 }
