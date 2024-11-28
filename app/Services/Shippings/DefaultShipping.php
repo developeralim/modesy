@@ -8,4 +8,9 @@ class DefaultShipping extends BaseShipping {
     {
         return 'default';
     }
+
+    public function settings(): array
+    {
+        return [];
+    }
 }

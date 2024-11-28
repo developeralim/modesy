@@ -1,0 +1,3 @@
+INFO - 2024-11-26 05:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-26 05:44:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-11-26 05:44:16 --> CSRF token verified.
