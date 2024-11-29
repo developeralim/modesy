@@ -643,8 +643,12 @@ class MondialRelayShipping extends BaseShipping {
     {
         return [
             array(
-                'type'    => 'repeater',
-                'inputs'  => [
+                'label'         => trans("method_name"),
+                'type'          => 'repeater',
+                'name'          => "account_information",
+                'class'         => 'form-control form-input m-b-5',
+                'col'           => 'col-md-12',
+                'inputs'        => [
                     array(
                         'type' => 'text',
                         'name' => 'account_number' 
@@ -661,7 +665,7 @@ class MondialRelayShipping extends BaseShipping {
                         'type' => 'text',
                         'name' => 'password' 
                     ),
-                ]
+                ],
             )
         ];
     }

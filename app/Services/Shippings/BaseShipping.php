@@ -387,10 +387,11 @@ abstract class BaseShipping implements ShippingInterface {
     {
         $inputs         = $this->getInputs();
         $baseName       = "methods[{$this->getName()}]" . "[".$this->uniqid."]";
+
         return $this->inputsWalker( $inputs,$baseName );
     }
 
-    private function inputsWalker( $inputs = [],$baseName = '' ) : string
+    private function inputsWalker( $inputs = [],$baseName = '' )
     {
         $htmlContent    = '<div class="row">';
 
@@ -429,62 +430,91 @@ abstract class BaseShipping implements ShippingInterface {
                 
                 case 'text': 
                     if ( empty( $group ) ) {
-                        $htmlContent .= sprintf('
-                            <div class="form-group m-b-10">
+                        $htmlContent .= sprintf(
+                            '<div class="form-group m-b-10">
                                 <label class="control-label">%1$s</label>
                                 <input type="text" name="%2$s" class="%3$s" value="%4$s" placeholder="%5$s" %6$s>
-                            </div>
-                        ',$label,$name,$class,$value,$placeholder,$attributesFormat);
+                            </div>',
+                            $label,
+                            $name,
+                            $class,
+                            $value,
+                            $placeholder,
+                            $attributesFormat
+                        );
                     } else {
-                        $htmlContent .= sprintf('
-                            <div class="form-group m-b-10">
+                        $htmlContent .= sprintf(
+                            '<div class="form-group m-b-10">
                                 <label class="control-label">%1$s</label>
                                 <div class="input-group">
                                     <span class="input-group-addon">%2$s</span>
                                     <input type="text" name="%3$s" value="%4$s" placeholder="%5$s" %6$s class="%7$s">
                                 </div>
-                            </div>
-                        ',$label,$title,$name,$value,$placeholder,$attributesFormat,$class);
+                            </div>',
+                            $label,
+                            $title,
+                            $name,
+                            $value,
+                            $placeholder,
+                            $attributesFormat,
+                            $class
+                        );
                     }
                     break;
                 case 'label' : 
-                    $htmlContent .= sprintf('
-                        <label>%1$s</label>
-                    ',$label);
+                    $htmlContent .= sprintf(
+                        '<label>%1$s</label>',
+                        $label
+                    );
                     break;
                 case 'radio' : 
-                    $htmlContent .= sprintf('
-                        <div class="custom-control custom-radio">
+                    $htmlContent .= sprintf(
+                        '<div class="custom-control custom-radio">
                             <input type="radio" name="%1$s" id="%1$s_%2$s" %3$s value="%4$s" class="%5$s">
                             <label for="%1$s_%2$s" class="custom-control-label">%6$s</label>
-                        </div>
-                    ',$name,$index,$attributesFormat,$value,$class,$label);
+                        </div>',
+                        $name,
+                        $index,
+                        $attributesFormat,
+                        $value,
+                        $class,
+                        $label
+                    );
                     break;
                 case 'select' : 
-
                     $optionsFormat = "";
                     
                     array_walk ( $options,function( $n,$v ) use(&$optionsFormat,$value){
                         $selected = "";
-
                         if ( ( is_array( $value ) && in_array($v,$value) ) || ( is_string($value) && $value == $v ) ) {
                             $selected = "selected";
                         }   
-
                         $optionsFormat .= "<option {$selected} value='{$v}'>{$n}</option>";
                     });
 
-                    $htmlContent .= sprintf('
-                        <div class="form-group">
+                    $htmlContent .= sprintf(
+                        '<div class="form-group">
                             <label>%1$s</label>
                             <select name="%2$s" class="%3$s" %4$s>
                                 %5$s
                             </select>
-                        </div>
-                    ',$label,$name,$class,$attributesFormat,$optionsFormat);
+                        </div>',
+                        $label,
+                        $name,
+                        $class,
+                        $attributesFormat,
+                        $optionsFormat
+                    );
                     break;
                 case 'hidden' : 
-                    $htmlContent .= sprintf('<input type="hidden" name="%s" value="%s" />',$name,$value);
+                    $htmlContent .= sprintf(
+                        '<input type="hidden" name="%s" value="%s" />',
+                        $name,
+                        $value
+                    );
+                    break;
+                case 'repeater' : 
+                    $htmlContent .= 'hello';
                     break;
             }
 
@@ -576,13 +606,6 @@ abstract class BaseShipping implements ShippingInterface {
     public function settingsForm()
     {
         $settings = $this->settings();
-
-        foreach( $settings as $setting ) {
-            switch ( $setting['type'] ) {
-                case 'repeater':
-                    
-                    break;
-            }
-        }
+        return $this->inputsWalker( $settings,'' );
     }
 }
